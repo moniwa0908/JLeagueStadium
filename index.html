@@ -1,0 +1,64 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="theme-color" content="#0b2440"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><title>Jリーグ スタジアム記録</title><link rel="manifest" href="manifest.json"><style>
+*{box-sizing:border-box}body{margin:0;background:#f3f6f8;color:#14202b;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif}button,input{font:inherit}header{background:linear-gradient(145deg,#071c30,#133f67);color:#fff;padding:calc(24px + env(safe-area-inset-top)) 18px 20px}.wrap{max-width:680px;margin:auto}.top{display:flex;justify-content:space-between;align-items:center}.eyebrow{font-size:10px;letter-spacing:.18em;color:#8ec5ef;font-weight:800;margin:0 0 5px}h1{font-size:22px;margin:0}.ball{font-size:28px}.progress{margin-top:18px;background:#ffffff18;border:1px solid #ffffff28;border-radius:16px;padding:14px 16px;display:grid;grid-template-columns:1fr auto;align-items:baseline}.progress strong{font-size:28px}.progress span{font-size:13px;color:#c9d8e5}.progress b{color:#8ee0b9}.bar{height:6px;background:#ffffff26;border-radius:99px;grid-column:1/3;margin-top:9px;overflow:hidden}.bar i{display:block;height:100%;background:#35cf8c;border-radius:99px;transition:.2s}.controls,.list{max-width:680px;margin:auto}.controls{padding:18px 16px 8px}.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.tabs button{border:1px solid #dce3e8;background:#fff;border-radius:10px;padding:9px 5px;font-size:13px;font-weight:700;color:#64717d}.tabs .active{background:#1667b1;border-color:#1667b1;color:#fff}.search{margin-top:12px;background:#fff;border:1px solid #dce3e8;border-radius:12px;height:45px;display:flex;align-items:center;padding:0 12px}.search input{border:0;outline:0;width:100%;background:transparent;font-size:14px}.only{display:flex;gap:7px;align-items:center;margin:12px 3px 0;font-size:13px;color:#52606c}.only input{width:17px;height:17px;accent-color:#1667b1}.list{padding:0 16px}.result{font-size:12px;color:#7d8891;margin:6px 2px 8px}.stadium{width:100%;display:flex;align-items:center;text-align:left;border:1px solid #dce3e8;background:#fff;border-radius:13px;padding:12px;margin-bottom:8px;min-height:68px}.stadium:active{transform:scale(.985)}.stadium.done{background:#effaf5;border-color:#a9dfc8}.check{width:29px;height:29px;flex:none;border:2px solid #c4cdd4;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:bold;margin-right:11px}.done .check{background:#1ea66f;border-color:#1ea66f}.info{min-width:0;display:flex;flex-direction:column;gap:4px;flex:1}.name{font-size:14px;line-height:1.35;font-weight:800}.club{font-size:11px;color:#71808b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.badge{font-size:10px;font-weight:900;padding:5px 7px;border-radius:7px;margin-left:8px}.J1{background:#e8f2fb;color:#1766aa}.J2{background:#eef0fb;color:#4c58a8}.J3{background:#f6ecec;color:#a64a4a}footer{text-align:center;color:#87939b;font-size:11px;padding:18px 12px calc(20px + env(safe-area-inset-bottom))}
+</style></head><body><header><div class="wrap"><div class="top"><div><p class="eyebrow">MY STADIUM LOG</p><h1>Jリーグ スタジアム記録</h1></div><span class="ball">⚽</span></div><div class="progress"><div><strong id="done">0</strong><span> / <span id="total">0</span> スタジアム</span></div><b id="pct">0%</b><div class="bar"><i id="bar"></i></div></div></div></header><section class="controls"><div class="tabs" id="tabs"><button class="active" data-l="ALL">すべて</button><button data-l="J1">J1</button><button data-l="J2">J2</button><button data-l="J3">J3</button></div><div class="search"><input id="q" aria-label="スタジアム検索" placeholder="🔍  スタジアム・クラブ名で検索"></div><label class="only"><input id="only" type="checkbox">まだ行っていない場所だけ</label></section><section class="list"><p class="result" id="count"></p><div id="items"></div></section><footer>チェックした内容は、この端末に自動保存されます</footer><script>
+const raw=`メルカリスタジアム|鹿島アントラーズ|J1|茨城
+水戸信用金庫スタジアム|水戸ホーリーホック|J1|茨城
+埼玉スタジアム2002|浦和レッズ|J1|埼玉
+フクダ電子アリーナ|ジェフユナイテッド千葉|J1|千葉
+三協フロンテア柏スタジアム|柏レイソル|J1|千葉
+味の素スタジアム|FC東京／東京ヴェルディ|J1|東京
+町田GIONスタジアム|FC町田ゼルビア|J1|東京
+Uvanceとどろきスタジアム by Fujitsu|川崎フロンターレ|J1|神奈川
+日産スタジアム|横浜F・マリノス|J1|神奈川
+IAIスタジアム日本平|清水エスパルス|J1|静岡
+豊田スタジアム|名古屋グランパス|J1|愛知
+サンガスタジアム by KYOCERA|京都サンガF.C.|J1|京都
+パナソニック スタジアム 吹田|ガンバ大阪|J1|大阪
+ヨドコウ桜スタジアム|セレッソ大阪|J1|大阪
+ノエビアスタジアム神戸|ヴィッセル神戸|J1|兵庫
+JFE晴れの国スタジアム|ファジアーノ岡山|J1|岡山
+エディオンピースウイング広島|サンフレッチェ広島|J1|広島
+ベスト電器スタジアム|アビスパ福岡|J1|福岡
+PEACE STADIUM Connected by SoftBank|V・ファーレン長崎|J1|長崎
+大和ハウス プレミストドーム|北海道コンサドーレ札幌|J2|北海道
+プライフーズスタジアム|ヴァンラーレ八戸|J2|青森
+ユアテックスタジアム仙台|ベガルタ仙台|J2|宮城
+ソユースタジアム|ブラウブリッツ秋田|J2|秋田
+NDソフトスタジアム山形|モンテディオ山形|J2|山形
+ハワイアンズスタジアムいわき|いわきFC|J2|福島
+CITY FOOTBALL STATION|栃木シティ|J2|栃木
+NACK5スタジアム大宮|RB大宮アルディージャ|J2|埼玉
+ニッパツ三ツ沢球技場|横浜FC|J2|神奈川
+レモンガススタジアム平塚|湘南ベルマーレ|J2|神奈川
+JIT リサイクルインク スタジアム|ヴァンフォーレ甲府|J2|山梨
+デンカビッグスワンスタジアム|アルビレックス新潟|J2|新潟
+富山県総合運動公園陸上競技場|カターレ富山|J2|富山
+ヤマハスタジアム（磐田）|ジュビロ磐田|J2|静岡
+藤枝総合運動公園サッカー場|藤枝MYFC|J2|静岡
+鳴門・大塚スポーツパーク ポカリスエットスタジアム|徳島ヴォルティス|J2|徳島
+アシックス里山スタジアム|FC今治|J2|愛媛
+駅前不動産スタジアム|サガン鳥栖|J2|佐賀
+クラサスドーム大分|大分トリニータ|J2|大分
+いちご宮崎新富サッカー場|テゲバジャーロ宮崎|J2|宮崎
+とうほう・みんなのスタジアム|福島ユナイテッドFC|J3|福島
+カンセキスタジアムとちぎ|栃木SC|J3|栃木
+正田醤油スタジアム群馬|ザスパ群馬|J3|群馬
+相模原ギオンスタジアム|SC相模原|J3|神奈川
+サンプロ アルウィン|松本山雅FC|J3|長野
+長野Uスタジアム|AC長野パルセイロ|J3|長野
+金沢ゴーゴーカレースタジアム|ツエーゲン金沢|J3|石川
+岐阜メモリアルセンター長良川競技場|FC岐阜|J3|岐阜
+平和堂HATOスタジアム|レイラック滋賀FC|J3|滋賀
+東大阪市花園ラグビー場|FC大阪|J3|大阪
+ロートフィールド奈良|奈良クラブ|J3|奈良
+Axisバードスタジアム|ガイナーレ鳥取|J3|鳥取
+維新みらいふスタジアム|レノファ山口FC|J3|山口
+Pikaraスタジアム|カマタマーレ讃岐|J3|香川
+ニンジニアスタジアム|愛媛FC|J3|愛媛
+高知県立春野総合運動公園陸上競技場|高知ユナイテッドSC|J3|高知
+ミクニワールドスタジアム北九州|ギラヴァンツ北九州|J3|福岡
+えがお健康スタジアム|ロアッソ熊本|J3|熊本
+白波スタジアム|鹿児島ユナイテッドFC|J3|鹿児島
+沖縄県総合運動公園陸上競技場|FC琉球|J3|沖縄`;
+const data=raw.split('\n').map((x,id)=>{const [name,club,league,area]=x.split('|');return{id:String(id),name,club,league,area}});let visited=[];try{visited=JSON.parse(localStorage.getItem('j-stadium-visited')||'[]')}catch{}let league='ALL';const $=x=>document.getElementById(x);function render(){const q=$('q').value.toLowerCase(),only=$('only').checked;const shown=data.filter(s=>(league==='ALL'||s.league===league)&&(!only||!visited.includes(s.id))&&(s.name+s.club+s.area).toLowerCase().includes(q));$('done').textContent=visited.length;$('total').textContent=data.length;const pct=Math.round(visited.length/data.length*100);$('pct').textContent=pct+'%';$('bar').style.width=pct+'%';$('count').textContent=shown.length+'件';$('items').innerHTML=shown.map(s=>`<button class="stadium ${visited.includes(s.id)?'done':''}" data-id="${s.id}"><span class="check">${visited.includes(s.id)?'✓':''}</span><span class="info"><span class="name">${s.name}</span><span class="club">${s.club} ・ ${s.area}</span></span><span class="badge ${s.league}">${s.league}</span></button>`).join('');document.querySelectorAll('.stadium').forEach(b=>b.onclick=()=>{const id=b.dataset.id;visited=visited.includes(id)?visited.filter(x=>x!==id):[...visited,id];localStorage.setItem('j-stadium-visited',JSON.stringify(visited));render()})}document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{league=b.dataset.l;document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('active',x===b));render()});$('q').oninput=render;$('only').onchange=render;render();if('serviceWorker'in navigator)navigator.serviceWorker.register('./service-worker.js');
+</script></body></html>
