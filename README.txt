@@ -14,6 +14,8 @@ Jリーグ スタジアム記録
 
 追加修正：YANMAR HANASAKA STADIUMとヤンマースタジアム長居の括弧内表記を削除し、国立競技場を一覧から削除しました。既存の訪問記録がずれない方式で更新しています。
 
+追加修正：神戸総合運動公園ユニバー記念競技場、たけびしスタジアム京都、エディオンスタジアム広島、トランスコスモススタジアム長崎を追加しました。
+
 GitHubで「JLeagueStadium」というリポジトリを作成し、このフォルダ内の3ファイル（index.html、manifest.json、service-worker.js）をアップロードしてください。
 GitHub Pagesをmainブランチ・rootで公開すると、URLは次の形になります。
 https://moniwa0908.github.io/JLeagueStadium/
