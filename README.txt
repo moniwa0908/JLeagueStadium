@@ -34,6 +34,8 @@ Jリーグ スタジアム記録
 
 追加修正（アクセス情報・第4段階）：J3タブに表示される全会場にもアクセス情報と公式ページへのリンクを追加し、J1・J2・J3の全77会場への登録を完了しました。
 
+追加修正：詳細画面の所在地を、都道府県名を大きな太字、その下に詳細住所を小さい文字で表示する2段構成に変更しました。
+
 GitHubで「JLeagueStadium」というリポジトリを作成し、このフォルダ内の3ファイル（index.html、manifest.json、service-worker.js）をアップロードしてください。
 GitHub Pagesをmainブランチ・rootで公開すると、URLは次の形になります。
 https://moniwa0908.github.io/JLeagueStadium/
