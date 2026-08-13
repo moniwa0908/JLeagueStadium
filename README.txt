@@ -6,6 +6,8 @@ Jリーグ スタジアム記録
 
 追加修正：1チームが現在併用する複数スタジアムを個別に記録できます。同じチームは複数会場に表示されてもチーム集計では1チームとして数えます。
 
+追加修正：スタジアム横のリーグ表示を、J1は赤、J2は青、J3は緑に変更しました。
+
 GitHubで「JLeagueStadium」というリポジトリを作成し、このフォルダ内の3ファイル（index.html、manifest.json、service-worker.js）をアップロードしてください。
 GitHub Pagesをmainブランチ・rootで公開すると、URLは次の形になります。
 https://moniwa0908.github.io/JLeagueStadium/
