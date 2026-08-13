@@ -4,6 +4,8 @@ Jリーグ スタジアム記録
 
 追加修正：すべて・J1・J2・J3の各タブに合わせて、スタジアム数・チーム数・達成率の集計が切り替わります。
 
+追加修正：1チームが現在併用する複数スタジアムを個別に記録できます。同じチームは複数会場に表示されてもチーム集計では1チームとして数えます。
+
 GitHubで「JLeagueStadium」というリポジトリを作成し、このフォルダ内の3ファイル（index.html、manifest.json、service-worker.js）をアップロードしてください。
 GitHub Pagesをmainブランチ・rootで公開すると、URLは次の形になります。
 https://moniwa0908.github.io/JLeagueStadium/
