@@ -36,7 +36,11 @@ Jリーグ スタジアム記録
 
 追加修正：詳細画面の所在地を、都道府県名を大きな太字、その下に詳細住所を小さい文字で表示する2段構成に変更しました。
 
-GitHubで「JLeagueStadium」というリポジトリを作成し、このフォルダ内の3ファイル（index.html、manifest.json、service-worker.js）をアップロードしてください。
+追加修正：家族はログイン不要で共有記録を閲覧し、管理者だけがメールアドレスとパスワードでログインして記録を変更できるFirebase共有方式に対応しました。初回のみ同梱の「Firebase設定手順.txt」に沿った設定が必要です。
+
+追加修正：Firebaseプロジェクト作成からGitHubへのアップロード、動作確認、エラー時の確認方法まで「Firebase設定手順.txt」を詳細化しました。初回ログイン時の既存記録の自動共有にも対応しました。
+
+GitHubの「JLeagueStadium」リポジトリへ、このフォルダ内の全ファイルをアップロードしてください。
 GitHub Pagesをmainブランチ・rootで公開すると、URLは次の形になります。
 https://moniwa0908.github.io/JLeagueStadium/
 
