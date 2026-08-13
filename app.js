@@ -1,13 +1,13 @@
 const data=raw.split('\n').map((x,id)=>{const[name,club,league,area]=x.split('|');
 return{id:String(id),name,clubs:club.split('／'),leagues:league.split('／'),area}}),teamLeague={};
 data.forEach(s=>s.clubs.forEach((t,i)=>teamLeague[t]=s.leagues[i]||s.leagues[0]));
-const teams=[...new Set(data.flatMap(s=>s.clubs))];
+const teams=[...new Set(data.flatMap(s=>s.clubs))],teamOrder=Object.fromEntries(teams.map((t,i)=>[t,i]));
 let visited=[],visitedTeams=[];
 try{visited=JSON.parse(localStorage.getItem('j-stadium-visited')||'[]');
 visitedTeams=JSON.parse(localStorage.getItem('j-team-visited')||'[]')}catch{}let league='ALL';
 const $=id=>document.getElementById(id),save=()=>{localStorage.setItem('j-stadium-visited',JSON.stringify(visited));
 localStorage.setItem('j-team-visited',JSON.stringify(visitedTeams))};
-function render(){const q=$('q').value.toLowerCase(),only=$('only').checked,scope=data.filter(s=>league==='ALL'||s.leagues.includes(league)),scopeTeams=league==='ALL'?teams:[...new Set(scope.flatMap(s=>s.clubs).filter(t=>teamLeague[t]===league))],scopeVisited=scope.filter(s=>visited.includes(s.id)),scopeVisitedTeams=scopeTeams.filter(t=>visitedTeams.includes(t)),shown=scope.filter(s=>(!only||!visited.includes(s.id))&&(s.name+s.clubs.join('')+s.area).toLowerCase().includes(q)),pct=Math.round(scopeVisited.length/scope.length*100),tp=Math.round(scopeVisitedTeams.length/scopeTeams.length*100);
+function render(){const q=$('q').value.toLowerCase(),only=$('only').checked,scope=data.filter(s=>league==='ALL'||s.leagues.includes(league)),scopeTeams=league==='ALL'?teams:[...new Set(scope.flatMap(s=>s.clubs).filter(t=>teamLeague[t]===league))],scopeVisited=scope.filter(s=>visited.includes(s.id)),scopeVisitedTeams=scopeTeams.filter(t=>visitedTeams.includes(t)),shown=scope.filter(s=>(!only||!visited.includes(s.id))&&(s.name+s.clubs.join('')+s.area).toLowerCase().includes(q)).sort((a,b)=>Math.min(...a.clubs.map(t=>teamOrder[t]))-Math.min(...b.clubs.map(t=>teamOrder[t]))||Number(a.id)-Number(b.id)),pct=Math.round(scopeVisited.length/scope.length*100),tp=Math.round(scopeVisitedTeams.length/scopeTeams.length*100);
 $('done').textContent=scopeVisited.length;
 $('total').textContent=scope.length;
 $('pct').textContent=pct+'%';

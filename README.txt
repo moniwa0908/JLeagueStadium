@@ -8,6 +8,8 @@ Jリーグ スタジアム記録
 
 追加修正：スタジアム横のリーグ表示を、J1は赤、J2は青、J3は緑に変更しました。
 
+追加修正：水戸ホーリーホックにケーズデンキスタジアム水戸を追加し、同じチームのスタジアムができる限り続けて表示されるようにしました。
+
 GitHubで「JLeagueStadium」というリポジトリを作成し、このフォルダ内の3ファイル（index.html、manifest.json、service-worker.js）をアップロードしてください。
 GitHub Pagesをmainブランチ・rootで公開すると、URLは次の形になります。
 https://moniwa0908.github.io/JLeagueStadium/
