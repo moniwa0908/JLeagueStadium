@@ -1,5 +1,5 @@
-const CACHE='j-stadium-v10';
-const FILES=['./','./index.html','./app.js?v=10','./manifest.json'];
+const CACHE='j-stadium-v11';
+const FILES=['./','./index.html','./app.js?v=11','./manifest.json'];
 self.addEventListener('install',event=>{
   self.skipWaiting();
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES)));
