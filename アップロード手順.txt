@@ -1,0 +1,21 @@
+Jリーグ スタジアム記録　ピンク版アイコン更新
+
+このフォルダ内の6ファイルだけをGitHubへアップロードしてください。
+firebase-config.jsは含まれていないため、設定済みのFirebase情報は消えません。
+
+1. GitHubの moniwa0908/JLeagueStadium を開きます。
+2. 「＋」→「Upload files」を押します。
+3. このフォルダ内の6ファイルをすべて選択してアップロードします。
+4. 「Commit changes」を2回押します。
+5. 1～3分待ちます。
+6. iPhoneの古いホーム画面アイコンを削除します。
+7. Safariで https://moniwa0908.github.io/JLeagueStadium/?v=23 を開きます。
+8. 共有ボタン→「ホーム画面に追加」を押します。
+
+アップロードするファイル
+・apple-touch-icon.png
+・icon-192.png
+・icon-512.png
+・index.html
+・manifest.json
+・service-worker.js
