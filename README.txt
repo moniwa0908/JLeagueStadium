@@ -24,6 +24,8 @@ Jリーグ スタジアム記録
 
 追加修正：リーグ表示を濃い赤・濃い青・濃い緑の背景と白文字に変更し、J1・J2・J3を明確に区別できるようにしました。
 
+追加修正：スタジアムをタップすると、スタジアム名、都道府県、リーグ、使用チーム、訪問状況を確認・変更できる詳細画面が開きます。現在地からのアクセスはGoogleマップで確認できます。
+
 GitHubで「JLeagueStadium」というリポジトリを作成し、このフォルダ内の3ファイル（index.html、manifest.json、service-worker.js）をアップロードしてください。
 GitHub Pagesをmainブランチ・rootで公開すると、URLは次の形になります。
 https://moniwa0908.github.io/JLeagueStadium/

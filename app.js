@@ -7,6 +7,14 @@ try{visited=JSON.parse(localStorage.getItem('j-stadium-visited')||'[]');
 visitedTeams=JSON.parse(localStorage.getItem('j-team-visited')||'[]')}catch{}let league='ALL';
 const $=id=>document.getElementById(id),save=()=>{localStorage.setItem('j-stadium-visited',JSON.stringify(visited));
 localStorage.setItem('j-team-visited',JSON.stringify(visitedTeams))};
+function showDetail(id){const s=data.find(x=>x.id===id);if(!s)return;
+const map=`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(s.name+' '+s.area)}`;
+$('detailCard').innerHTML=`<div class="detail-head"><div><h2 class="detail-title">${s.name}</h2><div class="detail-leagues">${s.leagues.map(l=>`<span class="badge ${l}">${l}</span>`).join('')}</div></div><button class="detail-close" aria-label="閉じる">×</button></div><div class="detail-section"><p class="detail-label">所在地</p><p class="detail-value">${s.area}</p></div><div class="detail-section"><p class="detail-label">使用チーム</p><div class="detail-teams">${s.clubs.map(t=>`<button class="detail-team ${visitedTeams.includes(t)?'done':''}" data-team="${t}">${visitedTeams.includes(t)?'✓ ':''}${t}</button>`).join('')}</div></div><div class="detail-section"><p class="detail-label">訪問記録</p><button class="detail-action detail-visit ${visited.includes(s.id)?'done':''}" data-id="${s.id}">${visited.includes(s.id)?'✓ 行ったスタジアム':'行ったスタジアムに登録'}</button></div><div class="detail-section"><p class="detail-label">アクセス</p><a class="detail-action map-button" href="${map}" target="_blank" rel="noopener">🗺 現在地からの経路をGoogleマップで開く</a><p class="detail-note">Googleマップで電車・車・徒歩などの移動方法を選べます。</p></div>`;
+$('detailOverlay').classList.add('open');document.body.style.overflow='hidden';
+$('detailCard').querySelector('.detail-close').onclick=closeDetail;
+$('detailCard').querySelector('.detail-visit').onclick=()=>{visited=visited.includes(s.id)?visited.filter(x=>x!==s.id):[...visited,s.id];save();render();showDetail(s.id)};
+$('detailCard').querySelectorAll('.detail-team').forEach(b=>b.onclick=()=>{const t=b.dataset.team;visitedTeams=visitedTeams.includes(t)?visitedTeams.filter(x=>x!==t):[...visitedTeams,t];save();render();showDetail(s.id)})}
+function closeDetail(){$('detailOverlay').classList.remove('open');document.body.style.overflow=''}
 function render(){const q=$('q').value.toLowerCase(),only=$('only').checked,scope=data.filter(s=>league==='ALL'||s.leagues.includes(league)),scopeTeams=league==='ALL'?teams:[...new Set(scope.flatMap(s=>s.clubs).filter(t=>teamLeague[t]===league))],scopeVisited=scope.filter(s=>visited.includes(s.id)),scopeVisitedTeams=scopeTeams.filter(t=>visitedTeams.includes(t)),shown=scope.filter(s=>(!only||!visited.includes(s.id))&&(s.name+s.clubs.join('')+s.area).toLowerCase().includes(q)).sort((a,b)=>Math.min(...a.clubs.map(t=>teamOrder[t]))-Math.min(...b.clubs.map(t=>teamOrder[t]))||Number(a.id)-Number(b.id)),pct=Math.round(scopeVisited.length/scope.length*100),tp=Math.round(scopeVisitedTeams.length/scopeTeams.length*100);
 $('done').textContent=scopeVisited.length;
 $('total').textContent=scope.length;
@@ -17,7 +25,8 @@ $('teamTotal').textContent=scopeTeams.length;
 $('teamPct').textContent=tp+'%';
 $('teamBar').style.width=tp+'%';
 $('count').textContent=shown.length+'件';
-$('items').innerHTML=shown.map(s=>`<div class="stadium ${visited.includes(s.id)?'done':''}"><div class="stadium-main"><button class="visit" data-id="${s.id}" aria-label="${s.name}へ行った">${visited.includes(s.id)?'✓':''}</button><span class="info"><span class="name">${s.name}</span><span class="area">${s.area}</span></span><span class="badges">${(league==='ALL'?s.leagues:[league]).map(l=>`<span class="badge ${l}">${l}</span>`).join('')}</span></div><div class="teams"><span class="teams-label">行ったチーム</span>${s.clubs.filter(t=>league==='ALL'||teamLeague[t]===league).map(t=>`<button class="team ${visitedTeams.includes(t)?'done':''}" data-team="${t}">${visitedTeams.includes(t)?'✓ ':''}${t}</button>`).join('')}</div></div>`).join('');
+$('items').innerHTML=shown.map(s=>`<div class="stadium ${visited.includes(s.id)?'done':''}" data-detail-id="${s.id}"><div class="stadium-main"><button class="visit" data-id="${s.id}" aria-label="${s.name}へ行った">${visited.includes(s.id)?'✓':''}</button><span class="info"><span class="name">${s.name}</span><span class="area">${s.area}</span></span><span class="badges">${(league==='ALL'?s.leagues:[league]).map(l=>`<span class="badge ${l}">${l}</span>`).join('')}</span></div><div class="teams"><span class="teams-label">行ったチーム</span>${s.clubs.filter(t=>league==='ALL'||teamLeague[t]===league).map(t=>`<button class="team ${visitedTeams.includes(t)?'done':''}" data-team="${t}">${visitedTeams.includes(t)?'✓ ':''}${t}</button>`).join('')}</div></div>`).join('');
+document.querySelectorAll('.stadium').forEach(card=>card.onclick=e=>{if(!e.target.closest('button'))showDetail(card.dataset.detailId)});
 document.querySelectorAll('.visit').forEach(b=>b.onclick=()=>{const id=b.dataset.id;
 visited=visited.includes(id)?visited.filter(x=>x!==id):[...visited,id];
 save();
@@ -30,5 +39,6 @@ document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('active'
 render()});
 $('q').oninput=render;
 $('only').onchange=render;
+$('detailOverlay').onclick=e=>{if(e.target===$('detailOverlay'))closeDetail()};
 render();
 if('serviceWorker'in navigator)navigator.serviceWorker.register('./service-worker.js');
