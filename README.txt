@@ -10,6 +10,8 @@ Jリーグ スタジアム記録
 
 追加修正：水戸ホーリーホックにケーズデンキスタジアム水戸を追加し、同じチームのスタジアムができる限り続けて表示されるようにしました。
 
+追加修正：Safariに古いapp.jsが残り、71スタジアム・78チームと表示される問題を修正しました。更新後は71スタジアム・60チームになり、水戸の2会場が続けて表示されます。
+
 GitHubで「JLeagueStadium」というリポジトリを作成し、このフォルダ内の3ファイル（index.html、manifest.json、service-worker.js）をアップロードしてください。
 GitHub Pagesをmainブランチ・rootで公開すると、URLは次の形になります。
 https://moniwa0908.github.io/JLeagueStadium/
