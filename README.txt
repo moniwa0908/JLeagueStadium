@@ -16,6 +16,8 @@ Jリーグ スタジアム記録
 
 追加修正：神戸総合運動公園ユニバー記念競技場、たけびしスタジアム京都、エディオンスタジアム広島、トランスコスモススタジアム長崎を追加しました。
 
+追加修正：RB大宮アルディージャに熊谷スポーツ文化公園陸上競技場、テゲバジャーロ宮崎にKUROKIRI STADIUMを追加し、ヤマハスタジアムの「（磐田）」表記を削除しました。全76スタジアム・60チームです。
+
 GitHubで「JLeagueStadium」というリポジトリを作成し、このフォルダ内の3ファイル（index.html、manifest.json、service-worker.js）をアップロードしてください。
 GitHub Pagesをmainブランチ・rootで公開すると、URLは次の形になります。
 https://moniwa0908.github.io/JLeagueStadium/
