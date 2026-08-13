@@ -12,6 +12,8 @@ Jリーグ スタジアム記録
 
 追加修正：Safariに古いapp.jsが残り、71スタジアム・78チームと表示される問題を修正しました。更新後は71スタジアム・60チームになり、水戸の2会場が続けて表示されます。
 
+追加修正：YANMAR HANASAKA STADIUMとヤンマースタジアム長居の括弧内表記を削除し、国立競技場を一覧から削除しました。既存の訪問記録がずれない方式で更新しています。
+
 GitHubで「JLeagueStadium」というリポジトリを作成し、このフォルダ内の3ファイル（index.html、manifest.json、service-worker.js）をアップロードしてください。
 GitHub Pagesをmainブランチ・rootで公開すると、URLは次の形になります。
 https://moniwa0908.github.io/JLeagueStadium/

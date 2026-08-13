@@ -1,5 +1,5 @@
 const data=raw.split('\n').map((x,id)=>{const[name,club,league,area]=x.split('|');
-return{id:String(id),name,clubs:club.split('／'),leagues:league.split('／'),area}}),teamLeague={};
+return{id:String(id),name,clubs:club.split('／'),leagues:league.split('／'),area}}).filter(s=>s.name!=='__REMOVED__'),teamLeague={};
 data.forEach(s=>s.clubs.forEach((t,i)=>teamLeague[t]=s.leagues[i]||s.leagues[0]));
 const teams=[...new Set(data.flatMap(s=>s.clubs))],teamOrder=Object.fromEntries(teams.map((t,i)=>[t,i]));
 let visited=[],visitedTeams=[];
