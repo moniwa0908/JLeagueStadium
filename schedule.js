@@ -1,4 +1,11 @@
 let scheduleMatches=[],scheduleFilter='ALL',scheduleTeam='ALL';
+const teamNorthOrder=[
+  '北海道コンサドーレ札幌','ヴァンラーレ八戸','ブラウブリッツ秋田','ベガルタ仙台','モンテディオ山形','アルビレックス新潟','福島ユナイテッドＦＣ','いわきＦＣ',
+  'ＡＣ長野パルセイロ','ツエーゲン金沢','カターレ富山','水戸ホーリーホック','栃木ＳＣ','栃木シティ','ザスパ群馬','松本山雅ＦＣ','鹿島アントラーズ',
+  'ＲＢ大宮アルディージャ','浦和レッズ','柏レイソル','ジェフユナイテッド千葉','ＦＣ東京','東京ヴェルディ','ＦＣ町田ゼルビア','川崎フロンターレ','ＳＣ相模原','横浜Ｆ・マリノス','横浜ＦＣ','湘南ベルマーレ','ヴァンフォーレ甲府',
+  '名古屋グランパス','清水エスパルス','藤枝ＭＹＦＣ','ジュビロ磐田','ＦＣ岐阜','京都サンガF.C.','レイラック滋賀ＦＣ','ガンバ大阪','ヴィッセル神戸','セレッソ大阪','奈良クラブ','ＦＣ大阪',
+  'ファジアーノ岡山','ガイナーレ鳥取','サンフレッチェ広島','レノファ山口ＦＣ','カマタマーレ讃岐','徳島ヴォルティス','愛媛ＦＣ','ＦＣ今治','高知ユナイテッドＳＣ','アビスパ福岡','ギラヴァンツ北九州','サガン鳥栖','Ｖ・ファーレン長崎','ロアッソ熊本','大分トリニータ','テゲバジャーロ宮崎','鹿児島ユナイテッドＦＣ','ＦＣ琉球'
+];
 
 const teamPicker=document.createElement('div');
 teamPicker.className='team-schedule-picker';
@@ -44,9 +51,19 @@ function stadiumForSchedule(name){
 
 function updateTeamOptions(reset=false){
   const select=$('scheduleTeam');
-  const teams=[...new Set(scheduleMatches.filter(m=>scheduleFilter==='ALL'||m.league===scheduleFilter).flatMap(m=>[m.home,m.away]))].sort((a,b)=>a.localeCompare(b,'ja'));
+  const leagues=scheduleFilter==='ALL'?['J1','J2','J3']:[scheduleFilter];
+  const byLeague=Object.fromEntries(leagues.map(league=>[league,[...new Set(scheduleMatches.filter(m=>m.league===league).flatMap(m=>[m.home,m.away]))].sort((a,b)=>{
+    const ai=teamNorthOrder.indexOf(a),bi=teamNorthOrder.indexOf(b);
+    return (ai<0?999:ai)-(bi<0?999:bi)||a.localeCompare(b,'ja')
+  })]));
+  const teams=leagues.flatMap(league=>byLeague[league]);
   if(reset||!teams.includes(scheduleTeam))scheduleTeam='ALL';
-  select.replaceChildren(new Option('すべてのチーム','ALL'),...teams.map(team=>new Option(team,team)));
+  select.replaceChildren(new Option('すべてのチーム','ALL'));
+  leagues.forEach(league=>{
+    const group=document.createElement('optgroup');group.label=league;
+    group.append(...byLeague[league].map(team=>new Option(team,team)));
+    select.append(group)
+  });
   select.value=scheduleTeam
 }
 
