@@ -1,21 +1,31 @@
-Jリーグ スタジアム記録　ピンク版アイコン更新
+Jリーグ日程 自動表示・毎日更新 v33
 
-このフォルダ内の6ファイルだけをGitHubへアップロードしてください。
-firebase-config.jsは含まれていないため、設定済みのFirebase情報は消えません。
+【追加される機能】
+・スタジアム／日程の画面切替
+・J1／J2／J3別の日程絞り込み
+・試合日、開始時刻、対戦カード、会場の表示
+・対応する会場名を押すとスタジアム詳細を表示
+・Jリーグ公式サイトの日程を毎朝自動取得
 
-1. GitHubの moniwa0908/JLeagueStadium を開きます。
-2. 「＋」→「Upload files」を押します。
-3. このフォルダ内の6ファイルをすべて選択してアップロードします。
-4. 「Commit changes」を2回押します。
-5. 1～3分待ちます。
-6. iPhoneの古いホーム画面アイコンを削除します。
-7. Safariで https://moniwa0908.github.io/JLeagueStadium/?v=23 を開きます。
-8. 共有ボタン→「ホーム画面に追加」を押します。
+【GitHubへアップロード】
+1. このZIPを右クリックし「すべて展開」を押します。
+2. 展開後の ScheduleUpdate-v33 フォルダを開きます。
+3. GitHubの moniwa0908/JLeagueStadium を開きます。
+4. 「＋」→「Upload files」を押します。
+5. ScheduleUpdate-v33フォルダ内でCtrl+Aを押し、すべてを選択します。
+6. 選択したファイルとフォルダをGitHubへドラッグします。
+7. 一覧に「.github/workflows/update-schedule.yml」が含まれることを確認します。
+8. 「Commit changes」を2回押します。
 
-アップロードするファイル
-・apple-touch-icon.png
-・icon-192.png
-・icon-512.png
-・index.html
-・manifest.json
-・service-worker.js
+【自動更新を有効にする】
+1. GitHub上部の「Actions」を押します。
+2. 「I understand my workflows, go ahead and enable them」が出た場合は押します。
+3. 左側の「Jリーグ日程を自動更新」を押します。
+4. 右側の「Run workflow」→緑色の「Run workflow」を押します。
+5. 数分後、緑色のチェックが表示されれば設定完了です。
+6. 以後は毎朝5時15分頃に自動更新されます。
+
+【確認用URL】
+https://moniwa0908.github.io/JLeagueStadium/?v=33
+
+Firebase設定、保存済みの訪問記録、ピンク版アイコンは変更されません。

@@ -1,0 +1,31 @@
+name: Jリーグ日程を自動更新
+
+on:
+  schedule:
+    - cron: "15 20 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ファイルを取得
+        uses: actions/checkout@v4
+      - name: Pythonを準備
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 必要な機能を準備
+        run: pip install lxml
+      - name: 公式日程を取得
+        run: python update_schedule.py
+      - name: 更新を保存
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add schedule.json
+          git diff --cached --quiet || git commit -m "Jリーグ日程を自動更新"
+          git push
