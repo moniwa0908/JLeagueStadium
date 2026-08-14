@@ -1,5 +1,5 @@
-const CACHE='j-stadium-v33';
-const FILES=['./','./index.html','./firebase-config.js?v=33','./stadium-details.js?v=33','./firebase-shared.js?v=33','./app.js?v=33','./schedule.js?v=33','./schedule.json','./manifest.json?v=23','./apple-touch-icon.png?v=23','./icon-192.png?v=23','./icon-512.png?v=23'];
+const CACHE='j-stadium-v34';
+const FILES=['./','./index.html','./firebase-config.js?v=34','./stadium-details.js?v=34','./firebase-shared.js?v=34','./app.js?v=34','./schedule.js?v=34','./schedule.json','./manifest.json?v=23','./apple-touch-icon.png?v=23','./icon-192.png?v=23','./icon-512.png?v=23'];
 self.addEventListener('install',event=>{
   self.skipWaiting();
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES)));

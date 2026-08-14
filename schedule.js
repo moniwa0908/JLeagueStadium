@@ -11,6 +11,18 @@ function displayDate(value){
   return `${d.getMonth()+1}月${d.getDate()}日（${week}）`
 }
 
+function monthLabel(value){
+  const [year,month]=value.split('-');
+  return `${year}年${Number(month)}月`
+}
+
+function jumpToSchedule(target){
+  const element=target==='recent'?document.querySelector('.schedule-month'):document.getElementById(`schedule-month-${target}`);
+  if(!element)return;
+  document.querySelectorAll('#monthShortcuts button').forEach(button=>button.classList.toggle('active',button.dataset.month===target));
+  element.scrollIntoView({behavior:'smooth',block:'start'})
+}
+
 function stadiumForSchedule(name){
   const aliases={
     '国立ＭＵＦＧスタジアム':'',
@@ -28,9 +40,11 @@ function stadiumForSchedule(name){
 function renderSchedule(){
   const today=localDateKey(),matches=scheduleMatches.filter(m=>m.date>=today&&(scheduleFilter==='ALL'||m.league===scheduleFilter));
   $('scheduleCount').textContent=`今後の試合 ${matches.length}件`;
-  if(!matches.length){$('scheduleItems').innerHTML='<div class="schedule-empty">表示できる今後の日程がありません。</div>';return}
-  const groups={};matches.forEach(m=>(groups[m.date]??=[]).push(m));
-  $('scheduleItems').innerHTML=Object.entries(groups).map(([date,items])=>`<section class="schedule-day"><h3>${displayDate(date)}</h3>${items.map(m=>{const stadium=stadiumForSchedule(m.stadium);return `<article class="match-card"><div class="match-top"><span class="schedule-badge ${m.league}">${m.league}</span><strong>${m.time}</strong></div><div class="match-teams"><span>${m.home}</span><b>VS</b><span>${m.away}</span></div><div class="match-bottom">${stadium?`<button class="match-stadium" data-stadium-id="${stadium.id}">📍 ${m.stadium}</button>`:`<span class="match-stadium-text">📍 ${m.stadium}</span>`}<a href="${m.url}" target="_blank" rel="noopener">公式試合情報</a></div></article>`}).join('')}</section>`).join('');
+  if(!matches.length){$('monthShortcuts').innerHTML='';$('scheduleItems').innerHTML='<div class="schedule-empty">表示できる今後の日程がありません。</div>';return}
+  const months={};matches.forEach(m=>((months[m.date.slice(0,7)]??={})[m.date]??=[]).push(m));
+  $('monthShortcuts').innerHTML=`<button class="active" data-month="recent">直近</button>${Object.keys(months).map(month=>`<button data-month="${month}">${monthLabel(month)}</button>`).join('')}`;
+  $('scheduleItems').innerHTML=Object.entries(months).map(([month,days])=>`<section class="schedule-month" id="schedule-month-${month}" data-month="${month}"><h2 class="schedule-month-title">${monthLabel(month)}</h2>${Object.entries(days).map(([date,items])=>`<section class="schedule-day"><h3>${displayDate(date)}</h3>${items.map(m=>{const stadium=stadiumForSchedule(m.stadium);return `<article class="match-card"><div class="match-top"><span class="schedule-badge ${m.league}">${m.league}</span><strong>${m.time}</strong></div><div class="match-teams"><span>${m.home}</span><b>VS</b><span>${m.away}</span></div><div class="match-bottom">${stadium?`<button class="match-stadium" data-stadium-id="${stadium.id}">📍 ${m.stadium}</button>`:`<span class="match-stadium-text">📍 ${m.stadium}</span>`}<a href="${m.url}" target="_blank" rel="noopener">公式試合情報</a></div></article>`}).join('')}</section>`).join('')}</section>`).join('');
+  document.querySelectorAll('#monthShortcuts button').forEach(button=>button.onclick=()=>jumpToSchedule(button.dataset.month));
   document.querySelectorAll('.match-stadium').forEach(button=>button.onclick=()=>showDetail(button.dataset.stadiumId))
 }
 
