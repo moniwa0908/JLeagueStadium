@@ -1,4 +1,4 @@
-let scheduleMatches=[],scheduleFilter='ALL',scheduleTeam='ALL';
+let scheduleMatches=[],scheduleFilter='ALL',scheduleTeam='ALL',selectedScheduleDate='ALL',calendarMonth=localDateKey().slice(0,7);
 const teamNorthOrder=[
   '北海道コンサドーレ札幌','ヴァンラーレ八戸','ブラウブリッツ秋田','ベガルタ仙台','モンテディオ山形','アルビレックス新潟','福島ユナイテッドＦＣ','いわきＦＣ',
   'ＡＣ長野パルセイロ','ツエーゲン金沢','カターレ富山','水戸ホーリーホック','栃木ＳＣ','栃木シティ','ザスパ群馬','松本山雅ＦＣ','鹿島アントラーズ',
@@ -11,6 +11,11 @@ const teamPicker=document.createElement('div');
 teamPicker.className='team-schedule-picker';
 teamPicker.innerHTML='<label for="scheduleTeam">チーム</label><select id="scheduleTeam" aria-label="表示するチーム"><option value="ALL">すべてのチーム</option></select>';
 $('monthShortcuts').before(teamPicker);
+const scheduleCalendar=document.createElement('section');
+scheduleCalendar.id='scheduleCalendar';
+scheduleCalendar.className='schedule-calendar';
+scheduleCalendar.setAttribute('aria-label','試合日カレンダー');
+teamPicker.after(scheduleCalendar);
 
 function localDateKey(){
   const parts=new Intl.DateTimeFormat('ja-JP',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
@@ -31,6 +36,8 @@ function monthLabel(value){
 function jumpToSchedule(target){
   const element=target==='recent'?document.querySelector('.schedule-month'):document.getElementById(`schedule-month-${target}`);
   if(!element)return;
+  calendarMonth=target==='recent'?element.dataset.month:target;
+  renderCalendar(baseScheduleMatches());
   document.querySelectorAll('#monthShortcuts button').forEach(button=>button.classList.toggle('active',button.dataset.month===target));
   element.scrollIntoView({behavior:'smooth',block:'start'})
 }
@@ -67,9 +74,43 @@ function updateTeamOptions(reset=false){
   select.value=scheduleTeam
 }
 
+function baseScheduleMatches(){
+  const today=localDateKey();
+  return scheduleMatches.filter(m=>m.date>=today&&(scheduleFilter==='ALL'||m.league===scheduleFilter)&&(scheduleTeam==='ALL'||m.home===scheduleTeam||m.away===scheduleTeam))
+}
+
+function renderCalendar(matches){
+  const [year,month]=calendarMonth.split('-').map(Number),firstWeekday=new Date(year,month-1,1).getDay(),lastDay=new Date(year,month,0).getDate();
+  const counts={};matches.filter(m=>m.date.startsWith(calendarMonth)).forEach(m=>counts[m.date]=(counts[m.date]||0)+1);
+  const blanks='<span class="calendar-blank"></span>'.repeat(firstWeekday);
+  const days=Array.from({length:lastDay},(_,index)=>{
+    const day=index+1,date=`${year}-${String(month).padStart(2,'0')}-${String(day).padStart(2,'0')}`,count=counts[date]||0;
+    return `<button class="calendar-day${count?' has-match':''}${selectedScheduleDate===date?' selected':''}" data-date="${date}" ${count?'':'disabled'}><span>${day}</span>${count?`<small>${count}試合</small>`:''}</button>`
+  }).join('');
+  $('scheduleCalendar').innerHTML=`<div class="calendar-head"><button id="calendarPrev" aria-label="前の月">‹</button><strong>${monthLabel(calendarMonth)}</strong><button id="calendarNext" aria-label="次の月">›</button></div><div class="calendar-week"><span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span></div><div class="calendar-grid">${blanks}${days}</div><button class="calendar-all${selectedScheduleDate==='ALL'?' active':''}" id="calendarAll">全日程を表示</button>`;
+  $('calendarPrev').onclick=()=>changeCalendarMonth(-1,matches);
+  $('calendarNext').onclick=()=>changeCalendarMonth(1,matches);
+  $('calendarAll').onclick=()=>{selectedScheduleDate='ALL';renderSchedule()};
+  document.querySelectorAll('.calendar-day.has-match').forEach(button=>button.onclick=()=>{selectedScheduleDate=button.dataset.date;renderSchedule()})
+}
+
+function changeCalendarMonth(amount,matches){
+  const [year,month]=calendarMonth.split('-').map(Number),date=new Date(year,month-1+amount,1);
+  calendarMonth=`${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}`;
+  selectedScheduleDate='ALL';
+  renderSchedule()
+}
+
+function resetScheduleDate(){
+  selectedScheduleDate='ALL';
+  const first=baseScheduleMatches()[0];
+  if(first)calendarMonth=first.date.slice(0,7)
+}
+
 function renderSchedule(){
-  const today=localDateKey(),matches=scheduleMatches.filter(m=>m.date>=today&&(scheduleFilter==='ALL'||m.league===scheduleFilter)&&(scheduleTeam==='ALL'||m.home===scheduleTeam||m.away===scheduleTeam));
-  $('scheduleCount').textContent=`${scheduleTeam==='ALL'?'':scheduleTeam+'：'}今後の試合 ${matches.length}件`;
+  const baseMatches=baseScheduleMatches(),matches=selectedScheduleDate==='ALL'?baseMatches:baseMatches.filter(m=>m.date===selectedScheduleDate);
+  renderCalendar(baseMatches);
+  $('scheduleCount').textContent=`${scheduleTeam==='ALL'?'':scheduleTeam+'：'}${selectedScheduleDate==='ALL'?'今後の試合':displayDate(selectedScheduleDate)} ${matches.length}件`;
   if(!matches.length){$('monthShortcuts').innerHTML='';$('scheduleItems').innerHTML='<div class="schedule-empty">表示できる今後の日程がありません。</div>';return}
   const months={};matches.forEach(m=>((months[m.date.slice(0,7)]??={})[m.date]??=[]).push(m));
   $('monthShortcuts').innerHTML=`<button class="active" data-month="recent">直近</button>${Object.keys(months).map(month=>`<button data-month="${month}">${monthLabel(month)}</button>`).join('')}`;
@@ -96,6 +137,6 @@ async function loadSchedule(){
 
 $('stadiumViewBtn').onclick=()=>setMainView('stadium');
 $('scheduleViewBtn').onclick=()=>setMainView('schedule');
-document.querySelectorAll('#scheduleTabs button').forEach(button=>button.onclick=()=>{scheduleFilter=button.dataset.l;document.querySelectorAll('#scheduleTabs button').forEach(item=>item.classList.toggle('active',item===button));updateTeamOptions(true);renderSchedule()});
-$('scheduleTeam').onchange=event=>{scheduleTeam=event.target.value;renderSchedule()};
+document.querySelectorAll('#scheduleTabs button').forEach(button=>button.onclick=()=>{scheduleFilter=button.dataset.l;document.querySelectorAll('#scheduleTabs button').forEach(item=>item.classList.toggle('active',item===button));updateTeamOptions(true);resetScheduleDate();renderSchedule()});
+$('scheduleTeam').onchange=event=>{scheduleTeam=event.target.value;resetScheduleDate();renderSchedule()};
 loadSchedule();
