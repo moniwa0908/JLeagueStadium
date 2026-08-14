@@ -1,4 +1,9 @@
-let scheduleMatches=[],scheduleFilter='ALL';
+let scheduleMatches=[],scheduleFilter='ALL',scheduleTeam='ALL';
+
+const teamPicker=document.createElement('div');
+teamPicker.className='team-schedule-picker';
+teamPicker.innerHTML='<label for="scheduleTeam">チーム</label><select id="scheduleTeam" aria-label="表示するチーム"><option value="ALL">すべてのチーム</option></select>';
+$('monthShortcuts').before(teamPicker);
 
 function localDateKey(){
   const parts=new Intl.DateTimeFormat('ja-JP',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
@@ -37,9 +42,17 @@ function stadiumForSchedule(name){
   return data.find(s=>{const n=compact(s.name);return n===target||n.includes(target)||target.includes(n)})||null
 }
 
+function updateTeamOptions(reset=false){
+  const select=$('scheduleTeam');
+  const teams=[...new Set(scheduleMatches.filter(m=>scheduleFilter==='ALL'||m.league===scheduleFilter).flatMap(m=>[m.home,m.away]))].sort((a,b)=>a.localeCompare(b,'ja'));
+  if(reset||!teams.includes(scheduleTeam))scheduleTeam='ALL';
+  select.replaceChildren(new Option('すべてのチーム','ALL'),...teams.map(team=>new Option(team,team)));
+  select.value=scheduleTeam
+}
+
 function renderSchedule(){
-  const today=localDateKey(),matches=scheduleMatches.filter(m=>m.date>=today&&(scheduleFilter==='ALL'||m.league===scheduleFilter));
-  $('scheduleCount').textContent=`今後の試合 ${matches.length}件`;
+  const today=localDateKey(),matches=scheduleMatches.filter(m=>m.date>=today&&(scheduleFilter==='ALL'||m.league===scheduleFilter)&&(scheduleTeam==='ALL'||m.home===scheduleTeam||m.away===scheduleTeam));
+  $('scheduleCount').textContent=`${scheduleTeam==='ALL'?'':scheduleTeam+'：'}今後の試合 ${matches.length}件`;
   if(!matches.length){$('monthShortcuts').innerHTML='';$('scheduleItems').innerHTML='<div class="schedule-empty">表示できる今後の日程がありません。</div>';return}
   const months={};matches.forEach(m=>((months[m.date.slice(0,7)]??={})[m.date]??=[]).push(m));
   $('monthShortcuts').innerHTML=`<button class="active" data-month="recent">直近</button>${Object.keys(months).map(month=>`<button data-month="${month}">${monthLabel(month)}</button>`).join('')}`;
@@ -58,7 +71,7 @@ function setMainView(view){
 async function loadSchedule(){
   try{
     const response=await fetch(`schedule.json?t=${Date.now()}`,{cache:'no-store'});if(!response.ok)throw new Error('schedule');
-    const payload=await response.json();scheduleMatches=Array.isArray(payload.matches)?payload.matches:[];
+    const payload=await response.json();scheduleMatches=Array.isArray(payload.matches)?payload.matches:[];updateTeamOptions();
     $('scheduleUpdated').textContent=payload.updatedAt?`最終更新：${new Date(payload.updatedAt).toLocaleString('ja-JP',{timeZone:'Asia/Tokyo',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})}`:'';
     renderSchedule()
   }catch(error){$('scheduleCount').textContent='日程を読み込めませんでした';$('scheduleItems').innerHTML='<div class="schedule-empty">時間をおいて、もう一度開いてください。</div>'}
@@ -66,5 +79,6 @@ async function loadSchedule(){
 
 $('stadiumViewBtn').onclick=()=>setMainView('stadium');
 $('scheduleViewBtn').onclick=()=>setMainView('schedule');
-document.querySelectorAll('#scheduleTabs button').forEach(button=>button.onclick=()=>{scheduleFilter=button.dataset.l;document.querySelectorAll('#scheduleTabs button').forEach(item=>item.classList.toggle('active',item===button));renderSchedule()});
+document.querySelectorAll('#scheduleTabs button').forEach(button=>button.onclick=()=>{scheduleFilter=button.dataset.l;document.querySelectorAll('#scheduleTabs button').forEach(item=>item.classList.toggle('active',item===button));updateTeamOptions(true);renderSchedule()});
+$('scheduleTeam').onchange=event=>{scheduleTeam=event.target.value;renderSchedule()};
 loadSchedule();
