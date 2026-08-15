@@ -22,7 +22,8 @@ function renderStandings(){
 }
 
 function openTeamSchedule(team){
-  scheduleFilter=standingsLeague;scheduleTeam=team;selectedScheduleDate='ALL';
+  scheduleFilter=standingsLeague;scheduleTeam=team;scheduleMode='upcoming';selectedScheduleDate='ALL';
+  document.querySelectorAll('#scheduleModePicker button').forEach(button=>button.classList.toggle('active',button.dataset.mode==='upcoming'));
   document.querySelectorAll('#scheduleTabs button').forEach(button=>button.classList.toggle('active',button.dataset.l===scheduleFilter));
   updateTeamOptions();$('scheduleTeam').value=team;resetScheduleDate();setMainView('schedule')
 }

@@ -13,14 +13,15 @@ from lxml import html
 
 BASE = "https://www.jleague.jp"
 LEAGUES = ("J1", "J2", "J3")
-MONTHS_AHEAD = 11
 ROOT = Path(__file__).resolve().parent
 
 
-def month_keys(start, count):
-    year, month = start.year, start.month
-    for offset in range(count + 1):
-        value = year * 12 + month - 1 + offset
+def season_month_keys(now):
+    # 2026-27シーズンは8月開幕・翌年6月終了。過去の結果も残す。
+    start_year = now.year if now.month >= 7 else now.year - 1
+    start_value = start_year * 12 + 7
+    for offset in range(11):
+        value = start_value + offset
         yield f"{value // 12:04d}{value % 12 + 1:02d}"
 
 
@@ -49,6 +50,8 @@ def fetch_month(league, month):
     href_pattern = re.compile(rf'href":"/match/{lower}/{year}/(\d{{6}})')
     team_pattern = re.compile(r'm-schedule__team-name.*?data-media":"pc","children":"([^"]+)')
     time_pattern = re.compile(r'm-schedule__time-text.*?children":"([^"]+)')
+    status_time_pattern = re.compile(r'm-schedule__status-time.*?children":\["([^"]+)')
+    score_pattern = re.compile(r'm-schedule__score[^" ]*.*?children":(?:"(\d+)"|(\d+))')
     stadium_pattern = re.compile(r'm-schedule__info-stadium.*?data-media":"pc","children":"([^"]+)')
 
     for script in script_pattern.finditer(source):
@@ -65,6 +68,10 @@ def fetch_month(league, month):
                 continue
             match_id = f"{year}{href.group(1)}"
             kickoff = time_pattern.findall(line)
+            if not kickoff:
+                kickoff = status_time_pattern.findall(line)
+            score_values = [int(first or second) for first, second in score_pattern.findall(line)]
+            finished = "m-schedule__game-over-text" in line and len(score_values) >= 2
             stadium = stadium_pattern.findall(line)
             matches[match_id] = {
             "id": f"{league}-{match_id}",
@@ -75,6 +82,10 @@ def fetch_month(league, month):
             "away": teams[1],
             "stadium": stadium[0] if stadium else "会場未定",
             "url": f"{BASE}/match/{lower}/{year}/{href.group(1)}/",
+            "status": "finished" if finished else "scheduled",
+            "statusText": "試合終了" if finished else "",
+            "homeScore": score_values[0] if finished else None,
+            "awayScore": score_values[1] if finished else None,
             }
 
     missing = sorted(expected_ids - matches.keys())
@@ -159,7 +170,6 @@ def write_standings(now, standings):
 
 def main():
     now = datetime.now(ZoneInfo("Asia/Tokyo"))
-    today = now.strftime("%Y-%m-%d")
     if "--standings-only" in sys.argv:
         standings = {league: fetch_standings(league) for league in LEAGUES}
         write_standings(now, standings)
@@ -169,11 +179,10 @@ def main():
     league_counts = {}
     for league in LEAGUES:
         found = 0
-        for month in month_keys(now, MONTHS_AHEAD):
+        for month in season_month_keys(now):
             for match in fetch_month(league, month):
-                if match["date"] >= today:
-                    matches[match["id"]] = match
-                    found += 1
+                matches[match["id"]] = match
+                found += 1
             time.sleep(0.25)
         if found == 0:
             raise RuntimeError(f"{league}の日程を取得できませんでした。既存データを更新しません。")
