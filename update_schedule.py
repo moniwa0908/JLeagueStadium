@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 import json
+import re
 import time
 import urllib.request
 import calendar
 from datetime import datetime
 from pathlib import Path
-from urllib.parse import urljoin
 from zoneinfo import ZoneInfo
 
 from lxml import html
@@ -23,11 +23,6 @@ def month_keys(start, count):
         yield f"{value // 12:04d}{value % 12 + 1:02d}"
 
 
-def text_one(node, xpath):
-    found = node.xpath(xpath)
-    return " ".join(found[0].text_content().split()) if found else ""
-
-
 def fetch_month(league, month):
     year, number = int(month[:4]), int(month[4:])
     last_day = calendar.monthrange(year, number)[1]
@@ -37,30 +32,54 @@ def fetch_month(league, month):
     url = f"{BASE}/{lower}/match/search-list/?category={lower}&startdate={start_date}&enddate={end_date}&period=custom"
     request = urllib.request.Request(url, headers={"User-Agent": "JLeagueStadiumSchedule/1.0"})
     with urllib.request.urlopen(request, timeout=30) as response:
-        root = html.fromstring(response.read())
-    matches = []
-    for card in root.xpath("//div[contains(concat(' ', normalize-space(@class), ' '), ' m-schedule ')][@id]"):
-        match_id = card.get("id", "")
-        if len(match_id) < 8 or not match_id[:8].isdigit():
+        source = response.read().decode("utf-8")
+
+    # Jリーグ公式サイトはNext.jsのストリーミング表示を使っているため、
+    # 通常のHTMLだけでは一部の試合がプレースホルダーのままになる。
+    # ページ内のFlightデータを復元して、後から表示される試合も取得する。
+    root = html.fromstring(source)
+    expected_ids = {
+        card.get("id")
+        for card in root.xpath("//div[contains(concat(' ', normalize-space(@class), ' '), ' m-schedule ')][@id]")
+        if card.get("id", "").isdigit()
+    }
+    matches = {}
+    script_pattern = re.compile(r"self\.__next_f\.push\((\[1,.*?\])\)</script>", re.S)
+    href_pattern = re.compile(rf'href":"/match/{lower}/{year}/(\d{{6}})')
+    team_pattern = re.compile(r'm-schedule__team-name.*?data-media":"pc","children":"([^"]+)')
+    time_pattern = re.compile(r'm-schedule__time-text.*?children":"([^"]+)')
+    stadium_pattern = re.compile(r'm-schedule__info-stadium.*?data-media":"pc","children":"([^"]+)')
+
+    for script in script_pattern.finditer(source):
+        try:
+            payload = json.loads(script.group(1))[1]
+        except (json.JSONDecodeError, IndexError, TypeError):
             continue
-        home = text_one(card, ".//*[contains(@class,'m-schedule__team-home')]//*[contains(@class,'m-schedule__team-name')][@data-media='pc']")
-        away = text_one(card, ".//*[contains(@class,'m-schedule__team-away')]//*[contains(@class,'m-schedule__team-name')][@data-media='pc']")
-        kickoff = text_one(card, ".//*[contains(@class,'m-schedule__time-text')]")
-        stadium = text_one(card, ".//*[contains(@class,'m-schedule__info-stadium')][@data-media='pc']")
-        links = card.xpath(".//a[contains(@class,'m-schedule__link')]/@href")
-        if not (home and away):
-            continue
-        matches.append({
+        for line in payload.splitlines():
+            if f"/match/{lower}/{year}/" not in line or "m-schedule__team-home" not in line:
+                continue
+            href = href_pattern.search(line)
+            teams = team_pattern.findall(line)
+            if not href or len(teams) < 2:
+                continue
+            match_id = f"{year}{href.group(1)}"
+            kickoff = time_pattern.findall(line)
+            stadium = stadium_pattern.findall(line)
+            matches[match_id] = {
             "id": f"{league}-{match_id}",
             "date": f"{match_id[:4]}-{match_id[4:6]}-{match_id[6:8]}",
-            "time": kickoff or "未定",
+            "time": kickoff[0] if kickoff else "未定",
             "league": league,
-            "home": home,
-            "away": away,
-            "stadium": stadium or "会場未定",
-            "url": urljoin(BASE, links[0]) if links else f"{BASE}/match/search/{league.lower()}/",
-        })
-    return matches
+            "home": teams[0],
+            "away": teams[1],
+            "stadium": stadium[0] if stadium else "会場未定",
+            "url": f"{BASE}/match/{lower}/{year}/{href.group(1)}/",
+            }
+
+    missing = sorted(expected_ids - matches.keys())
+    if missing:
+        raise RuntimeError(f"{league} {month} の試合を完全に取得できませんでした: {', '.join(missing)}")
+    return list(matches.values())
 
 
 def main():
