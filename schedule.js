@@ -120,10 +120,10 @@ function renderSchedule(){
 }
 
 function setMainView(view){
-  const stadium=view==='stadium';
-  $('stadiumViewBtn').classList.toggle('active',stadium);$('scheduleViewBtn').classList.toggle('active',!stadium);
-  $('stadiumControls').hidden=!stadium;$('stadiumList').hidden=!stadium;$('scheduleView').hidden=stadium;
-  if(!stadium)renderSchedule()
+  const stadium=view==='stadium',schedule=view==='schedule',standings=view==='standings';
+  $('stadiumViewBtn').classList.toggle('active',stadium);$('scheduleViewBtn').classList.toggle('active',schedule);$('standingsViewBtn').classList.toggle('active',standings);
+  $('stadiumControls').hidden=!stadium;$('stadiumList').hidden=!stadium;$('scheduleView').hidden=!schedule;$('standingsView').hidden=!standings;
+  if(schedule)renderSchedule();if(standings)renderStandings()
 }
 
 async function loadSchedule(){

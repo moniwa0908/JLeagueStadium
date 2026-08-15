@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import json
 import re
+import sys
 import time
 import urllib.request
 import calendar
@@ -82,9 +83,88 @@ def fetch_month(league, month):
     return list(matches.values())
 
 
+def fetch_standings(league):
+    lower = league.lower()
+    url = f"{BASE}/{lower}/standings/2026-27/"
+    found = {}
+    # 順位表もストリーミング表示のため、画面用HTMLでは先頭行などが欠ける。
+    # ページ内のFlightデータにあるstandingListを優先して復元する。
+    for attempt in range(3):
+        request = urllib.request.Request(url, headers={"User-Agent": "JLeagueStadiumSchedule/1.0"})
+        with urllib.request.urlopen(request, timeout=30) as response:
+            source = response.read().decode("utf-8")
+        for script in re.finditer(r"self\.__next_f\.push\((\[1,.*?\])\)</script>", source, re.S):
+            try:
+                payload = json.loads(script.group(1))[1]
+            except (json.JSONDecodeError, IndexError, TypeError):
+                continue
+            key = '"standingList":'
+            position = payload.find(key)
+            if position < 0:
+                continue
+            try:
+                standing_list, _ = json.JSONDecoder().raw_decode(payload[position + len(key):])
+            except json.JSONDecodeError:
+                continue
+            if len(standing_list) != 20:
+                continue
+            return [{
+                "rank": str(item.get("ranking", {}).get("value", "-")),
+                "team": item.get("club", {}).get("name", ""),
+                "points": str(item.get("point", "-")),
+                "played": str(item.get("match", "-")),
+                "won": str(item.get("win", "-")),
+                "drawn": str(item.get("draw", "-")),
+                "lost": str(item.get("loss", "-")),
+                "goalsFor": str(item.get("goalScored", "-")),
+                "goalsAgainst": str(item.get("goalLost", "-")),
+                "goalDifference": str(item.get("goalDifference", "-")),
+            } for item in standing_list]
+
+        # Flightデータを読めない場合に限り、通常の表から取れた行を補完する。
+        root = html.fromstring(source)
+        for tr in root.xpath("//table//tr[position()>1]"):
+            cells = [" ".join(cell.text_content().split()) for cell in tr.xpath("./th|./td")]
+            if len(cells) < 10 or not cells[1]:
+                continue
+            found[cells[1]] = {
+                "rank": cells[0], "team": cells[1], "points": cells[2],
+                "played": cells[3], "won": cells[4], "drawn": cells[5],
+                "lost": cells[6], "goalsFor": cells[7], "goalsAgainst": cells[8],
+                "goalDifference": cells[9],
+            }
+        if len(found) == 20:
+            break
+        time.sleep(1)
+    rows = sorted(found.values(), key=lambda row: int(row["rank"]) if row["rank"].isdigit() else 999)
+    if len(rows) != 20:
+        raise RuntimeError(f"{league}の順位表が20チームではありません: {len(rows)}チーム")
+    return rows
+
+
+def write_standings(now, standings):
+    output = {
+        "updatedAt": now.isoformat(timespec="minutes"),
+        "source": f"{BASE}/standings/",
+        "leagues": standings,
+    }
+    (ROOT / "standings.json").write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    schedule_path = ROOT / "schedule.json"
+    if schedule_path.exists():
+        schedule_output = json.loads(schedule_path.read_text(encoding="utf-8"))
+        schedule_output["standings"] = standings
+        schedule_output["standingsUpdatedAt"] = now.isoformat(timespec="minutes")
+        schedule_path.write_text(json.dumps(schedule_output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
 def main():
     now = datetime.now(ZoneInfo("Asia/Tokyo"))
     today = now.strftime("%Y-%m-%d")
+    if "--standings-only" in sys.argv:
+        standings = {league: fetch_standings(league) for league in LEAGUES}
+        write_standings(now, standings)
+        print(f"updated standings: {', '.join(f'{league}={len(rows)}' for league, rows in standings.items())}")
+        return
     matches = {}
     league_counts = {}
     for league in LEAGUES:
@@ -100,13 +180,17 @@ def main():
         league_counts[league] = found
     if not matches:
         raise RuntimeError("日程を1件も取得できませんでした。既存データを更新しません。")
+    standings = {league: fetch_standings(league) for league in LEAGUES}
     output = {
         "updatedAt": now.isoformat(timespec="minutes"),
         "source": f"{BASE}/match/search/",
         "matches": sorted(matches.values(), key=lambda item: (item["date"], item["time"], item["league"], item["id"])),
+        "standings": standings,
     }
     (ROOT / "schedule.json").write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    write_standings(now, standings)
     print(f"updated {len(matches)} matches: {league_counts}")
+    print(f"updated standings: {', '.join(f'{league}={len(rows)}' for league, rows in standings.items())}")
 
 
 if __name__ == "__main__":
