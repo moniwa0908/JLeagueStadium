@@ -36,6 +36,11 @@ function monthLabel(value){
   return `${year}年${Number(month)}月`
 }
 
+function scorerText(scorer){
+  const time=String(scorer.time||'').replace(/'$/,'');
+  return `${scorer.name}${time?` ${time}分`:''}${scorer.ownGoal?'（OG）':''}`
+}
+
 function jumpToSchedule(target){
   const element=target==='recent'?document.querySelector('.schedule-month'):document.getElementById(`schedule-month-${target}`);
   if(!element)return;
@@ -119,7 +124,7 @@ function renderSchedule(){
   if(!matches.length){$('monthShortcuts').innerHTML='';$('scheduleItems').innerHTML=`<div class="schedule-empty">表示できる${modeLabel}がありません。</div>`;return}
   const months={};matches.forEach(m=>((months[m.date.slice(0,7)]??={})[m.date]??=[]).push(m));
   $('monthShortcuts').innerHTML=`<button class="active" data-month="recent">${scheduleMode==='results'?'最新':'直近'}</button>${Object.keys(months).map(month=>`<button data-month="${month}">${monthLabel(month)}</button>`).join('')}`;
-  $('scheduleItems').innerHTML=Object.entries(months).map(([month,days])=>`<section class="schedule-month" id="schedule-month-${month}" data-month="${month}"><h2 class="schedule-month-title">${monthLabel(month)}</h2>${Object.entries(days).map(([date,items])=>`<section class="schedule-day"><h3>${displayDate(date)}</h3>${items.map(m=>{const stadium=stadiumForSchedule(m.stadium),result=m.status==='finished',homeWin=result&&m.homeScore>m.awayScore,awayWin=result&&m.awayScore>m.homeScore;return `<article class="match-card${result?' result-card':''}"><div class="match-top"><span class="schedule-badge ${m.league}">${m.league}</span><strong>${m.time}</strong>${result?'<small class="match-finished">試合終了</small>':''}</div><div class="match-teams"><span class="${homeWin?'winner':''}">${m.home}</span><b class="${result?'match-score':''}">${result?`${m.homeScore} - ${m.awayScore}`:'VS'}</b><span class="${awayWin?'winner':''}">${m.away}</span></div><div class="match-bottom">${stadium?`<button class="match-stadium" data-stadium-id="${stadium.id}">📍 ${m.stadium}</button>`:`<span class="match-stadium-text">📍 ${m.stadium}</span>`}<a href="${m.url}" target="_blank" rel="noopener">公式試合情報</a></div></article>`}).join('')}</section>`).join('')}</section>`).join('');
+  $('scheduleItems').innerHTML=Object.entries(months).map(([month,days])=>`<section class="schedule-month" id="schedule-month-${month}" data-month="${month}"><h2 class="schedule-month-title">${monthLabel(month)}</h2>${Object.entries(days).map(([date,items])=>`<section class="schedule-day"><h3>${displayDate(date)}</h3>${items.map(m=>{const stadium=stadiumForSchedule(m.stadium),result=m.status==='finished',homeWin=result&&m.homeScore>m.awayScore,awayWin=result&&m.awayScore>m.homeScore,homeScorers=m.homeScorers||[],awayScorers=m.awayScorers||[],hasScorers=homeScorers.length||awayScorers.length;return `<article class="match-card${result?' result-card':''}"><div class="match-top"><span class="schedule-badge ${m.league}">${m.league}</span><strong>${m.time}</strong>${result?'<small class="match-finished">試合終了</small>':''}</div><div class="match-teams"><span class="${homeWin?'winner':''}">${m.home}</span><b class="${result?'match-score':''}">${result?`${m.homeScore} - ${m.awayScore}`:'VS'}</b><span class="${awayWin?'winner':''}">${m.away}</span></div>${result&&hasScorers?`<div class="match-scorers"><div>${homeScorers.map(s=>`<span>⚽ ${scorerText(s)}</span>`).join('')}</div><div>${awayScorers.map(s=>`<span>⚽ ${scorerText(s)}</span>`).join('')}</div></div>`:''}<div class="match-bottom">${stadium?`<button class="match-stadium" data-stadium-id="${stadium.id}">📍 ${m.stadium}</button>`:`<span class="match-stadium-text">📍 ${m.stadium}</span>`}<a href="${m.url}" target="_blank" rel="noopener">公式試合情報</a></div></article>`}).join('')}</section>`).join('')}</section>`).join('');
   document.querySelectorAll('#monthShortcuts button').forEach(button=>button.onclick=()=>jumpToSchedule(button.dataset.month));
   document.querySelectorAll('.match-stadium').forEach(button=>button.onclick=()=>showDetail(button.dataset.stadiumId))
 }

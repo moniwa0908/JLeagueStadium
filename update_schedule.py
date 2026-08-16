@@ -5,6 +5,7 @@ import sys
 import time
 import urllib.request
 import calendar
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -94,6 +95,42 @@ def fetch_month(league, month):
     return list(matches.values())
 
 
+def fetch_scorers(match):
+    request = urllib.request.Request(match["url"], headers={"User-Agent": "JLeagueStadiumSchedule/1.0"})
+    with urllib.request.urlopen(request, timeout=30) as response:
+        source = response.read().decode("utf-8")
+    for script in re.finditer(r"self\.__next_f\.push\((\[1,.*?\])\)</script>", source, re.S):
+        try:
+            payload = json.loads(script.group(1))[1]
+        except (json.JSONDecodeError, IndexError, TypeError):
+            continue
+        teams = {}
+        for key in ("homeTeam", "awayTeam"):
+            marker = f'"{key}":'
+            position = payload.find(marker)
+            if position < 0:
+                break
+            try:
+                team, _ = json.JSONDecoder().raw_decode(payload[position + len(marker):])
+            except json.JSONDecodeError:
+                break
+            teams[key] = team
+        if len(teams) == 2:
+            return {
+                "homeScorers": [{
+                    "name": item.get("name", ""),
+                    "time": item.get("scoreTime", ""),
+                    "ownGoal": bool(item.get("ownGoal")),
+                } for item in teams["homeTeam"].get("playerScoreList", [])],
+                "awayScorers": [{
+                    "name": item.get("name", ""),
+                    "time": item.get("scoreTime", ""),
+                    "ownGoal": bool(item.get("ownGoal")),
+                } for item in teams["awayTeam"].get("playerScoreList", [])],
+            }
+    raise RuntimeError(f"得点者を取得できませんでした: {match['id']}")
+
+
 def fetch_standings(league):
     lower = league.lower()
     url = f"{BASE}/{lower}/standings/2026-27/"
@@ -170,6 +207,13 @@ def write_standings(now, standings):
 
 def main():
     now = datetime.now(ZoneInfo("Asia/Tokyo"))
+    previous = {}
+    schedule_path = ROOT / "schedule.json"
+    if schedule_path.exists():
+        try:
+            previous = {item["id"]: item for item in json.loads(schedule_path.read_text(encoding="utf-8")).get("matches", [])}
+        except (json.JSONDecodeError, KeyError, TypeError):
+            previous = {}
     if "--standings-only" in sys.argv:
         standings = {league: fetch_standings(league) for league in LEAGUES}
         write_standings(now, standings)
@@ -189,6 +233,23 @@ def main():
         league_counts[league] = found
     if not matches:
         raise RuntimeError("日程を1件も取得できませんでした。既存データを更新しません。")
+    scorer_targets = []
+    for match in matches.values():
+        old = previous.get(match["id"], {})
+        if match["status"] == "finished" and "homeScorers" in old and "awayScorers" in old:
+            match["homeScorers"] = old["homeScorers"]
+            match["awayScorers"] = old["awayScorers"]
+        elif match["status"] == "finished":
+            scorer_targets.append(match)
+    if scorer_targets:
+        with ThreadPoolExecutor(max_workers=6) as executor:
+            futures = {executor.submit(fetch_scorers, match): match for match in scorer_targets}
+            for future in as_completed(futures):
+                match = futures[future]
+                try:
+                    match.update(future.result())
+                except Exception as error:
+                    print(f"warning: {error}", file=sys.stderr)
     standings = {league: fetch_standings(league) for league in LEAGUES}
     output = {
         "updatedAt": now.isoformat(timespec="minutes"),

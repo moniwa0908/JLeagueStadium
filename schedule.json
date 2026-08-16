@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T08:29+09:00",
+  "updatedAt": "2026-08-16T09:46+09:00",
   "source": "https://www.jleague.jp/match/search/",
   "matches": [
     {
@@ -14,7 +14,46 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 3,
-      "awayScore": 4
+      "awayScore": 4,
+      "homeScorers": [
+        {
+          "name": "三井寺 眞",
+          "time": "7'",
+          "ownGoal": false
+        },
+        {
+          "name": "谷村 海那",
+          "time": "18'",
+          "ownGoal": false
+        },
+        {
+          "name": "谷村 海那",
+          "time": "58'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "レオ セアラ",
+          "time": "11'",
+          "ownGoal": false
+        },
+        {
+          "name": "レオ セアラ",
+          "time": "81'",
+          "ownGoal": false
+        },
+        {
+          "name": "チャヴリッチ",
+          "time": "90+9'",
+          "ownGoal": false
+        },
+        {
+          "name": "チャヴリッチ",
+          "time": "90+12'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J1-2026080702",
@@ -28,7 +67,46 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 4,
-      "awayScore": 3
+      "awayScore": 3,
+      "homeScorers": [
+        {
+          "name": "イッサム ジェバリ",
+          "time": "36'",
+          "ownGoal": false
+        },
+        {
+          "name": "デニス ヒュメット",
+          "time": "45+7'",
+          "ownGoal": false
+        },
+        {
+          "name": "ウェルトン",
+          "time": "84'",
+          "ownGoal": false
+        },
+        {
+          "name": "植中 朝日",
+          "time": "86'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "小森 飛絢",
+          "time": "17'",
+          "ownGoal": false
+        },
+        {
+          "name": "金子 拓郎",
+          "time": "78'",
+          "ownGoal": false
+        },
+        {
+          "name": "南野 遥海",
+          "time": "80'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J2-2026080807",
@@ -42,7 +120,20 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 2,
-      "awayScore": 0
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "ヴィニ ペイショット",
+          "time": "15'",
+          "ownGoal": false
+        },
+        {
+          "name": "白井 陽斗",
+          "time": "58'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
     },
     {
       "id": "J3-2026080815",
@@ -56,7 +147,9 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 0,
-      "awayScore": 0
+      "awayScore": 0,
+      "homeScorers": [],
+      "awayScorers": []
     },
     {
       "id": "J3-2026080816",
@@ -70,7 +163,15 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 1,
-      "awayScore": 0
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "藤川 虎太朗",
+          "time": "24'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
     },
     {
       "id": "J2-2026080808",
@@ -84,7 +185,20 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 2,
-      "awayScore": 0
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "佐藤 祐太",
+          "time": "6'",
+          "ownGoal": false
+        },
+        {
+          "name": "佐藤 祐太",
+          "time": "47'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
     },
     {
       "id": "J2-2026080809",
@@ -98,7 +212,20 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 2,
-      "awayScore": 0
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "鈴木 翔太",
+          "time": "12'",
+          "ownGoal": false
+        },
+        {
+          "name": "金本 毅騎",
+          "time": "73'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
     },
     {
       "id": "J1-2026080801",
@@ -112,7 +239,26 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 2,
-      "awayScore": 1
+      "awayScore": 1,
+      "homeScorers": [
+        {
+          "name": "垣田 裕暉",
+          "time": "5'",
+          "ownGoal": false
+        },
+        {
+          "name": "小泉 佳穂",
+          "time": "36'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "内野 航太郎",
+          "time": "68'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J1-2026080802",
@@ -126,7 +272,41 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 1,
-      "awayScore": 5
+      "awayScore": 5,
+      "homeScorers": [
+        {
+          "name": "マルセロ ヒアン",
+          "time": "5'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "ミッチェル デューク",
+          "time": "27'",
+          "ownGoal": false
+        },
+        {
+          "name": "明本 考浩",
+          "time": "45+2'",
+          "ownGoal": false
+        },
+        {
+          "name": "相馬 勇紀",
+          "time": "51'",
+          "ownGoal": false
+        },
+        {
+          "name": "テテ イェンギ",
+          "time": "65'",
+          "ownGoal": false
+        },
+        {
+          "name": "岡村 大八",
+          "time": "80'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J1-2026080803",
@@ -140,7 +320,15 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 0,
-      "awayScore": 1
+      "awayScore": 1,
+      "homeScorers": [],
+      "awayScorers": [
+        {
+          "name": "北川 航也",
+          "time": "38'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J1-2026080804",
@@ -154,7 +342,26 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 2,
-      "awayScore": 1
+      "awayScore": 1,
+      "homeScorers": [
+        {
+          "name": "櫻川 ソロモン",
+          "time": "20'",
+          "ownGoal": false
+        },
+        {
+          "name": "横山 夢樹",
+          "time": "24'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "ブラウン ノア 賢信",
+          "time": "8'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J1-2026080805",
@@ -168,7 +375,15 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 0,
-      "awayScore": 1
+      "awayScore": 1,
+      "homeScorers": [],
+      "awayScorers": [
+        {
+          "name": "大迫 勇也",
+          "time": "23'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J2-2026080810",
@@ -182,7 +397,15 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 1,
-      "awayScore": 0
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "山本 桜大",
+          "time": "5'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
     },
     {
       "id": "J2-2026080811",
@@ -196,7 +419,21 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "homeScorers": [
+        {
+          "name": "太田 龍之介",
+          "time": "1'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "半田 航也",
+          "time": "61'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J2-2026080812",
@@ -210,7 +447,15 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 0,
-      "awayScore": 1
+      "awayScore": 1,
+      "homeScorers": [],
+      "awayScorers": [
+        {
+          "name": "山田 寛人",
+          "time": "43'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J2-2026080813",
@@ -224,7 +469,15 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 0,
-      "awayScore": 1
+      "awayScore": 1,
+      "homeScorers": [],
+      "awayScorers": [
+        {
+          "name": "アダイウトン",
+          "time": "76'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J3-2026080818",
@@ -238,7 +491,21 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "homeScorers": [
+        {
+          "name": "河村 匠",
+          "time": "39'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "水口 湧斗",
+          "time": "51'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J3-2026080819",
@@ -252,7 +519,9 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 0,
-      "awayScore": 0
+      "awayScore": 0,
+      "homeScorers": [],
+      "awayScorers": []
     },
     {
       "id": "J3-2026080820",
@@ -266,7 +535,15 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 1,
-      "awayScore": 0
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "中山 桂吾",
+          "time": "32'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
     },
     {
       "id": "J1-2026080806",
@@ -280,7 +557,25 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 3,
-      "awayScore": 0
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "中野 就斗",
+          "time": "3'",
+          "ownGoal": false
+        },
+        {
+          "name": "鈴木 章斗",
+          "time": "79'",
+          "ownGoal": false
+        },
+        {
+          "name": "川村 拓夢",
+          "time": "88'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
     },
     {
       "id": "J2-2026080814",
@@ -294,7 +589,20 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 2,
-      "awayScore": 0
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "髙橋 利樹",
+          "time": "42'",
+          "ownGoal": false
+        },
+        {
+          "name": "田中 雄大",
+          "time": "87'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
     },
     {
       "id": "J1-2026080901",
@@ -308,7 +616,21 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "homeScorers": [
+        {
+          "name": "溝口 修平",
+          "time": "46'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "ラザル ロマニッチ",
+          "time": "90+6'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J2-2026080903",
@@ -322,7 +644,26 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 2,
-      "awayScore": 1
+      "awayScore": 1,
+      "homeScorers": [
+        {
+          "name": "熊田 直紀",
+          "time": "48'",
+          "ownGoal": false
+        },
+        {
+          "name": "熊田 直紀",
+          "time": "50'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "エジガル ジュニオ",
+          "time": "55'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J3-2026080905",
@@ -336,7 +677,26 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 1,
-      "awayScore": 2
+      "awayScore": 2,
+      "homeScorers": [
+        {
+          "name": "岡田 優希",
+          "time": "10'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "佐野 竜眞",
+          "time": "50'",
+          "ownGoal": false
+        },
+        {
+          "name": "林田 魁斗",
+          "time": "82'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J3-2026080906",
@@ -350,7 +710,25 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 0,
-      "awayScore": 3
+      "awayScore": 3,
+      "homeScorers": [],
+      "awayScorers": [
+        {
+          "name": "閑田 隼人",
+          "time": "50'",
+          "ownGoal": false
+        },
+        {
+          "name": "中村 駿",
+          "time": "84'",
+          "ownGoal": false
+        },
+        {
+          "name": "大串 昇平",
+          "time": "90'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J1-2026080902",
@@ -364,7 +742,26 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 2,
-      "awayScore": 1
+      "awayScore": 1,
+      "homeScorers": [
+        {
+          "name": "チアゴ サンタナ",
+          "time": "11'",
+          "ownGoal": false
+        },
+        {
+          "name": "チアゴ サンタナ",
+          "time": "29'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "ラファエル エリアス",
+          "time": "54'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J2-2026080904",
@@ -378,7 +775,20 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 2,
-      "awayScore": 0
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "ディサロ 燦シルヴァーノ",
+          "time": "20'",
+          "ownGoal": false
+        },
+        {
+          "name": "川名 連介",
+          "time": "90+3'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
     },
     {
       "id": "J3-2026080908",
@@ -392,7 +802,36 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 4,
-      "awayScore": 1
+      "awayScore": 1,
+      "homeScorers": [
+        {
+          "name": "田村 翔太",
+          "time": "36'",
+          "ownGoal": false
+        },
+        {
+          "name": "杉山 耕二",
+          "time": "39'",
+          "ownGoal": false
+        },
+        {
+          "name": "望月 想空",
+          "time": "45+2'",
+          "ownGoal": true
+        },
+        {
+          "name": "田村 翔太",
+          "time": "64'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "森本 ヒマン",
+          "time": "70'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J3-2026080907",
@@ -406,7 +845,36 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 3,
-      "awayScore": 2
+      "awayScore": 2,
+      "homeScorers": [
+        {
+          "name": "世瀬 啓人",
+          "time": "11'",
+          "ownGoal": false
+        },
+        {
+          "name": "田端 琉聖",
+          "time": "81'",
+          "ownGoal": false
+        },
+        {
+          "name": "永井 大士",
+          "time": "90+5'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "ブワニカ 啓太",
+          "time": "5'",
+          "ownGoal": false
+        },
+        {
+          "name": "榊原 杏太",
+          "time": "46'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J1-2026081401",
@@ -420,7 +888,31 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 1,
-      "awayScore": 3
+      "awayScore": 3,
+      "homeScorers": [
+        {
+          "name": "林 尚輝",
+          "time": "2'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "遠藤 渓太",
+          "time": "11'",
+          "ownGoal": false
+        },
+        {
+          "name": "瀬川 祐輔",
+          "time": "65'",
+          "ownGoal": false
+        },
+        {
+          "name": "久保 藤次郎",
+          "time": "82'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J1-2026081501",
@@ -434,7 +926,26 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 2,
-      "awayScore": 1
+      "awayScore": 1,
+      "homeScorers": [
+        {
+          "name": "レオ セアラ",
+          "time": "22'",
+          "ownGoal": false
+        },
+        {
+          "name": "関川 郁万",
+          "time": "90+8'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "原 輝綺",
+          "time": "54'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J1-2026081502",
@@ -448,7 +959,21 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "homeScorers": [
+        {
+          "name": "鳥海 芳樹",
+          "time": "18'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "中谷 進之介",
+          "time": "74'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J2-2026081510",
@@ -462,7 +987,30 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 0,
-      "awayScore": 4
+      "awayScore": 4,
+      "homeScorers": [],
+      "awayScorers": [
+        {
+          "name": "髙橋 馨希",
+          "time": "21'",
+          "ownGoal": false
+        },
+        {
+          "name": "カン ミヌ",
+          "time": "25'",
+          "ownGoal": false
+        },
+        {
+          "name": "キム テウォン",
+          "time": "55'",
+          "ownGoal": false
+        },
+        {
+          "name": "吉平 翼",
+          "time": "80'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J3-2026081519",
@@ -476,7 +1024,9 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 0,
-      "awayScore": 0
+      "awayScore": 0,
+      "homeScorers": [],
+      "awayScorers": []
     },
     {
       "id": "J2-2026081511",
@@ -490,7 +1040,35 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 5,
-      "awayScore": 0
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "照山 颯人",
+          "time": "10'",
+          "ownGoal": false
+        },
+        {
+          "name": "吉田 篤志",
+          "time": "30'",
+          "ownGoal": false
+        },
+        {
+          "name": "ペドロ アウグスト",
+          "time": "49'",
+          "ownGoal": false
+        },
+        {
+          "name": "小池 裕太",
+          "time": "64'",
+          "ownGoal": false
+        },
+        {
+          "name": "山下 敬大",
+          "time": "83'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
     },
     {
       "id": "J3-2026081518",
@@ -504,7 +1082,45 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 7,
-      "awayScore": 0
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "閑田 隼人",
+          "time": "4'",
+          "ownGoal": false
+        },
+        {
+          "name": "猪瀬 康介",
+          "time": "23'",
+          "ownGoal": true
+        },
+        {
+          "name": "大串 昇平",
+          "time": "35'",
+          "ownGoal": false
+        },
+        {
+          "name": "閑田 隼人",
+          "time": "49'",
+          "ownGoal": false
+        },
+        {
+          "name": "北 龍磨",
+          "time": "68'",
+          "ownGoal": false
+        },
+        {
+          "name": "ジョルダン テル",
+          "time": "72'",
+          "ownGoal": false
+        },
+        {
+          "name": "ジョルダン テル",
+          "time": "76'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
     },
     {
       "id": "J2-2026081512",
@@ -518,7 +1134,31 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 3,
-      "awayScore": 1
+      "awayScore": 1,
+      "homeScorers": [
+        {
+          "name": "森 侑里",
+          "time": "12'",
+          "ownGoal": false
+        },
+        {
+          "name": "木吹 翔太",
+          "time": "59'",
+          "ownGoal": true
+        },
+        {
+          "name": "金本 毅騎",
+          "time": "82'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "木吹 翔太",
+          "time": "45'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J1-2026081503",
@@ -532,7 +1172,15 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 0,
-      "awayScore": 1
+      "awayScore": 1,
+      "homeScorers": [],
+      "awayScorers": [
+        {
+          "name": "井上 太聖",
+          "time": "79'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J2-2026081515",
@@ -546,7 +1194,21 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "homeScorers": [
+        {
+          "name": "内藤 大和",
+          "time": "16'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "土信田 悠生",
+          "time": "6'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J1-2026081504",
@@ -560,7 +1222,15 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 1,
-      "awayScore": 0
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "ルカオ",
+          "time": "54'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
     },
     {
       "id": "J1-2026081507",
@@ -574,7 +1244,31 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 2,
-      "awayScore": 2
+      "awayScore": 2,
+      "homeScorers": [
+        {
+          "name": "ラザル ロマニッチ",
+          "time": "44'",
+          "ownGoal": false
+        },
+        {
+          "name": "マルシーニョ",
+          "time": "65'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "福田 心之助",
+          "time": "54'",
+          "ownGoal": false
+        },
+        {
+          "name": "ラファエル エリアス",
+          "time": "58'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J1-2026081508",
@@ -588,7 +1282,31 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 2,
-      "awayScore": 2
+      "awayScore": 2,
+      "homeScorers": [
+        {
+          "name": "大迫 勇也",
+          "time": "40'",
+          "ownGoal": false
+        },
+        {
+          "name": "武藤 嘉紀",
+          "time": "90+3'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "長倉 幹樹",
+          "time": "35'",
+          "ownGoal": false
+        },
+        {
+          "name": "長倉 幹樹",
+          "time": "69'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J1-2026081509",
@@ -602,7 +1320,25 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 3,
-      "awayScore": 0
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "藤本 一輝",
+          "time": "35'",
+          "ownGoal": false
+        },
+        {
+          "name": "辻岡 佑真",
+          "time": "43'",
+          "ownGoal": false
+        },
+        {
+          "name": "ウェリック ポポ",
+          "time": "73'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
     },
     {
       "id": "J2-2026081513",
@@ -616,7 +1352,9 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 0,
-      "awayScore": 0
+      "awayScore": 0,
+      "homeScorers": [],
+      "awayScorers": []
     },
     {
       "id": "J2-2026081514",
@@ -630,7 +1368,15 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 1,
-      "awayScore": 0
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "堂鼻 起暉",
+          "time": "75'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
     },
     {
       "id": "J2-2026081516",
@@ -644,7 +1390,26 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 2,
-      "awayScore": 1
+      "awayScore": 1,
+      "homeScorers": [
+        {
+          "name": "奥村 仁",
+          "time": "19'",
+          "ownGoal": false
+        },
+        {
+          "name": "シマブク カズヨシ",
+          "time": "46'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "堀米 悠斗",
+          "time": "36'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J2-2026081517",
@@ -658,7 +1423,36 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 2,
-      "awayScore": 3
+      "awayScore": 3,
+      "homeScorers": [
+        {
+          "name": "森 晃太",
+          "time": "6'",
+          "ownGoal": false
+        },
+        {
+          "name": "持井 響太",
+          "time": "68'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "カプリーニ",
+          "time": "12'",
+          "ownGoal": false
+        },
+        {
+          "name": "カルリーニョス ジュニオ",
+          "time": "27'",
+          "ownGoal": false
+        },
+        {
+          "name": "小島 幹敏",
+          "time": "90+1'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J3-2026081520",
@@ -672,7 +1466,36 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 1,
-      "awayScore": 4
+      "awayScore": 4,
+      "homeScorers": [
+        {
+          "name": "小西 宏登",
+          "time": "90+4'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "島川 俊郎",
+          "time": "25'",
+          "ownGoal": false
+        },
+        {
+          "name": "竹内 崇人",
+          "time": "45'",
+          "ownGoal": false
+        },
+        {
+          "name": "佐々木 快",
+          "time": "60'",
+          "ownGoal": false
+        },
+        {
+          "name": "佐々木 快",
+          "time": "63'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J3-2026081522",
@@ -686,7 +1509,15 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 1,
-      "awayScore": 0
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "成岡 輝瑠",
+          "time": "20'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
     },
     {
       "id": "J3-2026081523",
@@ -700,7 +1531,9 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 0,
-      "awayScore": 0
+      "awayScore": 0,
+      "homeScorers": [],
+      "awayScorers": []
     },
     {
       "id": "J1-2026081505",
@@ -714,7 +1547,36 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 1,
-      "awayScore": 4
+      "awayScore": 4,
+      "homeScorers": [
+        {
+          "name": "荒木 隼人",
+          "time": "22'",
+          "ownGoal": true
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "鈴木 章斗",
+          "time": "16'",
+          "ownGoal": false
+        },
+        {
+          "name": "塩谷 司",
+          "time": "45+2'",
+          "ownGoal": false
+        },
+        {
+          "name": "セバスティアン アレー",
+          "time": "61'",
+          "ownGoal": false
+        },
+        {
+          "name": "鈴木 章斗",
+          "time": "75'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J1-2026081506",
@@ -728,7 +1590,30 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 0,
-      "awayScore": 4
+      "awayScore": 4,
+      "homeScorers": [],
+      "awayScorers": [
+        {
+          "name": "中山 雄太",
+          "time": "18'",
+          "ownGoal": false
+        },
+        {
+          "name": "テテ イェンギ",
+          "time": "34'",
+          "ownGoal": false
+        },
+        {
+          "name": "西村 拓真",
+          "time": "70'",
+          "ownGoal": false
+        },
+        {
+          "name": "中村 帆高",
+          "time": "82'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J3-2026081521",
@@ -742,7 +1627,46 @@
       "status": "finished",
       "statusText": "試合終了",
       "homeScore": 4,
-      "awayScore": 3
+      "awayScore": 3,
+      "homeScorers": [
+        {
+          "name": "鈴木 遼",
+          "time": "49'",
+          "ownGoal": false
+        },
+        {
+          "name": "大澤 朋也",
+          "time": "62'",
+          "ownGoal": false
+        },
+        {
+          "name": "鈴木 遼",
+          "time": "76'",
+          "ownGoal": false
+        },
+        {
+          "name": "白輪地 敬大",
+          "time": "90+4'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "針谷 岳晃",
+          "time": "20'",
+          "ownGoal": false
+        },
+        {
+          "name": "岡田 優希",
+          "time": "23'",
+          "ownGoal": false
+        },
+        {
+          "name": "狩野 海晟",
+          "time": "88'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J2-2026081601",
@@ -16677,5 +17601,5 @@
       }
     ]
   },
-  "standingsUpdatedAt": "2026-08-16T08:29+09:00"
+  "standingsUpdatedAt": "2026-08-16T09:46+09:00"
 }
