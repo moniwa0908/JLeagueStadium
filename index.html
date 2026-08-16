@@ -1,245 +1,671 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="theme-color" content="#0b2440"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><title>Jリーグ スタジアム記録</title><link rel="manifest" href="manifest.json?v=23"><link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=23"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png?v=23"><style>
-*{box-sizing:border-box}
-body{margin:0;
-background:#f3f6f8;
-color:#14202b;
-font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif}
-button,input{font:inherit}
-header{background:linear-gradient(145deg,#071c30,#133f67);
-color:#fff;
-padding:calc(24px + env(safe-area-inset-top)) 18px 20px}
-.wrap{max-width:680px;
-margin:auto}
-.top{display:flex;
-justify-content:space-between;
-align-items:center}
-.eyebrow{font-size:10px;
-letter-spacing:.18em;
-color:#8ec5ef;
-font-weight:800;
-margin:0 0 5px}
-h1{font-size:22px;
-margin:0}
-.ball{font-size:28px}
-.viewer-mode .detail-visit,.viewer-mode .detail-team{pointer-events:none;opacity:.82}
-.mode-panel{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;padding:9px 10px;border:1px solid #ffffff2b;background:#ffffff14;border-radius:12px}.mode-status{font-size:11px;color:#c8dcea;font-weight:700}.mode-button{border:1px solid #ffffff50;background:#fff;color:#123b60;border-radius:8px;padding:7px 10px;font-size:11px;font-weight:800;white-space:nowrap}.mode-button.logout{background:transparent;color:#fff}.login-overlay{position:fixed;inset:0;background:rgba(5,20,34,.68);z-index:30;display:none;align-items:center;justify-content:center;padding:20px}.login-overlay.open{display:flex}.login-card{width:100%;max-width:390px;background:#fff;border-radius:18px;padding:20px}.login-card h2{margin:0 0 5px;font-size:19px}.login-card>p{margin:0 0 15px;color:#687783;font-size:12px}.login-card label{display:block;font-size:11px;font-weight:800;color:#53636f;margin:10px 0 5px}.login-card input{width:100%;height:44px;border:1px solid #cfd9e0;border-radius:10px;padding:0 11px;font-size:16px}.login-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}.login-actions button{border:0;border-radius:10px;padding:11px;font-weight:800}.login-submit{background:#1667b1;color:#fff}.login-cancel{background:#edf1f4;color:#53636f}.login-error{min-height:18px;color:#c62828!important;font-size:11px!important;margin:8px 0 0!important}.viewer-mode .visit,.viewer-mode .team{pointer-events:none}
-.progress{margin-top:18px;
-background:#ffffff18;
-border:1px solid #ffffff28;
-border-radius:16px;
-padding:14px 16px;
-display:grid;
-grid-template-columns:1fr auto;
-align-items:baseline}
-.progress strong{font-size:28px}
-.progress span{font-size:13px;
-color:#c9d8e5}
-.progress b{color:#8ee0b9}
-.bar{height:6px;
-background:#ffffff26;
-border-radius:99px;
-grid-column:1/3;
-margin-top:9px;
-overflow:hidden}
-.bar i{display:block;
-height:100%;
-background:#35cf8c;
-border-radius:99px;
-transition:.2s}
-.controls,.list{max-width:680px;
-margin:auto}
-.controls{padding:18px 16px 8px}
-.tabs{display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:7px}
-.tabs button{border:1px solid #dce3e8;
-background:#fff;
-border-radius:10px;
-padding:9px 5px;
-font-size:13px;
-font-weight:700;
-color:#64717d}
-.tabs .active{background:#1667b1;
-border-color:#1667b1;
-color:#fff}
-.search{margin-top:12px;
-background:#fff;
-border:1px solid #dce3e8;
-border-radius:12px;
-height:45px;
-display:flex;
-align-items:center;
-padding:0 12px}
-.search input{border:0;
-outline:0;
-width:100%;
-background:transparent;
-font-size:14px}
-.only{display:flex;
-gap:7px;
-align-items:center;
-margin:12px 3px 0;
-font-size:13px;
-color:#52606c}
-.only input{width:17px;
-height:17px;
-accent-color:#1667b1}
-.list{padding:0 16px}
-.result{font-size:12px;
-color:#7d8891;
-margin:6px 2px 8px}
-.stadium{width:100%;
-display:flex;
-align-items:center;
-text-align:left;
-border:1px solid #dce3e8;
-background:#fff;
-border-radius:13px;
-padding:12px;
-margin-bottom:8px;
-min-height:68px}
-.stadium:active{transform:scale(.985)}
-.stadium.done{background:#fff8d8;
-border-color:#e8c84d}
-.check{width:29px;
-height:29px;
-flex:none;
-border:2px solid #c4cdd4;
-border-radius:50%;
-display:grid;
-place-items:center;
-color:#fff;
-font-weight:bold;
-margin-right:11px}
-.done .check{background:#f4c430;
-border-color:#d9a900;
-color:#493600}
-.info{min-width:0;
-display:flex;
-flex-direction:column;
-gap:4px;
-flex:1}
-.name{font-size:14px;
-line-height:1.35;
-font-weight:800}
-.club{font-size:11px;
-color:#71808b;
-white-space:nowrap;
-overflow:hidden;
-text-overflow:ellipsis}
-.badge{font-size:10px;
-font-weight:900;
-padding:5px 7px;
-border-radius:7px}
-.badges{display:flex;
-gap:4px;
-margin-left:8px;
-flex:none}
-.J1{background:#d71920;
-color:#fff;
-box-shadow:0 1px 3px rgba(215,25,32,.28)}
-.J2{background:#005bac;
-color:#fff;
-box-shadow:0 1px 3px rgba(0,91,172,.28)}
-.J3{background:#00864a;
-color:#fff;
-box-shadow:0 1px 3px rgba(0,134,74,.28)}
-footer{text-align:center;color:#87939b;font-size:11px;padding:18px 12px calc(20px + env(safe-area-inset-bottom))}
-.summary{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:18px}.summary .progress{margin:0;padding:12px;display:block}.progress small{display:block;color:#a9c6dc;font-size:10px;font-weight:700;margin-bottom:3px}.summary .progress strong{font-size:24px}.summary .progress span{font-size:11px}.summary .progress b{float:right;font-size:13px;margin-top:8px}.summary .bar{display:block;height:5px;margin-top:8px}.team-progress .bar i{background:#69b9ff}.team-progress b{color:#93ceff}.stadium{display:block;min-height:0}.stadium-main{display:flex;align-items:center}.visit{width:29px;height:29px;padding:0;flex:none;border:2px solid #c4cdd4;background:#fff;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:bold;margin-right:11px}.stadium.done .visit{background:#f4c430;border-color:#d9a900;color:#493600}.area{font-size:11px;color:#71808b}.teams{border-top:1px solid #e7ecef;margin-top:10px;padding-top:9px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}.teams-label{font-size:10px;color:#7b8790}.team{border:1px solid #cfd8df;background:#fff;color:#52616d;border-radius:99px;padding:6px 9px;font-size:11px;font-weight:700}.team-J1.done{background:#cf1830;border-color:#cf1830;color:#fff}.team-J2.done{background:#0768b8;border-color:#0768b8;color:#fff}.team-J3.done{background:#006f3b;border-color:#006f3b;color:#fff}
-.detail-overlay{position:fixed;inset:0;background:rgba(5,20,34,.58);z-index:20;display:none;align-items:flex-end;justify-content:center;padding-top:40px}.detail-overlay.open{display:flex}.detail-card{width:100%;max-width:680px;max-height:88vh;overflow:auto;background:#fff;border-radius:22px 22px 0 0;padding:18px 18px calc(22px + env(safe-area-inset-bottom));box-shadow:0 -8px 30px rgba(0,0,0,.2)}.detail-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.detail-title{font-size:20px;line-height:1.4;margin:0}.detail-close{border:0;background:#edf1f4;border-radius:50%;width:34px;height:34px;font-size:20px;flex:none}.detail-section{border-top:1px solid #e4e9ed;margin-top:16px;padding-top:14px}.detail-team-section{margin-top:12px}.detail-label{font-size:11px;font-weight:800;color:#7a8791;margin:0 0 7px}.detail-value{font-size:14px;font-weight:700;margin:0}.detail-teams{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.detail-teams:has(.detail-team:only-child){grid-template-columns:1fr}.detail-action{display:block;width:100%;border:0;border-radius:12px;padding:13px 12px;margin-top:10px;font-size:14px;font-weight:800;text-align:center;text-decoration:none}.detail-visit{background:#fff4bf;color:#765600;border:1px solid #efcb45}.detail-visit.done{background:#f4c430;color:#493600;border-color:#d9a900}.detail-team{width:100%;min-width:0;display:grid;grid-template-columns:23px minmax(0,1fr) auto;align-items:center;gap:6px;border:1px solid;border-radius:11px;padding:9px 8px;text-align:left;font-size:11px;line-height:1.25;font-weight:800}.detail-team small{font-size:9px;font-weight:900}.detail-team-check{width:21px;height:21px;border:2px solid currentColor;border-radius:50%;display:grid;place-items:center;font-size:13px;line-height:1}.detail-team-J1{color:#c9182b;border-color:#f1a9b2;background:#fff6f7}.detail-team-J2{color:#075da8;border-color:#9fc9eb;background:#f3f9ff}.detail-team-J3{color:#006c35;border-color:#42a76c;background:#e2f5e9}.detail-team-J1.done{color:#fff;border-color:#cf1830;background:#cf1830}.detail-team-J2.done{color:#fff;border-color:#0768b8;background:#0768b8}.detail-team-J3.done{color:#fff;border-color:#006f3b;background:#006f3b}.detail-team.done .detail-team-check{background:#fff;color:inherit}.detail-team-J1.done .detail-team-check{color:#cf1830}.detail-team-J2.done .detail-team-check{color:#0768b8}.detail-team-J3.done .detail-team-check{color:#006f3b}.map-button{background:#1769aa;color:#fff}.detail-note{font-size:11px;color:#71808b;margin:8px 2px 0;line-height:1.5}.detail-location{display:flex;flex-direction:column;gap:3px}.detail-location .detail-label{margin:0}.detail-prefecture{font-size:17px;font-weight:900;color:#172b3a;line-height:1.35}.detail-address{font-size:11px;color:#687783;line-height:1.55}.stadium-map{width:100%;height:210px;border:0;border-radius:13px;margin-top:10px;background:#edf1f4}.access-text{font-size:13px;line-height:1.7;margin:0;color:#263746}.access-notice{font-size:11px;line-height:1.55;margin:7px 0 0;padding:8px 10px;background:#fff5df;color:#855b00;border-radius:8px}.official-button{background:#eef3f7;color:#31546d;border:1px solid #d4e0e8}
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover,interactive-widget=resizes-content">
+  <meta name="theme-color" content="#6d28d9">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="ツム管理">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="apple-touch-icon" href="./icon.svg">
+  <link rel="stylesheet" href="./style.css">
+  <title>TsumManager 8.4.34 Game8 Skill Data Fix</title>
+</head>
+<body>
+  <div id="startupErrorBanner" class="startup-error-banner" hidden></div>
+<div id="app">
+  <header class="app-header">
+    <div>
+      <h1>ツム管理</h1>
+      <p>TsumManager 8.4.34 Game8 Skill Data Fix</p>
+    </div>
+    <button id="quickAddButton" class="round-button" aria-label="ツムを追加">＋</button>
+  </header>
 
-.detail-card{transition:transform .22s ease-out;overscroll-behavior:contain}.detail-card.swiping{transition:none}.detail-head{touch-action:pan-down}
-.detail-visit:not(.done){background:#fff;color:#52616d;border-color:#cfd8df}
-.main-view-tabs{max-width:720px;margin:14px auto 0;padding:0 14px;display:grid;grid-template-columns:1fr 1fr;gap:8px}.main-view-tabs button{height:43px;border:1px solid #ccd8e0;border-radius:12px;background:#fff;color:#60717d;font-size:13px;font-weight:900}.main-view-tabs button.active{background:#123f64;border-color:#123f64;color:#fff}.schedule-view{max-width:720px;margin:auto;padding:12px 14px 30px}.schedule-view[hidden],#stadiumControls[hidden],#stadiumList[hidden]{display:none}.schedule-head{display:flex;justify-content:space-between;align-items:end;margin:4px 2px 9px}.schedule-head h2{margin:0;font-size:18px}.schedule-updated{font-size:10px;color:#7b8790}.schedule-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:10px}.schedule-tabs button{height:38px;border:1px solid #d6dfe5;border-radius:10px;background:#fff;color:#5b6974;font-weight:900}.schedule-tabs button.active{background:#1769aa;border-color:#1769aa;color:#fff}.month-shortcuts{position:sticky;top:0;z-index:5;display:flex;gap:7px;overflow-x:auto;margin:0 -14px 10px;padding:8px 14px;background:#f4f6f8;border-top:1px solid #e5eaee;border-bottom:1px solid #e5eaee;scrollbar-width:none;-webkit-overflow-scrolling:touch}.month-shortcuts::-webkit-scrollbar{display:none}.month-shortcuts button{flex:none;height:34px;padding:0 13px;border:1px solid #ccd7de;border-radius:18px;background:#fff;color:#50616d;font-size:11px;font-weight:900;white-space:nowrap}.month-shortcuts button.active{border-color:#123f64;background:#123f64;color:#fff}.schedule-count{font-size:11px;color:#7d8891;margin:0 2px 7px}.schedule-month{scroll-margin-top:58px}.schedule-month-title{margin:15px 0 9px;padding-bottom:5px;border-bottom:2px solid #123f64;color:#123f64;font-size:16px}.schedule-day{margin:0 0 18px}.schedule-day h3{margin:0 0 7px;font-size:14px;color:#203542}.match-card{background:#fff;border:1px solid #dce3e8;border-radius:13px;padding:11px 12px;margin-bottom:8px}.match-top{display:flex;align-items:center;gap:8px}.match-top strong{font-size:14px}.schedule-badge{border-radius:6px;padding:3px 7px;color:#fff;font-size:10px;font-weight:900}.schedule-badge.J1{background:#d71920}.schedule-badge.J2{background:#005bac}.schedule-badge.J3{background:#007a3d}.match-teams{display:grid;grid-template-columns:1fr 27px 1fr;align-items:center;gap:5px;margin:11px 0;font-size:13px;font-weight:900}.match-teams span:first-child{text-align:right}.match-teams span:last-child{text-align:left}.match-teams b{text-align:center;color:#87939b;font-size:10px}.match-bottom{border-top:1px solid #edf0f2;padding-top:8px;display:flex;align-items:center;justify-content:space-between;gap:8px}.match-stadium,.match-stadium-text{min-width:0;border:0;background:transparent;padding:0;color:#486171;font-size:10px;text-align:left;overflow-wrap:anywhere}.match-stadium{text-decoration:underline;text-underline-offset:2px}.match-bottom a{flex:none;color:#1769aa;font-size:10px;font-weight:800;text-decoration:none}.schedule-empty{background:#fff;border:1px solid #dce3e8;border-radius:13px;padding:24px;text-align:center;color:#71808b;font-size:12px}
-.schedule-mode-picker{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:10px}.schedule-mode-picker button{height:42px;border:2px solid #ccd8e0;border-radius:11px;background:#fff;color:#52636f;font-size:12px;font-weight:900}.schedule-mode-picker button.active{border-color:#123f64;background:#123f64;color:#fff}.team-schedule-picker{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:9px;margin-bottom:10px;padding:9px 10px;border:1px solid #d8e1e7;border-radius:11px;background:#fff}.team-schedule-picker label{color:#52636f;font-size:11px;font-weight:900}.team-schedule-picker select{width:100%;height:38px;padding:0 34px 0 11px;border:1px solid #cbd7df;border-radius:9px;background:#f8fafb;color:#172b3a;font-size:13px;font-weight:800}.match-finished{margin-left:auto;color:#687783;font-size:10px;font-weight:900}.match-teams .match-score{color:#172b3a;font-size:18px;white-space:nowrap}.match-teams .winner{color:#c2182b;font-weight:1000}.result-card{border-left:4px solid #123f64}.schedule-calendar{margin-bottom:10px;padding:10px;border:1px solid #d8e1e7;border-radius:13px;background:#fff}.calendar-head{display:grid;grid-template-columns:38px 1fr 38px;align-items:center;margin-bottom:7px}.calendar-head strong{text-align:center;color:#173247;font-size:15px}.calendar-head button{width:34px;height:34px;border:0;border-radius:50%;background:#edf3f7;color:#123f64;font-size:25px;line-height:1}.calendar-week,.calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}.calendar-week span{text-align:center;color:#7a8791;font-size:9px;font-weight:900;padding:3px 0}.calendar-week span:first-child{color:#c82a3d}.calendar-week span:last-child{color:#1769aa}.calendar-day{min-width:0;height:47px;border:0;border-radius:8px;background:transparent;color:#9aa4ab;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:11px}.calendar-day.has-match{background:#edf4f9;color:#173247;font-weight:900}.calendar-day.selected{background:#123f64;color:#fff;box-shadow:0 0 0 2px #9fc3dd}.calendar-day small{font-size:7px;white-space:nowrap;color:#1769aa;font-weight:900}.calendar-day.selected small{color:#fff}.calendar-day:disabled{opacity:1}.calendar-all{display:block;width:100%;height:34px;margin-top:8px;border:1px solid #ccd8e0;border-radius:9px;background:#fff;color:#52636f;font-size:11px;font-weight:900}.calendar-all.active{border-color:#123f64;background:#123f64;color:#fff}.main-view-tabs{grid-template-columns:repeat(3,1fr)}.standings-view{max-width:720px;margin:auto;padding:12px 14px 30px}.standings-view[hidden]{display:none}.standings-head{display:flex;justify-content:space-between;align-items:end;margin:4px 2px 9px}.standings-head h2{margin:0;font-size:18px}.standings-updated{font-size:10px;color:#7b8790}.standings-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:10px}.standings-tabs button{height:38px;border:2px solid transparent;border-radius:10px;background:#fff;font-weight:900}.standings-tabs .J1{border-color:#d71920;color:#b31319}.standings-tabs .J2{border-color:#005bac;color:#00529b}.standings-tabs .J3{border-color:#007a3d;color:#006934}.standings-tabs button.active{color:#fff}.standings-tabs .J1.active{background:#d71920}.standings-tabs .J2.active{background:#005bac}.standings-tabs .J3.active{background:#007a3d}.standings-table-wrap{width:100%;overflow:hidden;border:1px solid #d8e1e7;border-radius:13px;background:#fff}.standings-table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:9px}.standings-table .col-rank{width:8%}.standings-table .col-team{width:34%}.standings-table .col-points{width:10%}.standings-table .col-played{width:9%}.standings-table .col-record{width:17%}.standings-table .col-goals{width:13%}.standings-table .col-diff{width:9%}.standings-table th{padding:8px 2px;background:#edf3f7;color:#52636f;white-space:nowrap}.standings-table td{padding:9px 2px;border-top:1px solid #e7ecef;text-align:center;white-space:nowrap}.standings-table th:nth-child(2),.standings-table td:nth-child(2){text-align:left}.standing-team{width:100%;border:0;background:transparent;padding:0;color:#1769aa;font-size:10px;line-height:1.25;font-weight:900;text-align:left;white-space:normal;overflow-wrap:anywhere}.standing-points{font-size:12px;font-weight:900;color:#172b3a}.standings-note{display:none}
-/* 試合結果：得点と長いチーム名が重ならないための配置 */
-.match-teams{grid-template-columns:minmax(0,1fr) 27px minmax(0,1fr);gap:7px}
-.match-teams span{min-width:0;line-height:1.35;overflow-wrap:anywhere;word-break:normal}
-.result-card .match-teams{grid-template-columns:minmax(0,1fr) 64px minmax(0,1fr)}
-.result-card .match-teams span{font-size:clamp(8.5px,2.55vw,10px);letter-spacing:-.06em;white-space:nowrap;overflow-wrap:normal}
-.match-scorers{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;margin:-2px 0 10px;padding:8px 5px;border-radius:8px;background:#f5f7f9;color:#536875;font-size:9px;line-height:1.45}.match-scorers>div{min-width:0;display:flex;flex-direction:column;gap:2px}.match-scorers>div:first-child{text-align:right}.match-scorers>div:last-child{text-align:left}.match-scorers span{overflow-wrap:anywhere}
-</style>
-</head><body><header><div class="wrap"><div class="top"><div><p class="eyebrow">MY STADIUM LOG</p><h1>Jリーグ スタジアム記録</h1></div><span class="ball">⚽</span></div><div class="summary"><div class="progress"><small>行ったスタジアム</small><strong id="done">0</strong><span> / <span id="total">0</span></span><b id="pct">0%</b><div class="bar"><i id="bar"></i></div></div><div class="progress team-progress"><small>行ったチーム</small><strong id="teamDone">0</strong><span> / <span id="teamTotal">0</span></span><b id="teamPct">0%</b><div class="bar"><i id="teamBar"></i></div></div></div></div></header><nav class="main-view-tabs" aria-label="画面切替"><button id="stadiumViewBtn" class="active">スタジアム</button><button id="scheduleViewBtn">日程</button></nav><section class="controls" id="stadiumControls"><div class="tabs" id="tabs"><button class="active" data-l="ALL">すべて</button><button data-l="J1">J1</button><button data-l="J2">J2</button><button data-l="J3">J3</button></div><div class="search"><input id="q" aria-label="スタジアム検索" placeholder="🔍  スタジアム・クラブ名で検索"></div><label class="only"><input id="only" type="checkbox">まだ行っていないスタジアムだけ</label></section><section class="list" id="stadiumList"><p class="result" id="count"></p><div id="items"></div></section><section class="schedule-view" id="scheduleView" hidden><div class="schedule-head"><h2>Jリーグ日程</h2><span class="schedule-updated" id="scheduleUpdated"></span></div><div class="schedule-tabs" id="scheduleTabs"><button class="active" data-l="ALL">すべて</button><button data-l="J1">J1</button><button data-l="J2">J2</button><button data-l="J3">J3</button></div><nav class="month-shortcuts" id="monthShortcuts" aria-label="月別ショートカット"></nav><p class="schedule-count" id="scheduleCount">日程を読み込み中です</p><div id="scheduleItems"></div><a class="detail-action official-button" href="https://www.jleague.jp/match/search/" target="_blank" rel="noopener">Jリーグ公式の日程を確認</a></section><footer>スタジアム名をタップすると詳細とアクセスを確認できます。内容はこの端末に自動保存されます</footer><div class="detail-overlay" id="detailOverlay" role="dialog" aria-modal="true" aria-label="スタジアム詳細"><div class="detail-card" id="detailCard"></div></div><script>
+  
+<div hidden aria-hidden="true">
+  <button id="addTaskButton"></button>
+  <div id="dailyTaskList"></div><i id="taskProgressBar"></i><p id="taskProgressText"></p>
+  <button id="saveSnapshotButton"></button>
+  <div id="snapshotSummary"></div><div id="snapshotChart"></div>
+</div>
 
-const raw=`メルカリスタジアム|鹿島アントラーズ|J1|茨城
-水戸信用金庫スタジアム|水戸ホーリーホック|J1|茨城
-埼玉スタジアム2002|浦和レッズ|J1|埼玉
-フクダ電子アリーナ|ジェフユナイテッド千葉|J1|千葉
-三協フロンテア柏スタジアム|柏レイソル|J1|千葉
-味の素スタジアム|FC東京／東京ヴェルディ|J1|東京
-町田GIONスタジアム|FC町田ゼルビア|J1|東京
-Uvanceとどろきスタジアム by Fujitsu|川崎フロンターレ|J1|神奈川
-日産スタジアム|横浜F・マリノス|J1|神奈川
-IAIスタジアム日本平|清水エスパルス|J1|静岡
-豊田スタジアム|名古屋グランパス|J1|愛知
-サンガスタジアム by KYOCERA|京都サンガF.C.|J1|京都
-パナソニック スタジアム 吹田|ガンバ大阪|J1|大阪
-YANMAR HANASAKA STADIUM|セレッソ大阪|J1|大阪
-ノエビアスタジアム神戸|ヴィッセル神戸|J1|兵庫
-JFE晴れの国スタジアム|ファジアーノ岡山|J1|岡山
-エディオンピースウイング広島|サンフレッチェ広島|J1|広島
-ベスト電器スタジアム|アビスパ福岡|J1|福岡
-PEACE STADIUM Connected by SoftBank|V・ファーレン長崎|J1|長崎
-大和ハウス プレミストドーム|北海道コンサドーレ札幌|J2|北海道
-プライフーズスタジアム|ヴァンラーレ八戸|J2|青森
-ユアテックスタジアム仙台|ベガルタ仙台|J2|宮城
-ソユースタジアム|ブラウブリッツ秋田|J2|秋田
-NDソフトスタジアム山形|モンテディオ山形|J2|山形
-ハワイアンズスタジアムいわき|いわきFC|J2|福島
-CITY FOOTBALL STATION|栃木シティ|J2|栃木
-NACK5スタジアム大宮|RB大宮アルディージャ|J2|埼玉
-ニッパツ三ツ沢球技場|横浜F・マリノス／横浜FC|J1／J2|神奈川
-レモンガススタジアム平塚|湘南ベルマーレ|J2|神奈川
-JIT リサイクルインク スタジアム|ヴァンフォーレ甲府|J2|山梨
-デンカビッグスワンスタジアム|アルビレックス新潟|J2|新潟
-富山県総合運動公園陸上競技場|カターレ富山|J2|富山
-ヤマハスタジアム|ジュビロ磐田|J2|静岡
-藤枝総合運動公園サッカー場|藤枝MYFC|J2|静岡
-鳴門・大塚スポーツパーク ポカリスエットスタジアム|徳島ヴォルティス|J2|徳島
-アシックス里山スタジアム|FC今治|J2|愛媛
-駅前不動産スタジアム|サガン鳥栖|J2|佐賀
-クラサスドーム大分|大分トリニータ|J2|大分
-いちご宮崎新富サッカー場|テゲバジャーロ宮崎|J2|宮崎
-とうほう・みんなのスタジアム|福島ユナイテッドFC|J3|福島
-カンセキスタジアムとちぎ|栃木SC|J3|栃木
-正田醤油スタジアム群馬|ザスパ群馬|J3|群馬
-相模原ギオンスタジアム|SC相模原|J3|神奈川
-サンプロ アルウィン|松本山雅FC|J3|長野
-長野Uスタジアム|AC長野パルセイロ|J3|長野
-金沢ゴーゴーカレースタジアム|ツエーゲン金沢|J3|石川
-岐阜メモリアルセンター長良川競技場|FC岐阜|J3|岐阜
-平和堂HATOスタジアム|レイラック滋賀FC|J3|滋賀
-東大阪市花園ラグビー場|FC大阪|J3|大阪
-ロートフィールド奈良|奈良クラブ|J3|奈良
-Axisバードスタジアム|ガイナーレ鳥取|J3|鳥取
-維新みらいふスタジアム|レノファ山口FC|J3|山口
-四国化成MEGLIOスタジアム|カマタマーレ讃岐|J3|香川
-ニンジニアスタジアム|愛媛FC|J3|愛媛
-GIKENスタジアム|高知ユナイテッドSC|J3|高知
-ミクニワールドスタジアム北九州|ギラヴァンツ北九州|J3|福岡
-えがお健康スタジアム|ロアッソ熊本|J3|熊本
-白波スタジアム|鹿児島ユナイテッドFC|J3|鹿児島
-沖縄県総合運動公園陸上競技場|FC琉球|J3|沖縄
-札幌厚別公園競技場|北海道コンサドーレ札幌|J2|北海道
-浦和駒場スタジアム|浦和レッズ|J1|埼玉
-__REMOVED__|__REMOVED__|J1|東京
-パロマ瑞穂スタジアム|名古屋グランパス|J1|愛知
-エコパスタジアム|清水エスパルス／ジュビロ磐田|J1／J2|静岡
-ヤンマースタジアム長居|セレッソ大阪|J1|大阪
-栃木県グリーンスタジアム|栃木SC|J3|栃木
-__REMOVED__|__REMOVED__|J3|福島
-会津総合運動公園あいづ陸上競技場|福島ユナイテッドFC|J3|福島
-__REMOVED__|__REMOVED__|J3|鳥取
-__REMOVED__|__REMOVED__|J3|奈良
-ケーズデンキスタジアム水戸|水戸ホーリーホック|J1|茨城
-神戸総合運動公園ユニバー記念競技場|ヴィッセル神戸|J1|兵庫
-たけびしスタジアム京都|京都サンガF.C.|J1|京都
-エディオンスタジアム広島|サンフレッチェ広島|J1|広島
-トランスコスモススタジアム長崎|V・ファーレン長崎|J1|長崎
-熊谷スポーツ文化公園陸上競技場|RB大宮アルディージャ|J2|埼玉
-KUROKIRI STADIUM|テゲバジャーロ宮崎|J2|宮崎
-石川県西部緑地公園陸上競技場|ツエーゲン金沢|J3|石川
-布引グリーンスタジアム|レイラック滋賀FC|J3|滋賀
-オールガイナーレYAJINスタジアム|ガイナーレ鳥取|J3|鳥取
-北九州市立本城陸上競技場|ギラヴァンツ北九州|J3|福岡`;
-</script><script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script><script src="firebase-config.js?v=39"></script><script src="stadium-details.js?v=39"></script><script src="firebase-shared.js?v=39"></script><script src="app.js?v=39"></script><script src="standings.js?v=41"></script><script src="schedule.js?v=44"></script></body></html>
+
+<div hidden aria-hidden="true" id="removedHomeFeatureSupport">
+  <button id="refreshMonthlyReportButton" type="button"></button>
+  <div id="monthlyReport"></div>
+  <button id="refreshAssistantButton" type="button"></button>
+  <div id="assistantSuggestions"></div>
+</div>
+
+<div hidden aria-hidden="true" id="removedRankingSupport">
+  <button id="openNearRankingButton"></button>
+  <div id="nearRankingList"></div>
+  <button id="openCoinRankingButton"></button>
+  <div id="coinRankingList"></div>
+</div>
+<div hidden aria-hidden="true" id="removedTrainingCardsSupport">
+  <button id="changeTodayTrainingButton"></button>
+  <div id="todayTrainingCard"></div>
+  <button id="refreshRecommendButton"></button>
+  <div id="recommendList"></div>
+</div>
+<div hidden aria-hidden="true" id="removedRecentPrioritySupport">
+  <button id="clearRecentButton"></button>
+  <div id="recentTsumList"></div>
+  <div id="homePriorityList"></div>
+</div>
+<div hidden aria-hidden="true" id="removedNearSkillmaxSupport">
+  <button id="showNearButton"></button>
+  <div id="homeNearList"></div>
+</div>
+<div hidden aria-hidden="true" id="removedInputFeatureSupport">
+  <button id="clearHistoryButton"></button>
+  <div id="historyList"></div>
+  <button id="restoreLastHistoryButton"></button>
+  <input id="ticketSearch" type="search">
+  <div id="ticketCandidates"></div>
+  <select id="ticketAmount"></select>
+  <button id="applyTicketButton"></button>
+</div>
+<div hidden aria-hidden="true" id="removedGoalsSupport">
+<button id="newGoalButton"></button>
+<div id="goalList"></div>
+<button id="ticketStockMinus"></button>
+<strong id="ticketStockValue"></strong>
+<button id="ticketStockPlus"></button>
+<div id="goalSimulation"></div>
+<dialog id="goalDialog"></dialog>
+<form id="goalForm"></form>
+<h2 id="goalDialogTitle"></h2>
+<input id="goalId" type="hidden">
+<input id="goalTsumName">
+<select id="goalType"><option value="max">max</option></select>
+<label id="goalTargetWrap"></label>
+<input id="goalTargetOwned" type="number">
+<input id="goalDeadline" type="date">
+<input id="goalMilestone" type="number">
+<textarea id="goalMemo"></textarea>
+<button id="deleteGoalButton"></button>
+<button id="cancelGoalButton"></button>
+</div>
+<div hidden aria-hidden="true" id="removedStrategySupport">
+<button id="rankingOwnedOnlyButton"></button>
+<div id="personalRankingList"></div>
+<input id="missionSearchInput" type="search">
+<div id="missionResultList"></div>
+<div id="ratingCoverage"></div>
+</div>
+<input id="compactToggle" type="checkbox" hidden aria-hidden="true">
+<div hidden aria-hidden="true" id="removedProgressManagementSupport">
+<button id="deleteLastSnapshotButton"></button>
+<button id="clearSnapshotsButton"></button>
+</div>
+<div hidden aria-hidden="true" id="removedStableStatusSupport">
+<div id="stableStatus"></div>
+<button id="rerenderListButton"></button>
+<button id="reloadImagesStableButton"></button>
+</div>
+<div hidden aria-hidden="true" id="removedSafeSaveSupport">
+<div id="safeStorageStatus"></div>
+<button id="saveUserDataNowButton"></button>
+</div>
+<div hidden aria-hidden="true" id="removedRecoveryModeSupport">
+<div id="rescueStatus"></div>
+<button id="rescueBackupButton"></button>
+</div>
+<div hidden aria-hidden="true" id="removedDiagnosticsQuickInputSupport">
+<button id="runHealthCheckButton"></button>
+<div id="healthResult"></div>
+<textarea id="quickOwnedText"></textarea>
+<button id="applyQuickOwnedButton"></button>
+</div>
+<div hidden aria-hidden="true" id="removedDataManagementSupport">
+<button id="exportButton"></button>
+<input id="importInput" type="file">
+<button id="mergeMasterButton"></button>
+<button id="resetButton"></button>
+</div>
+<div hidden aria-hidden="true" id="removedBackupButtonsSupport"><button id="quickBackupButton"></button><button id="backupTestButton"></button></div>
+<main>
+    <section id="homeView" class="view">
+      <article class="hero-card">
+        <div class="hero-top">
+          <div><span>全体進捗</span><strong id="homePercent">0%</strong></div>
+          <div class="ring" id="progressRing"><b id="ringPercent">0%</b></div>
+        </div>
+        <div class="wide-progress"><i id="homeProgressBar"></i></div>
+        <div class="hero-stats">
+          <div><b id="homeOwned">0</b><span>所持済み</span></div>
+          <div><b id="homeMaxed">0</b><span>スキルマ</span></div>
+          <div><b id="homeRemaining">0</b><span>残り</span></div>
+          <div><b id="homeCoins">0</b><span>必要コイン</span></div>
+        </div>
+      </article>
+
+      <div class="quick-grid">
+        <button data-open-view="box" class="home-card-hidden quick-card"><span>📦</span><b>BOX入力</b><small>複数体を一括反映</small></button>
+        <button data-open-view="training" class="home-card-hidden quick-card"><span>🎯</span><b>育成予定</b><small>優先ツムを確認</small></button>
+        <button data-home-filter="near" class="home-card-hidden quick-card"><span>✨</span><b>スキルマ目前</b><small id="nearCount">0体</small></button>
+        <button data-home-filter="unowned" class="home-card-hidden quick-card"><span>🔒</span><b>未所持</b><small id="unownedCount">0体</small></button>
+      </div>
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+    </section>
+
+
+    <section id="collectionView" class="view" hidden>
+      <article class="panel collection-summary">
+        <div>
+          <span>コレクション率</span>
+          <strong id="collectionRate">0%</strong>
+        </div>
+        <div class="collection-summary-grid">
+          <div><b id="collectionOwned">0</b><span>所持</span></div>
+          <div><b id="collectionMissing">0</b><span>未所持</span></div>
+          <div><b id="collectionMaxed">0</b><span>スキルマ</span></div>
+        </div>
+      </article>
+      <article class="panel">
+        <div class="search-row">
+          <input id="collectionSearch" type="search" placeholder="図鑑を検索">
+          <select id="collectionFilter">
+            <option value="all">すべて</option>
+            <option value="owned">所持済み</option>
+            <option value="unowned">未所持</option>
+            <option value="max">スキルマ</option>
+            <option value="image">画像登録済み</option>
+            <option value="favorite">お気に入り</option>
+          </select>
+        </div>
+        <div id="collectionCategoryChips" class="chips"></div>
+      </article>
+      <div id="collectionGrid" class="collection-grid"></div>
+      <button id="loadMoreCollectionButton" class="load-more-button">さらに表示</button>
+    </section>
+
+    <section id="listView" class="view" hidden>
+      <article class="panel filter-panel">
+        <div class="search-row">
+          <input id="searchInput" type="search" placeholder="ツム名・メモを検索">
+          <select id="sortSelect">
+            <option value="id">ID順</option>
+            <option value="name">名前順</option>
+            <option value="remain">残りが少ない順</option>
+            <option value="progress">進捗が高い順</option>
+            <option value="owned">所持数が多い順</option>
+            <option value="favorite">お気に入り順</option>
+            <option value="releaseOld">リリース順（古い順）</option>
+            <option value="releaseNew">リリース順（新しい順）</option>
+            <option value="series">シリーズ順</option>
+          </select>
+        </div>
+        <div id="categoryChips" class="chips"></div>
+        <div id="statusChips" class="chips secondary"></div>
+        <div id="tagChips" class="chips tertiary"></div>
+        <div class="release-filter-row">
+          <select id="releaseYearFilter"><option value="all">登場年：すべて</option></select>
+          <select id="releaseMonthFilter"><option value="all">登場月：すべて</option></select>
+          <select id="seriesFilter"><option value="all">シリーズ：すべて</option></select>
+        </div>
+      </article>
+
+      <div class="list-toolbar">
+        <span id="resultCount">0体表示</span>
+        <div>
+          <button id="incrementMode">＋1</button>
+          <button id="layoutMode">コンパクト</button>
+          <button id="galleryMode">ギャラリー</button>
+        </div>
+      </div>
+      <div id="tsumList" class="tsum-list"></div>
+    </section>
+
+    <section id="boxView" class="view" hidden>
+      <article class="panel">
+        <h2>BOX結果をまとめて入力</h2>
+        <p class="helper">1行に1体入力します。同じツムを3回引いた場合は3行入力してください。</p>
+        <textarea id="boxText" placeholder="例：&#10;エルサ&#10;野獣&#10;エルサ"></textarea>
+        <div class="button-row">
+          <button id="clearBoxButton" class="secondary-button">クリア</button>
+          <button id="previewBoxButton" class="secondary-button">内容確認</button>
+          <button id="applyBoxButton" class="primary-button">反映する</button>
+        </div>
+        <div id="boxPreview" class="result-box">入力内容がここに表示されます。</div>
+      </article>
+
+      
+
+      
+    </section>
+
+    <section id="trainingView" class="view" hidden>
+
+      <article class="panel">
+        <h2>スキルチケット配分シミュレーター</h2>
+        <p class="helper">所持しているスキルチケット枚数を入力すると、少ない枚数でスキルマになる候補を提案します。実データは変更しません。</p>
+        <div class="simulator-controls">
+          <input id="simTicketCount" type="number" min="0" max="999" value="10">
+          <button id="runSimulatorButton" class="primary-button">計算する</button>
+        </div>
+        <div id="simulatorResult" class="simulator-result">枚数を入力して計算してください。</div>
+      </article>
+
+      <article class="panel">
+        <div class="section-title"><h2>育成予定</h2><button id="trainingHelpButton">使い方</button></div>
+        <p class="helper">ツム編集画面で「最優先・優先・あとで」を設定できます。</p>
+        <div id="trainingList" class="tsum-list"></div>
+      </article>
+    </section>
+
+
+    
+
+    <section id="statsView" class="view" hidden>
+      <article class="panel">
+        <h2>カテゴリ別進捗</h2>
+        <div id="categoryStats"></div>
+      </article>
+      <article class="panel">
+        <h2>育成状況</h2>
+        <div id="statusStats" class="stats-grid"></div>
+      </article>
+      <article class="panel">
+        <h2>タグ別コレクション率</h2>
+        <div id="tagStats"></div>
+      </article>
+      <article class="panel">
+        <h2>必要コイン内訳</h2>
+        <div id="coinStats"></div>
+      </article>
+    </section>
+
+
+
+    
+
+    <section id="plannerView" class="view" hidden>
+
+      <article class="panel">
+        <h2>コイン予算シミュレーター</h2>
+        <div class="budget-grid">
+          <label>現在のコイン
+            <input id="budgetCurrentCoins" type="number" min="0" value="0">
+          </label>
+          <label>1日に稼ぐコイン
+            <input id="budgetDailyCoins" type="number" min="0" value="50000">
+          </label>
+          <label>目標日
+            <input id="budgetTargetDate" type="date">
+          </label>
+          <label>1回のBOX
+            <input id="budgetBoxCost" type="number" min="1" value="30000">
+          </label>
+        </div>
+        <button id="calculateBudgetButton" class="primary-button">計算する</button>
+        <div id="budgetResult" class="result-box">条件を入力して計算してください。</div>
+      </article>
+
+      <article class="panel">
+        <div class="section-title"><h2>ガチャ計画</h2><button id="newPlanButton">新規作成</button></div>
+        <p class="helper">セレクトBOXやピックアップの対象ツムを登録し、必要数と必要コインを計算します。</p>
+        <div id="planList" class="plan-list"></div>
+      </article>
+
+      <article class="panel">
+        <h2>対象ツムから簡易計算</h2>
+        <textarea id="quickPlanText" placeholder="1行に1体入力&#10;例：&#10;エルサ&#10;野獣&#10;ガストン"></textarea>
+        <div class="button-row">
+          <button id="clearQuickPlanButton" class="secondary-button">クリア</button>
+          <button id="calcQuickPlanButton" class="primary-button">計算する</button>
+        </div>
+        <div id="quickPlanResult" class="result-box">対象ツムを入力してください。</div>
+      </article>
+    </section>
+
+    <section id="settingsView" class="view" hidden>
+      <article class="panel settings-panel">
+        <h2>表示設定</h2>
+        <label class="switch-row"><span>ダークモード</span><input id="darkToggle" type="checkbox"></label>
+        
+      </article>
+
+      
+
+
+
+      
+      
+      
+
+      
+
+      
+
+      <article class="panel settings-panel backup-panel">
+        <h2>完全バックアップ</h2>
+        <p class="helper">所持数・画像・お気に入り・メモ・タグ・評価・目標・履歴などを、1つのJSONファイルに保存します。</p>
+        <div id="backupSummary" class="backup-summary"></div>
+        <button type="button" id="exportFullBackupButton" class="primary-button">完全バックアップ（画像込み）を書き出す</button>
+        <label class="file-button">バックアップを読み込む
+          <input id="importFullBackupInput" type="file" accept=".json,application/json">
+        </label>
+        <label class="switch-row"><span>読込前に現在のデータを自動バックアップ</span><input id="autoBackupBeforeImport" type="checkbox" checked></label>
+        
+        
+        <p class="backup-ios-guide">iPhoneでは共有画面が開きます。「ファイルに保存」→「iCloud Drive」などを選んでください。</p>
+        <div id="backupStatus" class="result-box">まだバックアップは作成されていません。</div>
+      </article>
+
+      <article class="panel settings-panel">
+        <h2>CSVデータ</h2>
+        <p class="helper">Excelなどで所持数を編集できます。画像はCSVには含まれません。</p>
+        <button id="exportCsvButton">CSVを書き出す</button>
+        <label class="file-button">CSVを読み込む<input id="importCsvInput" type="file" accept=".csv,text/csv"></label>
+      </article>
+
+      
+
+
+
+
+      <article class="panel settings-panel">
+        <h2>登場年月・シリーズデータ</h2>
+        <p class="helper">未登録データの確認や、CSVによる一括更新ができます。</p>
+        <div id="masterDataStatus" class="data-status-grid"></div>
+        <button id="exportMasterCsvButton">年月・シリーズCSVを書き出す</button>
+        <label class="file-button">年月・シリーズCSVを読み込む
+          <input id="importMasterCsvInput" type="file" accept=".csv,text/csv">
+        </label>
+        <button id="showMissingReleaseButton">登場年月未登録を一覧表示</button>
+        <button id="showMissingSeriesButton">シリーズ未登録を一覧表示</button>
+      </article>
+
+      <article class="panel settings-panel" id="bulkImagePanel">
+        <h2>画像の一括登録</h2>
+        <p class="helper">画像ファイル名をツム名と同じにしてください。拡張子はjpg・png・webpなどに対応します。<br>例：<code>ミッキー.jpg</code>、<code>エルサ.png</code></p>
+        <label class="switch-row"><span>似た名前を候補として表示</span><input id="fuzzyImageMatchToggle" type="checkbox"></label>
+        <p class="helper">毎回すべての画像を選択しても、画像登録済みのツムは加工・再保存せず自動スキップします。画像を差し替える場合だけ、下のスイッチをオンにしてください。</p>
+        <label class="switch-row"><span>登録済み画像も上書きする</span><input id="overwriteExistingImagesToggle" type="checkbox"></label>
+        <label class="file-button">複数画像を選択
+          <input id="bulkImageInput" type="file" accept="image/*" multiple>
+        </label>
+        <div id="bulkImageResult" class="result-box">まだ画像は選択されていません。</div>
+        <div id="bulkImagePending" class="bulk-pending-list"></div>
+        <button id="applyBulkCandidatesButton" class="primary-button" hidden>選択した候補へ反映</button>
+      </article>
+
+      <article class="panel settings-panel">
+        <h2>画像管理</h2>
+        <p class="helper">登録済み画像の確認・削除ができます。画像はSafari内に保存されます。</p>
+        <button id="openImageManagerButton">登録画像を管理</button>
+      </article>
+
+
+
+      
+
+      
+
+      <article class="panel">
+        <h2>アプリ情報</h2>
+        <dl class="info-list">
+          <div><dt>収録ツム</dt><dd id="masterCount">0体</dd></div>
+          <div><dt>保存方式</dt><dd>Safari端末内保存</dd></div>
+          <div><dt>オフライン</dt><dd>対応</dd></div>
+          <div><dt>登場年月登録</dt><dd id="releaseDateCoverage">0/0体</dd></div>
+          <div><dt>シリーズ登録</dt><dd id="seriesCoverage">0/0体</dd></div>
+          <div><dt>データ引継ぎ</dt><dd>Ver.1〜5.1対応</dd></div>
+        </dl>
+      </article>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <button class="active" data-view="home"><span>⌂</span><b>ホーム</b></button>
+    <button data-view="collection"><span>▦</span><b>図鑑</b></button>
+    <button data-view="list"><span>☷</span><b>一覧</b></button>
+    <button data-view="box"><span>＋</span><b>入力</b></button>
+    
+    <button data-view="settings"><span>⚙</span><b>設定</b></button>
+  </nav>
+</div>
+
+<dialog id="editDialog">
+  <form id="editForm">
+    <h2 id="dialogTitle">ツムを編集</h2>
+    <input id="editId" type="hidden">
+    <label>ツム名<input id="editName" required></label>
+    <div class="form-grid">
+      <label>カテゴリ<input id="editCategory" required></label>
+      <label>スキルマ必要数<input id="editRequired" type="number" min="1" max="999" required></label>
+      <label>登場年月<input id="editReleaseDate" type="month"></label>
+      <label>シリーズ<input id="editSeries" placeholder="例：ミッキー＆フレンズ"></label>
+    </div>
+    <div class="skill-input-panel">
+      <span class="field-label">ゲーム画面と同じ形式で入力</span>
+      <div class="skill-input-grid">
+        <label>スキル
+          <select id="editSkillLevel"></select>
+        </label>
+        <label>ゲージ
+          <select id="editSkillPercent"></select>
+        </label>
+      </div>
+      <div id="editSkillPreview" class="skill-live-preview">未所持</div>
+      <p class="helper">例：ゲーム画面が「スキル3/6 25%」なら、スキル3・25%を選択してください。</p>
+    </div>
+    <div class="form-grid">
+      <label>現在数（自動換算）<input id="editOwned" type="number" min="0" max="999" required></label>
+      <label>育成優先度
+        <select id="editPriority">
+          <option value="0">設定なし</option>
+          <option value="1">最優先</option>
+          <option value="2">優先</option>
+          <option value="3">あとで</option>
+        </select>
+      </label>
+    </div>
+    <div class="image-edit-section">
+      <span class="field-label">ツム画像</span>
+      <div id="imagePreview" class="image-preview image-drop-zone" tabindex="0">
+        <span>画像をタップして選択</span>
+      </div>
+      <div class="image-action-grid">
+        <label class="secondary-button image-file-button">写真から選ぶ
+          <input id="editImageInput" type="file" accept="image/*">
+        </label>
+        <label class="secondary-button image-file-button">カメラで撮る
+          <input id="editCameraInput" type="file" accept="image/*" capture="environment">
+        </label>
+        <button type="button" id="removeImageButton" class="secondary-button">画像を削除</button>
+      </div>
+      <p class="helper">iPhoneは画像部分をタップして写真を選択できます。PCは画像をドラッグ＆ドロップできます。</p>
+    </div>
+    <label>タグ（カンマ区切り）
+      <input id="editTags" placeholder="例：プリンセス,スターウォーズ">
+    </label>
+    <div class="form-grid">
+      <label>コイン評価
+        <select id="editCoinRating">
+          <option value="0">未設定</option><option value="1">★1</option><option value="2">★2</option><option value="3">★3</option><option value="4">★4</option><option value="5">★5</option>
+        </select>
+      </label>
+      <label>スコア評価
+        <select id="editScoreRating">
+          <option value="0">未設定</option><option value="1">★1</option><option value="2">★2</option><option value="3">★3</option><option value="4">★4</option><option value="5">★5</option>
+        </select>
+      </label>
+    </div>
+    <div class="form-grid">
+      <label>使いやすさ
+        <select id="editEaseRating">
+          <option value="0">未設定</option><option value="1">★1</option><option value="2">★2</option><option value="3">★3</option><option value="4">★4</option><option value="5">★5</option>
+        </select>
+      </label>
+      <label>ミッション適性
+        <input id="editMissionTags" placeholder="例：フィーバー,コンボ,ボム">
+      </label>
+    </div>
+    <label>メモ<textarea id="editMemo"></textarea></label>
+    <button type="button" id="openDetailFromEditButton" class="secondary-button">詳細画面を開く</button>
+    <div class="dialog-actions">
+      <button type="button" id="deleteButton" class="danger-button">削除</button>
+      <button type="button" id="cancelEditButton" class="secondary-button">キャンセル</button>
+      <button type="submit" class="primary-button">保存</button>
+    </div>
+  </form>
+</dialog>
+
+
+
+
+
+
+
+
+<dialog id="missingDataDialog">
+  <div class="missing-data-dialog">
+    <div class="section-title">
+      <h2 id="missingDataTitle">未登録データ</h2>
+      <button id="closeMissingDataButton">閉じる</button>
+    </div>
+    <input id="missingDataSearch" type="search" placeholder="ツム名を検索">
+    <div id="missingDataList" class="missing-data-list"></div>
+  </div>
+</dialog>
+
+<dialog id="taskDialog">
+  <form id="taskForm">
+    <h2 id="taskDialogTitle">今日のタスクを追加</h2>
+    <input id="taskId" type="hidden">
+    <label>タスク名<input id="taskTitle" required placeholder="例：プレミアムBOXを5回引く"></label>
+    <label>関連ツム（任意）<input id="taskTsumName" placeholder="例：ガストン"></label>
+    <label>回数・枚数（任意）<input id="taskTarget" type="number" min="0" value="1"></label>
+    <div class="dialog-actions">
+      <button type="button" id="deleteTaskButton" class="danger-button">削除</button>
+      <button type="button" id="cancelTaskButton" class="secondary-button">キャンセル</button>
+      <button type="submit" class="primary-button">保存</button>
+    </div>
+  </form>
+</dialog>
+
+
+
+<dialog id="todayTrainingDialog">
+  <div class="message-dialog">
+    <h2>今日の育成ツムを選択</h2>
+    <input id="todayTrainingSearch" type="search" placeholder="ツム名を検索">
+    <div id="todayTrainingCandidates" class="candidate-list"></div>
+    <div class="dialog-actions">
+      <button id="clearTodayTrainingButton" class="danger-button">設定解除</button>
+      <button id="closeTodayTrainingButton" class="primary-button">閉じる</button>
+    </div>
+  </div>
+</dialog>
+
+<dialog id="planDialog">
+  <form id="planForm">
+    <h2 id="planDialogTitle">ガチャ計画を作成</h2>
+    <input id="planId" type="hidden">
+    <label>計画名<input id="planName" required placeholder="例：8月セレクトBOX"></label>
+    <label>種類
+      <select id="planType">
+        <option value="セレクトBOX">セレクトBOX</option>
+        <option value="ピックアップ">ピックアップ</option>
+        <option value="プレミアムBOX">プレミアムBOX</option>
+        <option value="その他">その他</option>
+      </select>
+    </label>
+    <label>対象ツム（1行に1体）<textarea id="planTsums" required></textarea></label>
+    <label>メモ<textarea id="planMemo"></textarea></label>
+    <div class="dialog-actions">
+      <button type="button" id="deletePlanButton" class="danger-button">削除</button>
+      <button type="button" id="cancelPlanButton" class="secondary-button">キャンセル</button>
+      <button type="submit" class="primary-button">保存</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="detailDialog">
+  <div class="detail-dialog">
+    <div class="detail-hero">
+      <div id="detailAvatar" class="detail-avatar"></div>
+      <div>
+        <span id="detailCategory" class="detail-category"></span>
+        <h2 id="detailName"></h2>
+        <p id="detailSkill"></p>
+      </div>
+    </div>
+    <div class="detail-progress-wrap">
+      <div class="detail-progress-head"><span>育成進捗</span><b id="detailPercent">0%</b></div>
+      <div class="detail-progress"><i id="detailBar"></i></div><div id="detailNextSkill" class="detail-next-skill"></div>
+    </div>
+    <div class="detail-grid">
+      <div><span>現在数</span><b id="detailOwned">0</b></div>
+      <div><span>必要数</span><b id="detailRequired">0</b></div>
+      <div><span>残り</span><b id="detailRemaining">0</b></div>
+      <div><span>必要コイン</span><b id="detailCoins">0</b></div>
+    </div>
+    <div class="detail-direct">
+      <label>所持数を直接入力
+        <input id="detailOwnedInput" type="number" min="0" max="999">
+      </label>
+      <button id="saveDetailOwnedButton" class="primary-button">反映</button>
+    </div>
+    <div id="detailMemo" class="detail-memo"></div>
+    <div class="dialog-actions">
+      <button id="detailFavoriteButton" class="secondary-button">お気に入り</button>
+      <button id="detailEditButton" class="secondary-button">編集</button>
+      <button id="closeDetailButton" class="primary-button">閉じる</button>
+    </div>
+  </div>
+</dialog>
+
+
+<dialog id="imageViewerDialog">
+  <div class="image-viewer-dialog">
+    <button id="closeImageViewerButton" class="viewer-close">×</button>
+    <button id="prevImageButton" class="viewer-nav viewer-prev">‹</button>
+    <img id="viewerImage" alt="">
+    <button id="nextImageButton" class="viewer-nav viewer-next">›</button>
+    <strong id="viewerName"></strong>
+  </div>
+</dialog>
+
+<dialog id="imageManagerDialog">
+  <div class="image-manager-dialog">
+    <div class="section-title"><h2>登録画像一覧</h2><button id="closeImageManagerButton">閉じる</button></div>
+    <p class="helper">画像を削除しても、所持数やメモは消えません。</p>
+    <div id="imageManagerGrid" class="image-manager-grid"></div>
+  </div>
+</dialog>
+
+<dialog id="messageDialog">
+  <div class="message-dialog">
+    <h2 id="messageTitle"></h2>
+    <p id="messageBody"></p>
+    <button id="closeMessageButton" class="primary-button">閉じる</button>
+  </div>
+</dialog>
+
+<button id="scrollTopButton" class="scroll-top-button" aria-label="ページ上部へ">↑</button>
+<div id="toast"></div>
+<script src="./tsums-data.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>
