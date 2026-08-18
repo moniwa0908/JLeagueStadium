@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-18T06:03+09:00",
+  "updatedAt": "2026-08-19T05:59+09:00",
   "source": "https://www.jleague.jp/match/search/",
   "matches": [
     {
@@ -978,7 +978,7 @@
     {
       "id": "J2-2026081510",
       "date": "2026-08-15",
-      "time": "18:03",
+      "time": "18:00",
       "league": "J2",
       "home": "ブラウブリッツ秋田",
       "away": "カターレ富山",
@@ -1013,25 +1013,9 @@
       ]
     },
     {
-      "id": "J3-2026081519",
-      "date": "2026-08-15",
-      "time": "18:03",
-      "league": "J3",
-      "home": "ギラヴァンツ北九州",
-      "away": "カマタマーレ讃岐",
-      "stadium": "ミクニワールドスタジアム北九州",
-      "url": "https://www.jleague.jp/match/j3/2026/081519/",
-      "status": "finished",
-      "statusText": "試合終了",
-      "homeScore": 0,
-      "awayScore": 0,
-      "homeScorers": [],
-      "awayScorers": []
-    },
-    {
       "id": "J2-2026081511",
       "date": "2026-08-15",
-      "time": "18:04",
+      "time": "18:00",
       "league": "J2",
       "home": "栃木シティ",
       "away": "ヴァンラーレ八戸",
@@ -1073,7 +1057,7 @@
     {
       "id": "J3-2026081518",
       "date": "2026-08-15",
-      "time": "18:04",
+      "time": "18:00",
       "league": "J3",
       "home": "ＦＣ岐阜",
       "away": "高知ユナイテッドＳＣ",
@@ -1123,6 +1107,22 @@
       "awayScorers": []
     },
     {
+      "id": "J3-2026081519",
+      "date": "2026-08-15",
+      "time": "18:00",
+      "league": "J3",
+      "home": "ギラヴァンツ北九州",
+      "away": "カマタマーレ讃岐",
+      "stadium": "ミクニワールドスタジアム北九州",
+      "url": "https://www.jleague.jp/match/j3/2026/081519/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeScorers": [],
+      "awayScorers": []
+    },
+    {
       "id": "J1-2026081503",
       "date": "2026-08-15",
       "time": "18:30",
@@ -1147,7 +1147,7 @@
     {
       "id": "J2-2026081512",
       "date": "2026-08-15",
-      "time": "18:33",
+      "time": "18:30",
       "league": "J2",
       "home": "藤枝ＭＹＦＣ",
       "away": "いわきＦＣ",
@@ -1393,6 +1393,44 @@
       "awayScorers": []
     },
     {
+      "id": "J2-2026081513",
+      "date": "2026-08-15",
+      "time": "19:00",
+      "league": "J2",
+      "home": "ベガルタ仙台",
+      "away": "大分トリニータ",
+      "stadium": "ユアテックスタジアム仙台",
+      "url": "https://www.jleague.jp/match/j2/2026/081513/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeScorers": [],
+      "awayScorers": []
+    },
+    {
+      "id": "J2-2026081514",
+      "date": "2026-08-15",
+      "time": "19:00",
+      "league": "J2",
+      "home": "湘南ベルマーレ",
+      "away": "モンテディオ山形",
+      "stadium": "レモンガススタジアム平塚",
+      "url": "https://www.jleague.jp/match/j2/2026/081514/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 1,
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "堂鼻 起暉",
+          "time": "75'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
+    },
+    {
       "id": "J2-2026081515",
       "date": "2026-08-15",
       "time": "19:00",
@@ -1421,47 +1459,9 @@
       ]
     },
     {
-      "id": "J2-2026081513",
-      "date": "2026-08-15",
-      "time": "19:03",
-      "league": "J2",
-      "home": "ベガルタ仙台",
-      "away": "大分トリニータ",
-      "stadium": "ユアテックスタジアム仙台",
-      "url": "https://www.jleague.jp/match/j2/2026/081513/",
-      "status": "finished",
-      "statusText": "試合終了",
-      "homeScore": 0,
-      "awayScore": 0,
-      "homeScorers": [],
-      "awayScorers": []
-    },
-    {
-      "id": "J2-2026081514",
-      "date": "2026-08-15",
-      "time": "19:03",
-      "league": "J2",
-      "home": "湘南ベルマーレ",
-      "away": "モンテディオ山形",
-      "stadium": "レモンガススタジアム平塚",
-      "url": "https://www.jleague.jp/match/j2/2026/081514/",
-      "status": "finished",
-      "statusText": "試合終了",
-      "homeScore": 1,
-      "awayScore": 0,
-      "homeScorers": [
-        {
-          "name": "堂鼻 起暉",
-          "time": "75'",
-          "ownGoal": false
-        }
-      ],
-      "awayScorers": []
-    },
-    {
       "id": "J2-2026081516",
       "date": "2026-08-15",
-      "time": "19:03",
+      "time": "19:00",
       "league": "J2",
       "home": "アルビレックス新潟",
       "away": "北海道コンサドーレ札幌",
@@ -1494,7 +1494,7 @@
     {
       "id": "J2-2026081517",
       "date": "2026-08-15",
-      "time": "19:03",
+      "time": "19:00",
       "league": "J2",
       "home": "ＦＣ今治",
       "away": "ＲＢ大宮アルディージャ",
@@ -1537,7 +1537,7 @@
     {
       "id": "J3-2026081520",
       "date": "2026-08-15",
-      "time": "19:03",
+      "time": "19:00",
       "league": "J3",
       "home": "ザスパ群馬",
       "away": "ＳＣ相模原",
@@ -1580,7 +1580,7 @@
     {
       "id": "J3-2026081522",
       "date": "2026-08-15",
-      "time": "19:03",
+      "time": "19:00",
       "league": "J3",
       "home": "レノファ山口ＦＣ",
       "away": "ＦＣ琉球",
@@ -1602,7 +1602,7 @@
     {
       "id": "J3-2026081523",
       "date": "2026-08-15",
-      "time": "19:03",
+      "time": "19:00",
       "league": "J3",
       "home": "ロアッソ熊本",
       "away": "栃木ＳＣ",
@@ -1669,9 +1669,47 @@
       ]
     },
     {
+      "id": "J2-2026081601",
+      "date": "2026-08-16",
+      "time": "18:00",
+      "league": "J2",
+      "home": "横浜ＦＣ",
+      "away": "ジュビロ磐田",
+      "stadium": "ＭＵＦＧスタジアム",
+      "url": "https://www.jleague.jp/match/j2/2026/081601/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 3,
+      "awayScore": 1,
+      "homeScorers": [
+        {
+          "name": "髙江 麗央",
+          "time": "28'",
+          "ownGoal": false
+        },
+        {
+          "name": "ルキアン",
+          "time": "51'",
+          "ownGoal": false
+        },
+        {
+          "name": "島村 拓弥",
+          "time": "62'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "ジョアン ヴィクトル",
+          "time": "70'",
+          "ownGoal": false
+        }
+      ]
+    },
+    {
       "id": "J3-2026081603",
       "date": "2026-08-16",
-      "time": "18:03",
+      "time": "18:00",
       "league": "J3",
       "home": "ＦＣ大阪",
       "away": "ＡＣ長野パルセイロ",
@@ -1719,7 +1757,7 @@
     {
       "id": "J3-2026081604",
       "date": "2026-08-16",
-      "time": "18:03",
+      "time": "18:00",
       "league": "J3",
       "home": "奈良クラブ",
       "away": "鹿児島ユナイテッドＦＣ",
@@ -1755,47 +1793,25 @@
       ]
     },
     {
-      "id": "J2-2026081601",
+      "id": "J2-2026081602",
       "date": "2026-08-16",
-      "time": "18:04",
+      "time": "19:00",
       "league": "J2",
-      "home": "横浜ＦＣ",
-      "away": "ジュビロ磐田",
-      "stadium": "ＭＵＦＧスタジアム",
-      "url": "https://www.jleague.jp/match/j2/2026/081601/",
+      "home": "徳島ヴォルティス",
+      "away": "サガン鳥栖",
+      "stadium": "鳴門・大塚スポーツパーク ポカリスエットスタジアム",
+      "url": "https://www.jleague.jp/match/j2/2026/081602/",
       "status": "finished",
       "statusText": "試合終了",
-      "homeScore": 3,
-      "awayScore": 1,
-      "homeScorers": [
-        {
-          "name": "髙江 麗央",
-          "time": "28'",
-          "ownGoal": false
-        },
-        {
-          "name": "ルキアン",
-          "time": "51'",
-          "ownGoal": false
-        },
-        {
-          "name": "島村 拓弥",
-          "time": "62'",
-          "ownGoal": false
-        }
-      ],
-      "awayScorers": [
-        {
-          "name": "ジョアン ヴィクトル",
-          "time": "70'",
-          "ownGoal": false
-        }
-      ]
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeScorers": [],
+      "awayScorers": []
     },
     {
       "id": "J3-2026081605",
       "date": "2026-08-16",
-      "time": "19:03",
+      "time": "19:00",
       "league": "J3",
       "home": "松本山雅ＦＣ",
       "away": "レイラック滋賀ＦＣ",
@@ -1838,7 +1854,7 @@
     {
       "id": "J3-2026081606",
       "date": "2026-08-16",
-      "time": "19:03",
+      "time": "19:00",
       "league": "J3",
       "home": "愛媛ＦＣ",
       "away": "ガイナーレ鳥取",
@@ -1870,22 +1886,6 @@
           "ownGoal": false
         }
       ],
-      "awayScorers": []
-    },
-    {
-      "id": "J2-2026081602",
-      "date": "2026-08-16",
-      "time": "19:04",
-      "league": "J2",
-      "home": "徳島ヴォルティス",
-      "away": "サガン鳥栖",
-      "stadium": "鳴門・大塚スポーツパーク ポカリスエットスタジアム",
-      "url": "https://www.jleague.jp/match/j2/2026/081602/",
-      "status": "finished",
-      "statusText": "試合終了",
-      "homeScore": 0,
-      "awayScore": 0,
-      "homeScorers": [],
       "awayScorers": []
     },
     {
@@ -17737,5 +17737,5 @@
       }
     ]
   },
-  "standingsUpdatedAt": "2026-08-18T06:03+09:00"
+  "standingsUpdatedAt": "2026-08-19T05:59+09:00"
 }
