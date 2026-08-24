@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T05:57+09:00",
+  "updatedAt": "2026-08-25T06:46+09:00",
   "source": "https://www.jleague.jp/match/search/",
   "matches": [
     {
@@ -1891,7 +1891,7 @@
     {
       "id": "J1-2026082102",
       "date": "2026-08-21",
-      "time": "19:03",
+      "time": "19:00",
       "league": "J1",
       "home": "柏レイソル",
       "away": "Ｖ・ファーレン長崎",
@@ -1939,7 +1939,7 @@
     {
       "id": "J1-2026082101",
       "date": "2026-08-21",
-      "time": "19:34",
+      "time": "19:30",
       "league": "J1",
       "home": "ＦＣ東京",
       "away": "ジェフユナイテッド千葉",
@@ -1966,7 +1966,7 @@
     {
       "id": "J2-2026082208",
       "date": "2026-08-22",
-      "time": "15:04",
+      "time": "15:00",
       "league": "J2",
       "home": "北海道コンサドーレ札幌",
       "away": "ＲＢ大宮アルディージャ",
@@ -2034,9 +2034,52 @@
       ]
     },
     {
+      "id": "J1-2026082201",
+      "date": "2026-08-22",
+      "time": "18:00",
+      "league": "J1",
+      "home": "鹿島アントラーズ",
+      "away": "アビスパ福岡",
+      "stadium": "メルカリスタジアム",
+      "url": "https://www.jleague.jp/match/j1/2026/082201/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 3,
+      "awayScore": 2,
+      "homeScorers": [
+        {
+          "name": "奈良 竜樹",
+          "time": "31'",
+          "ownGoal": true
+        },
+        {
+          "name": "レオ セアラ",
+          "time": "60'",
+          "ownGoal": false
+        },
+        {
+          "name": "チャヴリッチ",
+          "time": "64'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "師岡 柊生",
+          "time": "43'",
+          "ownGoal": false
+        },
+        {
+          "name": "関川 郁万",
+          "time": "76'",
+          "ownGoal": true
+        }
+      ]
+    },
+    {
       "id": "J2-2026082210",
       "date": "2026-08-22",
-      "time": "18:03",
+      "time": "18:00",
       "league": "J2",
       "home": "ブラウブリッツ秋田",
       "away": "ヴァンフォーレ甲府",
@@ -2180,49 +2223,6 @@
       ]
     },
     {
-      "id": "J1-2026082201",
-      "date": "2026-08-22",
-      "time": "18:04",
-      "league": "J1",
-      "home": "鹿島アントラーズ",
-      "away": "アビスパ福岡",
-      "stadium": "メルカリスタジアム",
-      "url": "https://www.jleague.jp/match/j1/2026/082201/",
-      "status": "finished",
-      "statusText": "試合終了",
-      "homeScore": 3,
-      "awayScore": 2,
-      "homeScorers": [
-        {
-          "name": "奈良 竜樹",
-          "time": "31'",
-          "ownGoal": true
-        },
-        {
-          "name": "レオ セアラ",
-          "time": "60'",
-          "ownGoal": false
-        },
-        {
-          "name": "チャヴリッチ",
-          "time": "64'",
-          "ownGoal": false
-        }
-      ],
-      "awayScorers": [
-        {
-          "name": "師岡 柊生",
-          "time": "43'",
-          "ownGoal": false
-        },
-        {
-          "name": "関川 郁万",
-          "time": "76'",
-          "ownGoal": true
-        }
-      ]
-    },
-    {
       "id": "J1-2026082202",
       "date": "2026-08-22",
       "time": "18:30",
@@ -2241,7 +2241,7 @@
     {
       "id": "J2-2026082211",
       "date": "2026-08-22",
-      "time": "18:33",
+      "time": "18:30",
       "league": "J2",
       "home": "カターレ富山",
       "away": "ＦＣ今治",
@@ -2314,6 +2314,66 @@
       ]
     },
     {
+      "id": "J1-2026082204",
+      "date": "2026-08-22",
+      "time": "19:00",
+      "league": "J1",
+      "home": "京都サンガF.C.",
+      "away": "水戸ホーリーホック",
+      "stadium": "サンガスタジアム by ＫＹＯＣＥＲＡ",
+      "url": "https://www.jleague.jp/match/j1/2026/082204/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 1,
+      "awayScore": 3,
+      "homeScorers": [
+        {
+          "name": "中野 瑠馬",
+          "time": "82'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "真瀬 拓海",
+          "time": "17'",
+          "ownGoal": false
+        },
+        {
+          "name": "木本 恭生",
+          "time": "31'",
+          "ownGoal": false
+        },
+        {
+          "name": "加藤 千尋",
+          "time": "68'",
+          "ownGoal": false
+        }
+      ]
+    },
+    {
+      "id": "J1-2026082205",
+      "date": "2026-08-22",
+      "time": "19:00",
+      "league": "J1",
+      "home": "セレッソ大阪",
+      "away": "清水エスパルス",
+      "stadium": "YANMAR HANASAKA STADIUM",
+      "url": "https://www.jleague.jp/match/j1/2026/082205/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 1,
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "チアゴ アンドラーデ",
+          "time": "62'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
+    },
+    {
       "id": "J2-2026082212",
       "date": "2026-08-22",
       "time": "19:00",
@@ -2339,6 +2399,61 @@
         }
       ],
       "awayScorers": []
+    },
+    {
+      "id": "J2-2026082213",
+      "date": "2026-08-22",
+      "time": "19:00",
+      "league": "J2",
+      "home": "アルビレックス新潟",
+      "away": "藤枝ＭＹＦＣ",
+      "stadium": "デンカビッグスワンスタジアム",
+      "url": "https://www.jleague.jp/match/j2/2026/082213/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 1,
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "シマブク カズヨシ",
+          "time": "82'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
+    },
+    {
+      "id": "J2-2026082214",
+      "date": "2026-08-22",
+      "time": "19:00",
+      "league": "J2",
+      "home": "ジュビロ磐田",
+      "away": "徳島ヴォルティス",
+      "stadium": "ヤマハスタジアム（磐田）",
+      "url": "https://www.jleague.jp/match/j2/2026/082214/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 2,
+      "awayScore": 1,
+      "homeScorers": [
+        {
+          "name": "イアゴ テレス",
+          "time": "13'",
+          "ownGoal": false
+        },
+        {
+          "name": "太田 龍之介",
+          "time": "90+2'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "山越 康平",
+          "time": "43'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J2-2026082215",
@@ -2379,47 +2494,62 @@
       ]
     },
     {
-      "id": "J1-2026082205",
+      "id": "J2-2026082216",
       "date": "2026-08-22",
-      "time": "19:03",
-      "league": "J1",
-      "home": "セレッソ大阪",
-      "away": "清水エスパルス",
-      "stadium": "YANMAR HANASAKA STADIUM",
-      "url": "https://www.jleague.jp/match/j1/2026/082205/",
+      "time": "19:00",
+      "league": "J2",
+      "home": "大分トリニータ",
+      "away": "いわきＦＣ",
+      "stadium": "クラサスドーム大分",
+      "url": "https://www.jleague.jp/match/j2/2026/082216/",
       "status": "finished",
       "statusText": "試合終了",
-      "homeScore": 1,
-      "awayScore": 0,
+      "homeScore": 4,
+      "awayScore": 1,
       "homeScorers": [
         {
-          "name": "チアゴ アンドラーデ",
-          "time": "62'",
+          "name": "宇津元 伸弥",
+          "time": "15'",
+          "ownGoal": false
+        },
+        {
+          "name": "西村 恭史",
+          "time": "33'",
+          "ownGoal": false
+        },
+        {
+          "name": "西村 恭史",
+          "time": "45+2'",
+          "ownGoal": false
+        },
+        {
+          "name": "木本 真翔",
+          "time": "68'",
           "ownGoal": false
         }
       ],
-      "awayScorers": []
+      "awayScorers": [
+        {
+          "name": "山中 惇希",
+          "time": "29'",
+          "ownGoal": false
+        }
+      ]
     },
     {
-      "id": "J2-2026082213",
+      "id": "J2-2026082217",
       "date": "2026-08-22",
-      "time": "19:03",
+      "time": "19:00",
       "league": "J2",
-      "home": "アルビレックス新潟",
-      "away": "藤枝ＭＹＦＣ",
-      "stadium": "デンカビッグスワンスタジアム",
-      "url": "https://www.jleague.jp/match/j2/2026/082213/",
+      "home": "テゲバジャーロ宮崎",
+      "away": "湘南ベルマーレ",
+      "stadium": "いちご宮崎新富サッカー場",
+      "url": "https://www.jleague.jp/match/j2/2026/082217/",
       "status": "finished",
       "statusText": "試合終了",
-      "homeScore": 1,
+      "homeScore": 0,
       "awayScore": 0,
-      "homeScorers": [
-        {
-          "name": "シマブク カズヨシ",
-          "time": "82'",
-          "ownGoal": false
-        }
-      ],
+      "homeScorers": [],
       "awayScorers": []
     },
     {
@@ -2575,139 +2705,9 @@
       "awayScorers": []
     },
     {
-      "id": "J1-2026082204",
-      "date": "2026-08-22",
-      "time": "19:04",
-      "league": "J1",
-      "home": "京都サンガF.C.",
-      "away": "水戸ホーリーホック",
-      "stadium": "サンガスタジアム by ＫＹＯＣＥＲＡ",
-      "url": "https://www.jleague.jp/match/j1/2026/082204/",
-      "status": "finished",
-      "statusText": "試合終了",
-      "homeScore": 1,
-      "awayScore": 3,
-      "homeScorers": [
-        {
-          "name": "中野 瑠馬",
-          "time": "82'",
-          "ownGoal": false
-        }
-      ],
-      "awayScorers": [
-        {
-          "name": "真瀬 拓海",
-          "time": "17'",
-          "ownGoal": false
-        },
-        {
-          "name": "木本 恭生",
-          "time": "31'",
-          "ownGoal": false
-        },
-        {
-          "name": "加藤 千尋",
-          "time": "68'",
-          "ownGoal": false
-        }
-      ]
-    },
-    {
-      "id": "J2-2026082214",
-      "date": "2026-08-22",
-      "time": "19:04",
-      "league": "J2",
-      "home": "ジュビロ磐田",
-      "away": "徳島ヴォルティス",
-      "stadium": "ヤマハスタジアム（磐田）",
-      "url": "https://www.jleague.jp/match/j2/2026/082214/",
-      "status": "finished",
-      "statusText": "試合終了",
-      "homeScore": 2,
-      "awayScore": 1,
-      "homeScorers": [
-        {
-          "name": "イアゴ テレス",
-          "time": "13'",
-          "ownGoal": false
-        },
-        {
-          "name": "太田 龍之介",
-          "time": "90+2'",
-          "ownGoal": false
-        }
-      ],
-      "awayScorers": [
-        {
-          "name": "山越 康平",
-          "time": "43'",
-          "ownGoal": false
-        }
-      ]
-    },
-    {
-      "id": "J2-2026082217",
-      "date": "2026-08-22",
-      "time": "19:04",
-      "league": "J2",
-      "home": "テゲバジャーロ宮崎",
-      "away": "湘南ベルマーレ",
-      "stadium": "いちご宮崎新富サッカー場",
-      "url": "https://www.jleague.jp/match/j2/2026/082217/",
-      "status": "finished",
-      "statusText": "試合終了",
-      "homeScore": 0,
-      "awayScore": 0,
-      "homeScorers": [],
-      "awayScorers": []
-    },
-    {
-      "id": "J2-2026082216",
-      "date": "2026-08-22",
-      "time": "19:05",
-      "league": "J2",
-      "home": "大分トリニータ",
-      "away": "いわきＦＣ",
-      "stadium": "クラサスドーム大分",
-      "url": "https://www.jleague.jp/match/j2/2026/082216/",
-      "status": "finished",
-      "statusText": "試合終了",
-      "homeScore": 4,
-      "awayScore": 1,
-      "homeScorers": [
-        {
-          "name": "宇津元 伸弥",
-          "time": "15'",
-          "ownGoal": false
-        },
-        {
-          "name": "西村 恭史",
-          "time": "33'",
-          "ownGoal": false
-        },
-        {
-          "name": "西村 恭史",
-          "time": "45+2'",
-          "ownGoal": false
-        },
-        {
-          "name": "木本 真翔",
-          "time": "68'",
-          "ownGoal": false
-        }
-      ],
-      "awayScorers": [
-        {
-          "name": "山中 惇希",
-          "time": "29'",
-          "ownGoal": false
-        }
-      ]
-    },
-    {
       "id": "J1-2026082206",
       "date": "2026-08-22",
-      "time": "19:20",
+      "time": "19:15",
       "league": "J1",
       "home": "サンフレッチェ広島",
       "away": "川崎フロンターレ",
@@ -2735,7 +2735,7 @@
     {
       "id": "J1-2026082207",
       "date": "2026-08-22",
-      "time": "19:34",
+      "time": "19:30",
       "league": "J1",
       "home": "横浜Ｆ・マリノス",
       "away": "ヴィッセル神戸",
@@ -2823,7 +2823,7 @@
     {
       "id": "J1-2026082301",
       "date": "2026-08-23",
-      "time": "19:36",
+      "time": "19:30",
       "league": "J1",
       "home": "ＦＣ町田ゼルビア",
       "away": "浦和レッズ",
@@ -18287,5 +18287,5 @@
       }
     ]
   },
-  "standingsUpdatedAt": "2026-08-24T05:57+09:00"
+  "standingsUpdatedAt": "2026-08-25T06:46+09:00"
 }
