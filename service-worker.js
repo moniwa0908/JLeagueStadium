@@ -1,4 +1,4 @@
-const CACHE='j-stadium-v47';
+const CACHE='j-stadium-v48';
 const FILES=['./','./index.html','./firebase-config.js?v=39','./stadium-details.js?v=39','./firebase-shared.js?v=39','./app.js?v=39','./standings.js?v=46','./schedule.js?v=47','./schedule.json','./manifest.json?v=23','./apple-touch-icon.png?v=23','./icon-192.png?v=23','./icon-512.png?v=23'];
 self.addEventListener('install',event=>{
   self.skipWaiting();
