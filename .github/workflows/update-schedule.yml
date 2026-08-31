@@ -2,6 +2,9 @@ name: Jリーグ日程を自動更新
 
 on:
   schedule:
+    # 日本時間 21:45（UTC 12:45）
+    - cron: "45 12 * * *"
+    # 日本時間 翌朝5:15（UTC 前日20:15）
     - cron: "15 20 * * *"
   workflow_dispatch:
 
