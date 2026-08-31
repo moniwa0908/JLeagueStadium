@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-31T07:42+09:00",
+  "updatedAt": "2026-09-01T04:15+09:00",
   "source": "https://www.jleague.jp/match/search/",
   "matches": [
     {
@@ -2905,7 +2905,7 @@
     {
       "id": "J2-2026082911",
       "date": "2026-08-29",
-      "time": "18:03",
+      "time": "18:00",
       "league": "J2",
       "home": "いわきＦＣ",
       "away": "アルビレックス新潟",
@@ -2948,7 +2948,7 @@
     {
       "id": "J2-2026082912",
       "date": "2026-08-29",
-      "time": "18:03",
+      "time": "18:00",
       "league": "J2",
       "home": "栃木シティ",
       "away": "ジュビロ磐田",
@@ -3229,7 +3229,7 @@
     {
       "id": "J2-2026082914",
       "date": "2026-08-29",
-      "time": "18:33",
+      "time": "18:30",
       "league": "J2",
       "home": "カターレ富山",
       "away": "藤枝ＭＹＦＣ",
@@ -3478,7 +3478,7 @@
     {
       "id": "J2-2026082915",
       "date": "2026-08-29",
-      "time": "19:03",
+      "time": "19:00",
       "league": "J2",
       "home": "ベガルタ仙台",
       "away": "テゲバジャーロ宮崎",
@@ -3524,9 +3524,47 @@
       ]
     },
     {
+      "id": "J2-2026082916",
+      "date": "2026-08-29",
+      "time": "19:00",
+      "league": "J2",
+      "home": "ＲＢ大宮アルディージャ",
+      "away": "湘南ベルマーレ",
+      "stadium": "ＮＡＣＫ５スタジアム大宮",
+      "url": "https://www.jleague.jp/match/j2/2026/082916/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 2,
+      "awayScore": 2,
+      "homeScorers": [
+        {
+          "name": "カルリーニョス ジュニオ",
+          "time": "74'",
+          "ownGoal": false
+        },
+        {
+          "name": "スファナット ムエアンタ",
+          "time": "90+1'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "山田 寛人",
+          "time": "30'",
+          "ownGoal": false
+        },
+        {
+          "name": "西野 太陽",
+          "time": "37'",
+          "ownGoal": false
+        }
+      ]
+    },
+    {
       "id": "J2-2026082917",
       "date": "2026-08-29",
-      "time": "19:03",
+      "time": "19:00",
       "league": "J2",
       "home": "横浜ＦＣ",
       "away": "サガン鳥栖",
@@ -3564,7 +3602,7 @@
     {
       "id": "J2-2026082918",
       "date": "2026-08-29",
-      "time": "19:03",
+      "time": "19:00",
       "league": "J2",
       "home": "ヴァンフォーレ甲府",
       "away": "北海道コンサドーレ札幌",
@@ -3597,7 +3635,7 @@
     {
       "id": "J2-2026082919",
       "date": "2026-08-29",
-      "time": "19:04",
+      "time": "19:00",
       "league": "J2",
       "home": "徳島ヴォルティス",
       "away": "大分トリニータ",
@@ -3619,7 +3657,7 @@
     {
       "id": "J2-2026082920",
       "date": "2026-08-29",
-      "time": "19:04",
+      "time": "19:00",
       "league": "J2",
       "home": "ＦＣ今治",
       "away": "モンテディオ山形",
@@ -3644,44 +3682,6 @@
         {
           "name": "ディサロ 燦シルヴァーノ",
           "time": "90+4'",
-          "ownGoal": false
-        }
-      ]
-    },
-    {
-      "id": "J2-2026082916",
-      "date": "2026-08-29",
-      "time": "19:05",
-      "league": "J2",
-      "home": "ＲＢ大宮アルディージャ",
-      "away": "湘南ベルマーレ",
-      "stadium": "ＮＡＣＫ５スタジアム大宮",
-      "url": "https://www.jleague.jp/match/j2/2026/082916/",
-      "status": "finished",
-      "statusText": "試合終了",
-      "homeScore": 2,
-      "awayScore": 2,
-      "homeScorers": [
-        {
-          "name": "カルリーニョス ジュニオ",
-          "time": "74'",
-          "ownGoal": false
-        },
-        {
-          "name": "スファナット ムエアンタ",
-          "time": "90+1'",
-          "ownGoal": false
-        }
-      ],
-      "awayScorers": [
-        {
-          "name": "山田 寛人",
-          "time": "30'",
-          "ownGoal": false
-        },
-        {
-          "name": "西野 太陽",
-          "time": "37'",
           "ownGoal": false
         }
       ]
@@ -18843,5 +18843,5 @@
       }
     ]
   },
-  "standingsUpdatedAt": "2026-08-31T07:42+09:00"
+  "standingsUpdatedAt": "2026-09-01T04:15+09:00"
 }
