@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-07T05:07+09:00",
+  "updatedAt": "2026-09-08T06:14+09:00",
   "source": "https://www.jleague.jp/match/search/",
   "matches": [
     {
@@ -4288,7 +4288,7 @@
     {
       "id": "J1-2026090501",
       "date": "2026-09-05",
-      "time": "19:03",
+      "time": "19:00",
       "league": "J1",
       "home": "アビスパ福岡",
       "away": "水戸ホーリーホック",
@@ -4655,9 +4655,58 @@
       ]
     },
     {
+      "id": "J1-2026090603",
+      "date": "2026-09-06",
+      "time": "18:00",
+      "league": "J1",
+      "home": "鹿島アントラーズ",
+      "away": "浦和レッズ",
+      "stadium": "メルカリスタジアム",
+      "url": "https://www.jleague.jp/match/j1/2026/090603/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 0,
+      "awayScore": 1,
+      "homeScorers": [],
+      "awayScorers": [
+        {
+          "name": "鈴木 優磨",
+          "time": "20'",
+          "ownGoal": true
+        }
+      ]
+    },
+    {
+      "id": "J1-2026090604",
+      "date": "2026-09-06",
+      "time": "18:00",
+      "league": "J1",
+      "home": "ジェフユナイテッド千葉",
+      "away": "ガンバ大阪",
+      "stadium": "フクダ電子アリーナ",
+      "url": "https://www.jleague.jp/match/j1/2026/090604/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 2,
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "矢村 健",
+          "time": "1'",
+          "ownGoal": false
+        },
+        {
+          "name": "津久井 匠海",
+          "time": "52'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
+    },
+    {
       "id": "J1-2026090605",
       "date": "2026-09-06",
-      "time": "18:03",
+      "time": "18:00",
       "league": "J1",
       "home": "名古屋グランパス",
       "away": "ＦＣ町田ゼルビア",
@@ -4695,7 +4744,7 @@
     {
       "id": "J1-2026090606",
       "date": "2026-09-06",
-      "time": "18:03",
+      "time": "18:00",
       "league": "J1",
       "home": "ファジアーノ岡山",
       "away": "サンフレッチェ広島",
@@ -4832,58 +4881,9 @@
       ]
     },
     {
-      "id": "J1-2026090603",
-      "date": "2026-09-06",
-      "time": "18:04",
-      "league": "J1",
-      "home": "鹿島アントラーズ",
-      "away": "浦和レッズ",
-      "stadium": "メルカリスタジアム",
-      "url": "https://www.jleague.jp/match/j1/2026/090603/",
-      "status": "finished",
-      "statusText": "試合終了",
-      "homeScore": 0,
-      "awayScore": 1,
-      "homeScorers": [],
-      "awayScorers": [
-        {
-          "name": "鈴木 優磨",
-          "time": "20'",
-          "ownGoal": true
-        }
-      ]
-    },
-    {
-      "id": "J1-2026090604",
-      "date": "2026-09-06",
-      "time": "18:04",
-      "league": "J1",
-      "home": "ジェフユナイテッド千葉",
-      "away": "ガンバ大阪",
-      "stadium": "フクダ電子アリーナ",
-      "url": "https://www.jleague.jp/match/j1/2026/090604/",
-      "status": "finished",
-      "statusText": "試合終了",
-      "homeScore": 2,
-      "awayScore": 0,
-      "homeScorers": [
-        {
-          "name": "矢村 健",
-          "time": "1'",
-          "ownGoal": false
-        },
-        {
-          "name": "津久井 匠海",
-          "time": "52'",
-          "ownGoal": false
-        }
-      ],
-      "awayScorers": []
-    },
-    {
       "id": "J1-2026090602",
       "date": "2026-09-06",
-      "time": "19:03",
+      "time": "19:00",
       "league": "J1",
       "home": "川崎フロンターレ",
       "away": "清水エスパルス",
@@ -4921,7 +4921,7 @@
     {
       "id": "J1-2026090607",
       "date": "2026-09-06",
-      "time": "19:03",
+      "time": "19:00",
       "league": "J1",
       "home": "柏レイソル",
       "away": "横浜Ｆ・マリノス",
@@ -4948,7 +4948,7 @@
     {
       "id": "J1-2026090608",
       "date": "2026-09-06",
-      "time": "19:03",
+      "time": "19:00",
       "league": "J1",
       "home": "セレッソ大阪",
       "away": "東京ヴェルディ",
@@ -4960,6 +4960,44 @@
       "awayScore": 0,
       "homeScorers": [],
       "awayScorers": []
+    },
+    {
+      "id": "J1-2026090609",
+      "date": "2026-09-06",
+      "time": "19:00",
+      "league": "J1",
+      "home": "ヴィッセル神戸",
+      "away": "Ｖ・ファーレン長崎",
+      "stadium": "ノエビアスタジアム神戸",
+      "url": "https://www.jleague.jp/match/j1/2026/090609/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 3,
+      "awayScore": 1,
+      "homeScorers": [
+        {
+          "name": "永戸 勝也",
+          "time": "2'",
+          "ownGoal": false
+        },
+        {
+          "name": "郷家 友太",
+          "time": "34'",
+          "ownGoal": false
+        },
+        {
+          "name": "郷家 友太",
+          "time": "52'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "松本 天夢",
+          "time": "90+3'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J2-2026090614",
@@ -5012,47 +5050,9 @@
       ]
     },
     {
-      "id": "J1-2026090609",
-      "date": "2026-09-06",
-      "time": "19:04",
-      "league": "J1",
-      "home": "ヴィッセル神戸",
-      "away": "Ｖ・ファーレン長崎",
-      "stadium": "ノエビアスタジアム神戸",
-      "url": "https://www.jleague.jp/match/j1/2026/090609/",
-      "status": "finished",
-      "statusText": "試合終了",
-      "homeScore": 3,
-      "awayScore": 1,
-      "homeScorers": [
-        {
-          "name": "永戸 勝也",
-          "time": "2'",
-          "ownGoal": false
-        },
-        {
-          "name": "郷家 友太",
-          "time": "34'",
-          "ownGoal": false
-        },
-        {
-          "name": "郷家 友太",
-          "time": "52'",
-          "ownGoal": false
-        }
-      ],
-      "awayScorers": [
-        {
-          "name": "松本 天夢",
-          "time": "90+3'",
-          "ownGoal": false
-        }
-      ]
-    },
-    {
       "id": "J1-2026090610",
       "date": "2026-09-06",
-      "time": "19:33",
+      "time": "19:30",
       "league": "J1",
       "home": "ＦＣ東京",
       "away": "京都サンガF.C.",
@@ -19539,5 +19539,5 @@
       }
     ]
   },
-  "standingsUpdatedAt": "2026-09-07T05:07+09:00"
+  "standingsUpdatedAt": "2026-09-08T06:14+09:00"
 }
