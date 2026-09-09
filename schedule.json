@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-09T05:51+09:00",
+  "updatedAt": "2026-09-09T23:57+09:00",
   "source": "https://www.jleague.jp/match/search/",
   "matches": [
     {
@@ -5079,16 +5079,34 @@
     {
       "id": "J3-2026090908",
       "date": "2026-09-09",
-      "time": "19:00",
+      "time": "19:03",
       "league": "J3",
       "home": "ＦＣ琉球",
       "away": "ギラヴァンツ北九州",
       "stadium": "沖縄県総合運動公園陸上競技場",
       "url": "https://www.jleague.jp/match/j3/2026/090908/",
-      "status": "scheduled",
-      "statusText": "",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 3,
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "加藤 悠馬",
+          "time": "52'",
+          "ownGoal": false
+        },
+        {
+          "name": "石浦 大雅",
+          "time": "77'",
+          "ownGoal": false
+        },
+        {
+          "name": "上野 瑶介",
+          "time": "89'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
     },
     {
       "id": "J1-2026091101",
@@ -19371,6 +19389,18 @@
       },
       {
         "rank": "7",
+        "team": "ＦＣ琉球",
+        "points": "7",
+        "played": "5",
+        "won": "2",
+        "drawn": "1",
+        "lost": "2",
+        "goalsFor": "8",
+        "goalsAgainst": "6",
+        "goalDifference": "2"
+      },
+      {
+        "rank": "8",
         "team": "ＦＣ大阪",
         "points": "7",
         "played": "5",
@@ -19382,7 +19412,7 @@
         "goalDifference": "2"
       },
       {
-        "rank": "8",
+        "rank": "9",
         "team": "レノファ山口ＦＣ",
         "points": "7",
         "played": "5",
@@ -19394,7 +19424,7 @@
         "goalDifference": "1"
       },
       {
-        "rank": "9",
+        "rank": "10",
         "team": "ＡＣ長野パルセイロ",
         "points": "7",
         "played": "5",
@@ -19406,7 +19436,7 @@
         "goalDifference": "-1"
       },
       {
-        "rank": "10",
+        "rank": "11",
         "team": "ガイナーレ鳥取",
         "points": "7",
         "played": "5",
@@ -19418,7 +19448,7 @@
         "goalDifference": "-5"
       },
       {
-        "rank": "11",
+        "rank": "12",
         "team": "ロアッソ熊本",
         "points": "6",
         "played": "5",
@@ -19430,7 +19460,7 @@
         "goalDifference": "1"
       },
       {
-        "rank": "12",
+        "rank": "13",
         "team": "ツエーゲン金沢",
         "points": "6",
         "played": "5",
@@ -19442,7 +19472,7 @@
         "goalDifference": "-1"
       },
       {
-        "rank": "13",
+        "rank": "14",
         "team": "奈良クラブ",
         "points": "5",
         "played": "5",
@@ -19454,7 +19484,7 @@
         "goalDifference": "-3"
       },
       {
-        "rank": "14",
+        "rank": "15",
         "team": "福島ユナイテッドＦＣ",
         "points": "4",
         "played": "5",
@@ -19466,25 +19496,13 @@
         "goalDifference": "-1"
       },
       {
-        "rank": "15",
+        "rank": "16",
         "team": "松本山雅ＦＣ",
         "points": "4",
         "played": "5",
         "won": "0",
         "drawn": "4",
         "lost": "1",
-        "goalsFor": "5",
-        "goalsAgainst": "6",
-        "goalDifference": "-1"
-      },
-      {
-        "rank": "15",
-        "team": "ＦＣ琉球",
-        "points": "4",
-        "played": "4",
-        "won": "1",
-        "drawn": "1",
-        "lost": "2",
         "goalsFor": "5",
         "goalsAgainst": "6",
         "goalDifference": "-1"
@@ -19517,13 +19535,13 @@
         "rank": "19",
         "team": "ギラヴァンツ北九州",
         "points": "3",
-        "played": "4",
+        "played": "5",
         "won": "0",
         "drawn": "3",
-        "lost": "1",
+        "lost": "2",
         "goalsFor": "5",
-        "goalsAgainst": "7",
-        "goalDifference": "-2"
+        "goalsAgainst": "10",
+        "goalDifference": "-5"
       },
       {
         "rank": "20",
@@ -19539,5 +19557,5 @@
       }
     ]
   },
-  "standingsUpdatedAt": "2026-09-09T05:51+09:00"
+  "standingsUpdatedAt": "2026-09-09T23:57+09:00"
 }
