@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-11T05:32+09:00",
+  "updatedAt": "2026-09-11T23:45+09:00",
   "source": "https://www.jleague.jp/match/search/",
   "matches": [
     {
@@ -5079,7 +5079,7 @@
     {
       "id": "J3-2026090908",
       "date": "2026-09-09",
-      "time": "19:03",
+      "time": "19:00",
       "league": "J3",
       "home": "ＦＣ琉球",
       "away": "ギラヴァンツ北九州",
@@ -5109,20 +5109,6 @@
       "awayScorers": []
     },
     {
-      "id": "J1-2026091101",
-      "date": "2026-09-11",
-      "time": "19:00",
-      "league": "J1",
-      "home": "京都サンガF.C.",
-      "away": "柏レイソル",
-      "stadium": "サンガスタジアム by ＫＹＯＣＥＲＡ",
-      "url": "https://www.jleague.jp/match/j1/2026/091101/",
-      "status": "scheduled",
-      "statusText": "",
-      "homeScore": null,
-      "awayScore": null
-    },
-    {
       "id": "J1-2026091102",
       "date": "2026-09-11",
       "time": "19:00",
@@ -5131,10 +5117,72 @@
       "away": "鹿島アントラーズ",
       "stadium": "ノエビアスタジアム神戸",
       "url": "https://www.jleague.jp/match/j1/2026/091102/",
-      "status": "scheduled",
-      "statusText": "",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 2,
+      "awayScore": 1,
+      "homeScorers": [
+        {
+          "name": "大迫 勇也",
+          "time": "56'",
+          "ownGoal": false
+        },
+        {
+          "name": "山川 哲史",
+          "time": "77'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "チャヴリッチ",
+          "time": "73'",
+          "ownGoal": false
+        }
+      ]
+    },
+    {
+      "id": "J1-2026091101",
+      "date": "2026-09-11",
+      "time": "19:04",
+      "league": "J1",
+      "home": "京都サンガF.C.",
+      "away": "柏レイソル",
+      "stadium": "サンガスタジアム by ＫＹＯＣＥＲＡ",
+      "url": "https://www.jleague.jp/match/j1/2026/091101/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 2,
+      "awayScore": 3,
+      "homeScorers": [
+        {
+          "name": "ラファエル エリアス",
+          "time": "3'",
+          "ownGoal": false
+        },
+        {
+          "name": "ラファエル エリアス",
+          "time": "33'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "久保 藤次郎",
+          "time": "59'",
+          "ownGoal": false
+        },
+        {
+          "name": "瀬川 祐輔",
+          "time": "67'",
+          "ownGoal": false
+        },
+        {
+          "name": "瀬川 祐輔",
+          "time": "71'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J1-2026091202",
@@ -6761,20 +6809,6 @@
       "awayScore": null
     },
     {
-      "id": "J2-2026101105",
-      "date": "2026-10-11",
-      "time": "13:00",
-      "league": "J2",
-      "home": "モンテディオ山形",
-      "away": "ベガルタ仙台",
-      "stadium": "ＮＤソフトスタジアム山形",
-      "url": "https://www.jleague.jp/match/j2/2026/101105/",
-      "status": "scheduled",
-      "statusText": "",
-      "homeScore": null,
-      "awayScore": null
-    },
-    {
       "id": "J3-2026101109",
       "date": "2026-10-11",
       "time": "13:00",
@@ -6797,6 +6831,20 @@
       "away": "愛媛ＦＣ",
       "stadium": "えがお健康スタジアム",
       "url": "https://www.jleague.jp/match/j3/2026/101110/",
+      "status": "scheduled",
+      "statusText": "",
+      "homeScore": null,
+      "awayScore": null
+    },
+    {
+      "id": "J2-2026101105",
+      "date": "2026-10-11",
+      "time": "13:05",
+      "league": "J2",
+      "home": "モンテディオ山形",
+      "away": "ベガルタ仙台",
+      "stadium": "ＮＤソフトスタジアム山形",
+      "url": "https://www.jleague.jp/match/j2/2026/101105/",
       "status": "scheduled",
       "statusText": "",
       "homeScore": null,
@@ -18846,38 +18894,38 @@
       {
         "rank": "2",
         "team": "ヴィッセル神戸",
-        "points": "13",
-        "played": "6",
-        "won": "4",
+        "points": "16",
+        "played": "7",
+        "won": "5",
         "drawn": "1",
         "lost": "1",
-        "goalsFor": "9",
-        "goalsAgainst": "4",
-        "goalDifference": "5"
+        "goalsFor": "11",
+        "goalsAgainst": "5",
+        "goalDifference": "6"
       },
       {
         "rank": "3",
-        "team": "鹿島アントラーズ",
-        "points": "12",
-        "played": "6",
-        "won": "4",
+        "team": "柏レイソル",
+        "points": "15",
+        "played": "7",
+        "won": "5",
         "drawn": "0",
         "lost": "2",
         "goalsFor": "13",
-        "goalsAgainst": "11",
-        "goalDifference": "2"
+        "goalsAgainst": "10",
+        "goalDifference": "3"
       },
       {
         "rank": "4",
-        "team": "柏レイソル",
+        "team": "鹿島アントラーズ",
         "points": "12",
-        "played": "6",
+        "played": "7",
         "won": "4",
         "drawn": "0",
-        "lost": "2",
-        "goalsFor": "10",
-        "goalsAgainst": "8",
-        "goalDifference": "2"
+        "lost": "3",
+        "goalsFor": "14",
+        "goalsAgainst": "13",
+        "goalDifference": "1"
       },
       {
         "rank": "5",
@@ -19003,13 +19051,13 @@
         "rank": "15",
         "team": "京都サンガF.C.",
         "points": "5",
-        "played": "6",
+        "played": "7",
         "won": "1",
         "drawn": "2",
-        "lost": "3",
-        "goalsFor": "7",
-        "goalsAgainst": "11",
-        "goalDifference": "-4"
+        "lost": "4",
+        "goalsFor": "9",
+        "goalsAgainst": "14",
+        "goalDifference": "-5"
       },
       {
         "rank": "16",
@@ -19557,5 +19605,5 @@
       }
     ]
   },
-  "standingsUpdatedAt": "2026-09-11T05:32+09:00"
+  "standingsUpdatedAt": "2026-09-11T23:45+09:00"
 }
