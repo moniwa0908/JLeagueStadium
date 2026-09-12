@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-12T05:38+09:00",
+  "updatedAt": "2026-09-12T22:49+09:00",
   "source": "https://www.jleague.jp/match/search/",
   "matches": [
     {
@@ -5109,42 +5109,9 @@
       "awayScorers": []
     },
     {
-      "id": "J1-2026091102",
-      "date": "2026-09-11",
-      "time": "19:00",
-      "league": "J1",
-      "home": "ヴィッセル神戸",
-      "away": "鹿島アントラーズ",
-      "stadium": "ノエビアスタジアム神戸",
-      "url": "https://www.jleague.jp/match/j1/2026/091102/",
-      "status": "finished",
-      "statusText": "試合終了",
-      "homeScore": 2,
-      "awayScore": 1,
-      "homeScorers": [
-        {
-          "name": "大迫 勇也",
-          "time": "56'",
-          "ownGoal": false
-        },
-        {
-          "name": "山川 哲史",
-          "time": "77'",
-          "ownGoal": false
-        }
-      ],
-      "awayScorers": [
-        {
-          "name": "チャヴリッチ",
-          "time": "73'",
-          "ownGoal": false
-        }
-      ]
-    },
-    {
       "id": "J1-2026091101",
       "date": "2026-09-11",
-      "time": "19:04",
+      "time": "19:00",
       "league": "J1",
       "home": "京都サンガF.C.",
       "away": "柏レイソル",
@@ -5185,18 +5152,37 @@
       ]
     },
     {
-      "id": "J1-2026091202",
-      "date": "2026-09-12",
-      "time": "18:00",
+      "id": "J1-2026091102",
+      "date": "2026-09-11",
+      "time": "19:00",
       "league": "J1",
-      "home": "水戸ホーリーホック",
-      "away": "川崎フロンターレ",
-      "stadium": "水戸信用金庫スタジアム",
-      "url": "https://www.jleague.jp/match/j1/2026/091202/",
-      "status": "scheduled",
-      "statusText": "",
-      "homeScore": null,
-      "awayScore": null
+      "home": "ヴィッセル神戸",
+      "away": "鹿島アントラーズ",
+      "stadium": "ノエビアスタジアム神戸",
+      "url": "https://www.jleague.jp/match/j1/2026/091102/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 2,
+      "awayScore": 1,
+      "homeScorers": [
+        {
+          "name": "大迫 勇也",
+          "time": "56'",
+          "ownGoal": false
+        },
+        {
+          "name": "山川 哲史",
+          "time": "77'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "チャヴリッチ",
+          "time": "73'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J2-2026091209",
@@ -5207,80 +5193,202 @@
       "away": "徳島ヴォルティス",
       "stadium": "ソユースタジアム",
       "url": "https://www.jleague.jp/match/j2/2026/091209/",
-      "status": "scheduled",
-      "statusText": "",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 4,
+      "awayScore": 1,
+      "homeScorers": [
+        {
+          "name": "野々村 鷹人",
+          "time": "17'",
+          "ownGoal": false
+        },
+        {
+          "name": "鈴木 翔大",
+          "time": "27'",
+          "ownGoal": false
+        },
+        {
+          "name": "高橋 秀典",
+          "time": "33'",
+          "ownGoal": false
+        },
+        {
+          "name": "鈴木 翔大",
+          "time": "36'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "ルーカス バルセロス",
+          "time": "23'",
+          "ownGoal": false
+        }
+      ]
+    },
+    {
+      "id": "J1-2026091202",
+      "date": "2026-09-12",
+      "time": "18:05",
+      "league": "J1",
+      "home": "水戸ホーリーホック",
+      "away": "川崎フロンターレ",
+      "stadium": "水戸信用金庫スタジアム",
+      "url": "https://www.jleague.jp/match/j1/2026/091202/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 0,
+      "awayScore": 1,
+      "homeScorers": [],
+      "awayScorers": [
+        {
+          "name": "マルシーニョ",
+          "time": "59'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J2-2026091210",
       "date": "2026-09-12",
-      "time": "18:00",
+      "time": "18:05",
       "league": "J2",
       "home": "いわきＦＣ",
       "away": "横浜ＦＣ",
       "stadium": "ハワイアンズスタジアムいわき",
       "url": "https://www.jleague.jp/match/j2/2026/091210/",
-      "status": "scheduled",
-      "statusText": "",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 2,
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "山中 惇希",
+          "time": "52'",
+          "ownGoal": false
+        },
+        {
+          "name": "山口 大輝",
+          "time": "80'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
     },
     {
       "id": "J3-2026091217",
       "date": "2026-09-12",
-      "time": "18:00",
+      "time": "18:05",
       "league": "J3",
       "home": "福島ユナイテッドＦＣ",
       "away": "ロアッソ熊本",
       "stadium": "とうほう・みんなのスタジアム",
       "url": "https://www.jleague.jp/match/j3/2026/091217/",
-      "status": "scheduled",
-      "statusText": "",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 1,
+      "awayScore": 2,
+      "homeScorers": [
+        {
+          "name": "岡田 優希",
+          "time": "31'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "小澤 秀充",
+          "time": "29'",
+          "ownGoal": false
+        },
+        {
+          "name": "石原 央羅",
+          "time": "61'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J3-2026091218",
       "date": "2026-09-12",
-      "time": "18:00",
+      "time": "18:05",
       "league": "J3",
       "home": "奈良クラブ",
       "away": "ＦＣ岐阜",
       "stadium": "ロートフィールド奈良",
       "url": "https://www.jleague.jp/match/j3/2026/091218/",
-      "status": "scheduled",
-      "statusText": "",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 2,
+      "awayScore": 1,
+      "homeScorers": [
+        {
+          "name": "吉田 新",
+          "time": "45'",
+          "ownGoal": false
+        },
+        {
+          "name": "望月 想空",
+          "time": "85'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "横山 智也",
+          "time": "49'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J3-2026091219",
       "date": "2026-09-12",
-      "time": "18:00",
+      "time": "18:05",
       "league": "J3",
       "home": "ギラヴァンツ北九州",
       "away": "ガイナーレ鳥取",
       "stadium": "ミクニワールドスタジアム北九州",
       "url": "https://www.jleague.jp/match/j3/2026/091219/",
-      "status": "scheduled",
-      "statusText": "",
-      "homeScore": null,
-      "awayScore": null
-    },
-    {
-      "id": "J1-2026091203",
-      "date": "2026-09-12",
-      "time": "18:30",
-      "league": "J1",
-      "home": "清水エスパルス",
-      "away": "アビスパ福岡",
-      "stadium": "ＩＡＩスタジアム日本平",
-      "url": "https://www.jleague.jp/match/j1/2026/091203/",
-      "status": "scheduled",
-      "statusText": "",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 2,
+      "awayScore": 4,
+      "homeScorers": [
+        {
+          "name": "吉田 晃盛",
+          "time": "42'",
+          "ownGoal": false
+        },
+        {
+          "name": "高 昇辰",
+          "time": "78'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "荒井 涼",
+          "time": "17'",
+          "ownGoal": false
+        },
+        {
+          "name": "矢島 慎也",
+          "time": "29'",
+          "ownGoal": false
+        },
+        {
+          "name": "山本 颯太",
+          "time": "57'",
+          "ownGoal": false
+        },
+        {
+          "name": "金浦 真樹",
+          "time": "62'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J2-2026091211",
@@ -5291,150 +5399,321 @@
       "away": "湘南ベルマーレ",
       "stadium": "プライフーズスタジアム",
       "url": "https://www.jleague.jp/match/j2/2026/091211/",
-      "status": "scheduled",
-      "statusText": "",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 0,
+      "awayScore": 1,
+      "homeScorers": [],
+      "awayScorers": [
+        {
+          "name": "奥埜 博亮",
+          "time": "90+6'",
+          "ownGoal": false
+        }
+      ]
+    },
+    {
+      "id": "J1-2026091203",
+      "date": "2026-09-12",
+      "time": "18:34",
+      "league": "J1",
+      "home": "清水エスパルス",
+      "away": "アビスパ福岡",
+      "stadium": "ＩＡＩスタジアム日本平",
+      "url": "https://www.jleague.jp/match/j1/2026/091203/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 1,
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "嶋本 悠大",
+          "time": "71'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
     },
     {
       "id": "J2-2026091212",
       "date": "2026-09-12",
-      "time": "18:30",
+      "time": "18:35",
       "league": "J2",
       "home": "カターレ富山",
       "away": "栃木シティ",
       "stadium": "富山県総合運動公園陸上競技場",
       "url": "https://www.jleague.jp/match/j2/2026/091212/",
-      "status": "scheduled",
-      "statusText": "",
-      "homeScore": null,
-      "awayScore": null
-    },
-    {
-      "id": "J1-2026091201",
-      "date": "2026-09-12",
-      "time": "19:00",
-      "league": "J1",
-      "home": "ＦＣ町田ゼルビア",
-      "away": "横浜Ｆ・マリノス",
-      "stadium": "ＭＵＦＧスタジアム",
-      "url": "https://www.jleague.jp/match/j1/2026/091201/",
-      "status": "scheduled",
-      "statusText": "",
-      "homeScore": null,
-      "awayScore": null
-    },
-    {
-      "id": "J1-2026091204",
-      "date": "2026-09-12",
-      "time": "19:00",
-      "league": "J1",
-      "home": "ガンバ大阪",
-      "away": "ＦＣ東京",
-      "stadium": "パナソニック スタジアム 吹田",
-      "url": "https://www.jleague.jp/match/j1/2026/091204/",
-      "status": "scheduled",
-      "statusText": "",
-      "homeScore": null,
-      "awayScore": null
-    },
-    {
-      "id": "J1-2026091205",
-      "date": "2026-09-12",
-      "time": "19:00",
-      "league": "J1",
-      "home": "サンフレッチェ広島",
-      "away": "セレッソ大阪",
-      "stadium": "エディオンピースウイング広島",
-      "url": "https://www.jleague.jp/match/j1/2026/091205/",
-      "status": "scheduled",
-      "statusText": "",
-      "homeScore": null,
-      "awayScore": null
-    },
-    {
-      "id": "J1-2026091206",
-      "date": "2026-09-12",
-      "time": "19:00",
-      "league": "J1",
-      "home": "Ｖ・ファーレン長崎",
-      "away": "名古屋グランパス",
-      "stadium": "PEACE STADIUM Connected by SoftBank",
-      "url": "https://www.jleague.jp/match/j1/2026/091206/",
-      "status": "scheduled",
-      "statusText": "",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeScorers": [],
+      "awayScorers": []
     },
     {
       "id": "J2-2026091213",
       "date": "2026-09-12",
-      "time": "19:00",
+      "time": "19:03",
       "league": "J2",
       "home": "ＲＢ大宮アルディージャ",
       "away": "大分トリニータ",
       "stadium": "ＮＡＣＫ５スタジアム大宮",
       "url": "https://www.jleague.jp/match/j2/2026/091213/",
-      "status": "scheduled",
-      "statusText": "",
-      "homeScore": null,
-      "awayScore": null
-    },
-    {
-      "id": "J2-2026091214",
-      "date": "2026-09-12",
-      "time": "19:00",
-      "league": "J2",
-      "home": "ヴァンフォーレ甲府",
-      "away": "ジュビロ磐田",
-      "stadium": "ＪＩＴ　リサイクルインク　スタジアム",
-      "url": "https://www.jleague.jp/match/j2/2026/091214/",
-      "status": "scheduled",
-      "statusText": "",
-      "homeScore": null,
-      "awayScore": null
-    },
-    {
-      "id": "J2-2026091215",
-      "date": "2026-09-12",
-      "time": "19:00",
-      "league": "J2",
-      "home": "ＦＣ今治",
-      "away": "サガン鳥栖",
-      "stadium": "アシックス里山スタジアム",
-      "url": "https://www.jleague.jp/match/j2/2026/091215/",
-      "status": "scheduled",
-      "statusText": "",
-      "homeScore": null,
-      "awayScore": null
-    },
-    {
-      "id": "J2-2026091216",
-      "date": "2026-09-12",
-      "time": "19:00",
-      "league": "J2",
-      "home": "テゲバジャーロ宮崎",
-      "away": "藤枝ＭＹＦＣ",
-      "stadium": "いちご宮崎新富サッカー場",
-      "url": "https://www.jleague.jp/match/j2/2026/091216/",
-      "status": "scheduled",
-      "statusText": "",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeScorers": [],
+      "awayScorers": []
     },
     {
       "id": "J3-2026091220",
       "date": "2026-09-12",
-      "time": "19:00",
+      "time": "19:03",
       "league": "J3",
       "home": "レノファ山口ＦＣ",
       "away": "ザスパ群馬",
       "stadium": "維新みらいふスタジアム",
       "url": "https://www.jleague.jp/match/j3/2026/091220/",
-      "status": "scheduled",
-      "statusText": "",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 2,
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "渡邉 颯太",
+          "time": "15'",
+          "ownGoal": false
+        },
+        {
+          "name": "山本 龍平",
+          "time": "24'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
+    },
+    {
+      "id": "J1-2026091204",
+      "date": "2026-09-12",
+      "time": "19:04",
+      "league": "J1",
+      "home": "ガンバ大阪",
+      "away": "ＦＣ東京",
+      "stadium": "パナソニック スタジアム 吹田",
+      "url": "https://www.jleague.jp/match/j1/2026/091204/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 0,
+      "awayScore": 2,
+      "homeScorers": [],
+      "awayScorers": [
+        {
+          "name": "安斎 颯馬",
+          "time": "38'",
+          "ownGoal": false
+        },
+        {
+          "name": "長倉 幹樹",
+          "time": "52'",
+          "ownGoal": false
+        }
+      ]
+    },
+    {
+      "id": "J1-2026091206",
+      "date": "2026-09-12",
+      "time": "19:04",
+      "league": "J1",
+      "home": "Ｖ・ファーレン長崎",
+      "away": "名古屋グランパス",
+      "stadium": "PEACE STADIUM Connected by SoftBank",
+      "url": "https://www.jleague.jp/match/j1/2026/091206/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 2,
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "マテウス ジェズス",
+          "time": "36'",
+          "ownGoal": false
+        },
+        {
+          "name": "チアゴ サンタナ",
+          "time": "57'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
+    },
+    {
+      "id": "J2-2026091215",
+      "date": "2026-09-12",
+      "time": "19:04",
+      "league": "J2",
+      "home": "ＦＣ今治",
+      "away": "サガン鳥栖",
+      "stadium": "アシックス里山スタジアム",
+      "url": "https://www.jleague.jp/match/j2/2026/091215/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 1,
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "森 晃太",
+          "time": "89'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
+    },
+    {
+      "id": "J1-2026091201",
+      "date": "2026-09-12",
+      "time": "19:05",
+      "league": "J1",
+      "home": "ＦＣ町田ゼルビア",
+      "away": "横浜Ｆ・マリノス",
+      "stadium": "ＭＵＦＧスタジアム",
+      "url": "https://www.jleague.jp/match/j1/2026/091201/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 1,
+      "awayScore": 1,
+      "homeScorers": [
+        {
+          "name": "望月 ヘンリー海輝",
+          "time": "84'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "谷村 海那",
+          "time": "12'",
+          "ownGoal": false
+        }
+      ]
+    },
+    {
+      "id": "J1-2026091205",
+      "date": "2026-09-12",
+      "time": "19:05",
+      "league": "J1",
+      "home": "サンフレッチェ広島",
+      "away": "セレッソ大阪",
+      "stadium": "エディオンピースウイング広島",
+      "url": "https://www.jleague.jp/match/j1/2026/091205/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 6,
+      "awayScore": 1,
+      "homeScorers": [
+        {
+          "name": "鈴木 章斗",
+          "time": "10'",
+          "ownGoal": false
+        },
+        {
+          "name": "鮎川 峻",
+          "time": "18'",
+          "ownGoal": false
+        },
+        {
+          "name": "鈴木 章斗",
+          "time": "45+3'",
+          "ownGoal": false
+        },
+        {
+          "name": "中野 就斗",
+          "time": "55'",
+          "ownGoal": false
+        },
+        {
+          "name": "鮎川 峻",
+          "time": "57'",
+          "ownGoal": false
+        },
+        {
+          "name": "鮎川 峻",
+          "time": "80'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "上門 知樹",
+          "time": "90+1'",
+          "ownGoal": false
+        }
+      ]
+    },
+    {
+      "id": "J2-2026091214",
+      "date": "2026-09-12",
+      "time": "19:05",
+      "league": "J2",
+      "home": "ヴァンフォーレ甲府",
+      "away": "ジュビロ磐田",
+      "stadium": "ＪＩＴ　リサイクルインク　スタジアム",
+      "url": "https://www.jleague.jp/match/j2/2026/091214/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 0,
+      "awayScore": 1,
+      "homeScorers": [],
+      "awayScorers": [
+        {
+          "name": "川合 徳孟",
+          "time": "74'",
+          "ownGoal": false
+        }
+      ]
+    },
+    {
+      "id": "J2-2026091216",
+      "date": "2026-09-12",
+      "time": "19:05",
+      "league": "J2",
+      "home": "テゲバジャーロ宮崎",
+      "away": "藤枝ＭＹＦＣ",
+      "stadium": "いちご宮崎新富サッカー場",
+      "url": "https://www.jleague.jp/match/j2/2026/091216/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 3,
+      "awayScore": 2,
+      "homeScorers": [
+        {
+          "name": "阿野 真拓",
+          "time": "22'",
+          "ownGoal": false
+        },
+        {
+          "name": "阿野 真拓",
+          "time": "36'",
+          "ownGoal": false
+        },
+        {
+          "name": "奥村 晃司",
+          "time": "56'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "川本 梨誉",
+          "time": "59'",
+          "ownGoal": false
+        },
+        {
+          "name": "真鍋 隼虎",
+          "time": "79'",
+          "ownGoal": false
+        }
+      ]
     },
     {
       "id": "J1-2026091302",
@@ -18882,13 +19161,13 @@
       {
         "rank": "1",
         "team": "ＦＣ町田ゼルビア",
-        "points": "16",
-        "played": "6",
+        "points": "17",
+        "played": "7",
         "won": "5",
-        "drawn": "1",
+        "drawn": "2",
         "lost": "0",
-        "goalsFor": "18",
-        "goalsAgainst": "5",
+        "goalsFor": "19",
+        "goalsAgainst": "6",
         "goalDifference": "13"
       },
       {
@@ -18917,6 +19196,42 @@
       },
       {
         "rank": "4",
+        "team": "サンフレッチェ広島",
+        "points": "14",
+        "played": "7",
+        "won": "4",
+        "drawn": "2",
+        "lost": "1",
+        "goalsFor": "19",
+        "goalsAgainst": "6",
+        "goalDifference": "13"
+      },
+      {
+        "rank": "5",
+        "team": "ＦＣ東京",
+        "points": "14",
+        "played": "7",
+        "won": "4",
+        "drawn": "2",
+        "lost": "1",
+        "goalsFor": "13",
+        "goalsAgainst": "8",
+        "goalDifference": "5"
+      },
+      {
+        "rank": "6",
+        "team": "川崎フロンターレ",
+        "points": "12",
+        "played": "7",
+        "won": "3",
+        "drawn": "3",
+        "lost": "1",
+        "goalsFor": "13",
+        "goalsAgainst": "9",
+        "goalDifference": "4"
+      },
+      {
+        "rank": "7",
         "team": "鹿島アントラーズ",
         "points": "12",
         "played": "7",
@@ -18928,43 +19243,19 @@
         "goalDifference": "1"
       },
       {
-        "rank": "5",
-        "team": "サンフレッチェ広島",
-        "points": "11",
-        "played": "6",
-        "won": "3",
-        "drawn": "2",
-        "lost": "1",
-        "goalsFor": "13",
-        "goalsAgainst": "5",
-        "goalDifference": "8"
-      },
-      {
-        "rank": "6",
-        "team": "ＦＣ東京",
-        "points": "11",
-        "played": "6",
-        "won": "3",
-        "drawn": "2",
-        "lost": "1",
-        "goalsFor": "11",
-        "goalsAgainst": "8",
-        "goalDifference": "3"
-      },
-      {
-        "rank": "7",
+        "rank": "8",
         "team": "横浜Ｆ・マリノス",
-        "points": "10",
-        "played": "6",
+        "points": "11",
+        "played": "7",
         "won": "3",
-        "drawn": "1",
+        "drawn": "2",
         "lost": "2",
-        "goalsFor": "10",
-        "goalsAgainst": "8",
+        "goalsFor": "11",
+        "goalsAgainst": "9",
         "goalDifference": "2"
       },
       {
-        "rank": "8",
+        "rank": "9",
         "team": "ファジアーノ岡山",
         "points": "10",
         "played": "6",
@@ -18976,40 +19267,28 @@
         "goalDifference": "1"
       },
       {
-        "rank": "9",
+        "rank": "10",
         "team": "セレッソ大阪",
         "points": "10",
-        "played": "6",
+        "played": "7",
         "won": "3",
         "drawn": "1",
-        "lost": "2",
-        "goalsFor": "5",
-        "goalsAgainst": "5",
-        "goalDifference": "0"
-      },
-      {
-        "rank": "10",
-        "team": "川崎フロンターレ",
-        "points": "9",
-        "played": "6",
-        "won": "2",
-        "drawn": "3",
-        "lost": "1",
-        "goalsFor": "12",
-        "goalsAgainst": "9",
-        "goalDifference": "3"
+        "lost": "3",
+        "goalsFor": "6",
+        "goalsAgainst": "11",
+        "goalDifference": "-5"
       },
       {
         "rank": "11",
         "team": "水戸ホーリーホック",
         "points": "9",
-        "played": "6",
+        "played": "7",
         "won": "2",
         "drawn": "3",
-        "lost": "1",
+        "lost": "2",
         "goalsFor": "11",
-        "goalsAgainst": "8",
-        "goalDifference": "3"
+        "goalsAgainst": "9",
+        "goalDifference": "2"
       },
       {
         "rank": "12",
@@ -19025,30 +19304,54 @@
       },
       {
         "rank": "13",
-        "team": "ガンバ大阪",
-        "points": "6",
-        "played": "6",
-        "won": "1",
-        "drawn": "3",
-        "lost": "2",
-        "goalsFor": "8",
-        "goalsAgainst": "11",
+        "team": "清水エスパルス",
+        "points": "7",
+        "played": "7",
+        "won": "2",
+        "drawn": "1",
+        "lost": "4",
+        "goalsFor": "4",
+        "goalsAgainst": "7",
         "goalDifference": "-3"
       },
       {
         "rank": "14",
-        "team": "名古屋グランパス",
-        "points": "6",
-        "played": "6",
+        "team": "Ｖ・ファーレン長崎",
+        "points": "7",
+        "played": "7",
         "won": "2",
-        "drawn": "0",
+        "drawn": "1",
         "lost": "4",
-        "goalsFor": "7",
-        "goalsAgainst": "11",
-        "goalDifference": "-4"
+        "goalsFor": "9",
+        "goalsAgainst": "14",
+        "goalDifference": "-5"
       },
       {
         "rank": "15",
+        "team": "ガンバ大阪",
+        "points": "6",
+        "played": "7",
+        "won": "1",
+        "drawn": "3",
+        "lost": "3",
+        "goalsFor": "8",
+        "goalsAgainst": "13",
+        "goalDifference": "-5"
+      },
+      {
+        "rank": "16",
+        "team": "名古屋グランパス",
+        "points": "6",
+        "played": "7",
+        "won": "2",
+        "drawn": "0",
+        "lost": "5",
+        "goalsFor": "7",
+        "goalsAgainst": "13",
+        "goalDifference": "-6"
+      },
+      {
+        "rank": "17",
         "team": "京都サンガF.C.",
         "points": "5",
         "played": "7",
@@ -19060,40 +19363,16 @@
         "goalDifference": "-5"
       },
       {
-        "rank": "16",
+        "rank": "18",
         "team": "アビスパ福岡",
         "points": "4",
-        "played": "6",
+        "played": "7",
         "won": "1",
         "drawn": "1",
-        "lost": "4",
+        "lost": "5",
         "goalsFor": "9",
-        "goalsAgainst": "10",
-        "goalDifference": "-1"
-      },
-      {
-        "rank": "17",
-        "team": "清水エスパルス",
-        "points": "4",
-        "played": "6",
-        "won": "1",
-        "drawn": "1",
-        "lost": "4",
-        "goalsFor": "3",
-        "goalsAgainst": "7",
-        "goalDifference": "-4"
-      },
-      {
-        "rank": "18",
-        "team": "Ｖ・ファーレン長崎",
-        "points": "4",
-        "played": "6",
-        "won": "1",
-        "drawn": "1",
-        "lost": "4",
-        "goalsFor": "7",
-        "goalsAgainst": "14",
-        "goalDifference": "-7"
+        "goalsAgainst": "11",
+        "goalDifference": "-2"
       },
       {
         "rank": "19",
@@ -19124,10 +19403,10 @@
       {
         "rank": "1",
         "team": "ＲＢ大宮アルディージャ",
-        "points": "11",
-        "played": "5",
+        "points": "12",
+        "played": "6",
         "won": "3",
-        "drawn": "2",
+        "drawn": "3",
         "lost": "0",
         "goalsFor": "10",
         "goalsAgainst": "5",
@@ -19135,18 +19414,54 @@
       },
       {
         "rank": "2",
-        "team": "横浜ＦＣ",
+        "team": "湘南ベルマーレ",
+        "points": "11",
+        "played": "6",
+        "won": "3",
+        "drawn": "2",
+        "lost": "1",
+        "goalsFor": "6",
+        "goalsAgainst": "5",
+        "goalDifference": "1"
+      },
+      {
+        "rank": "3",
+        "team": "栃木シティ",
         "points": "10",
-        "played": "5",
+        "played": "6",
         "won": "3",
         "drawn": "1",
-        "lost": "1",
+        "lost": "2",
+        "goalsFor": "13",
+        "goalsAgainst": "7",
+        "goalDifference": "6"
+      },
+      {
+        "rank": "4",
+        "team": "カターレ富山",
+        "points": "10",
+        "played": "6",
+        "won": "3",
+        "drawn": "1",
+        "lost": "2",
         "goalsFor": "11",
         "goalsAgainst": "5",
         "goalDifference": "6"
       },
       {
-        "rank": "3",
+        "rank": "5",
+        "team": "横浜ＦＣ",
+        "points": "10",
+        "played": "6",
+        "won": "3",
+        "drawn": "1",
+        "lost": "2",
+        "goalsFor": "11",
+        "goalsAgainst": "7",
+        "goalDifference": "4"
+      },
+      {
+        "rank": "6",
         "team": "ベガルタ仙台",
         "points": "10",
         "played": "5",
@@ -19158,43 +19473,31 @@
         "goalDifference": "4"
       },
       {
-        "rank": "4",
+        "rank": "7",
         "team": "藤枝ＭＹＦＣ",
         "points": "10",
-        "played": "5",
+        "played": "6",
         "won": "3",
         "drawn": "1",
-        "lost": "1",
-        "goalsFor": "8",
-        "goalsAgainst": "4",
-        "goalDifference": "4"
-      },
-      {
-        "rank": "5",
-        "team": "栃木シティ",
-        "points": "9",
-        "played": "5",
-        "won": "3",
-        "drawn": "0",
         "lost": "2",
-        "goalsFor": "13",
+        "goalsFor": "10",
         "goalsAgainst": "7",
-        "goalDifference": "6"
+        "goalDifference": "3"
       },
       {
-        "rank": "6",
-        "team": "カターレ富山",
-        "points": "9",
-        "played": "5",
+        "rank": "8",
+        "team": "ジュビロ磐田",
+        "points": "10",
+        "played": "6",
         "won": "3",
-        "drawn": "0",
+        "drawn": "1",
         "lost": "2",
-        "goalsFor": "11",
-        "goalsAgainst": "5",
-        "goalDifference": "6"
+        "goalsFor": "8",
+        "goalsAgainst": "7",
+        "goalDifference": "1"
       },
       {
-        "rank": "7",
+        "rank": "9",
         "team": "モンテディオ山形",
         "points": "9",
         "played": "5",
@@ -19206,7 +19509,7 @@
         "goalDifference": "5"
       },
       {
-        "rank": "8",
+        "rank": "10",
         "team": "アルビレックス新潟",
         "points": "9",
         "played": "5",
@@ -19218,103 +19521,115 @@
         "goalDifference": "-3"
       },
       {
-        "rank": "9",
-        "team": "サガン鳥栖",
-        "points": "8",
-        "played": "5",
-        "won": "2",
-        "drawn": "2",
-        "lost": "1",
-        "goalsFor": "7",
-        "goalsAgainst": "5",
-        "goalDifference": "2"
-      },
-      {
-        "rank": "10",
-        "team": "湘南ベルマーレ",
-        "points": "8",
-        "played": "5",
-        "won": "2",
-        "drawn": "2",
-        "lost": "1",
-        "goalsFor": "5",
-        "goalsAgainst": "5",
-        "goalDifference": "0"
-      },
-      {
         "rank": "11",
-        "team": "ジュビロ磐田",
-        "points": "7",
-        "played": "5",
+        "team": "ブラウブリッツ秋田",
+        "points": "8",
+        "played": "6",
         "won": "2",
-        "drawn": "1",
+        "drawn": "2",
         "lost": "2",
-        "goalsFor": "7",
+        "goalsFor": "8",
         "goalsAgainst": "7",
-        "goalDifference": "0"
+        "goalDifference": "1"
       },
       {
         "rank": "12",
-        "team": "徳島ヴォルティス",
-        "points": "7",
-        "played": "5",
+        "team": "サガン鳥栖",
+        "points": "8",
+        "played": "6",
         "won": "2",
-        "drawn": "1",
+        "drawn": "2",
         "lost": "2",
-        "goalsFor": "3",
-        "goalsAgainst": "4",
-        "goalDifference": "-1"
+        "goalsFor": "7",
+        "goalsAgainst": "6",
+        "goalDifference": "1"
       },
       {
         "rank": "13",
         "team": "ヴァンフォーレ甲府",
         "points": "7",
-        "played": "5",
+        "played": "6",
         "won": "2",
         "drawn": "1",
-        "lost": "2",
+        "lost": "3",
         "goalsFor": "5",
-        "goalsAgainst": "8",
-        "goalDifference": "-3"
+        "goalsAgainst": "9",
+        "goalDifference": "-4"
       },
       {
         "rank": "14",
-        "team": "ヴァンラーレ八戸",
+        "team": "徳島ヴォルティス",
         "points": "7",
-        "played": "5",
+        "played": "6",
         "won": "2",
         "drawn": "1",
-        "lost": "2",
-        "goalsFor": "3",
-        "goalsAgainst": "7",
+        "lost": "3",
+        "goalsFor": "4",
+        "goalsAgainst": "8",
         "goalDifference": "-4"
       },
       {
         "rank": "15",
+        "team": "ヴァンラーレ八戸",
+        "points": "7",
+        "played": "6",
+        "won": "2",
+        "drawn": "1",
+        "lost": "3",
+        "goalsFor": "3",
+        "goalsAgainst": "8",
+        "goalDifference": "-5"
+      },
+      {
+        "rank": "16",
         "team": "大分トリニータ",
-        "points": "5",
-        "played": "5",
+        "points": "6",
+        "played": "6",
         "won": "1",
-        "drawn": "2",
+        "drawn": "3",
         "lost": "2",
         "goalsFor": "5",
         "goalsAgainst": "4",
         "goalDifference": "1"
       },
       {
-        "rank": "16",
-        "team": "ブラウブリッツ秋田",
-        "points": "5",
-        "played": "5",
-        "won": "1",
-        "drawn": "2",
-        "lost": "2",
-        "goalsFor": "4",
-        "goalsAgainst": "6",
-        "goalDifference": "-2"
+        "rank": "17",
+        "team": "いわきＦＣ",
+        "points": "6",
+        "played": "6",
+        "won": "2",
+        "drawn": "0",
+        "lost": "4",
+        "goalsFor": "8",
+        "goalsAgainst": "12",
+        "goalDifference": "-4"
       },
       {
-        "rank": "17",
+        "rank": "18",
+        "team": "テゲバジャーロ宮崎",
+        "points": "5",
+        "played": "6",
+        "won": "1",
+        "drawn": "2",
+        "lost": "3",
+        "goalsFor": "6",
+        "goalsAgainst": "10",
+        "goalDifference": "-4"
+      },
+      {
+        "rank": "19",
+        "team": "ＦＣ今治",
+        "points": "4",
+        "played": "6",
+        "won": "1",
+        "drawn": "1",
+        "lost": "4",
+        "goalsFor": "5",
+        "goalsAgainst": "13",
+        "goalDifference": "-8"
+      },
+      {
+        "rank": "20",
         "team": "北海道コンサドーレ札幌",
         "points": "3",
         "played": "5",
@@ -19324,42 +19639,6 @@
         "goalsFor": "6",
         "goalsAgainst": "12",
         "goalDifference": "-6"
-      },
-      {
-        "rank": "17",
-        "team": "いわきＦＣ",
-        "points": "3",
-        "played": "5",
-        "won": "1",
-        "drawn": "0",
-        "lost": "4",
-        "goalsFor": "6",
-        "goalsAgainst": "12",
-        "goalDifference": "-6"
-      },
-      {
-        "rank": "19",
-        "team": "テゲバジャーロ宮崎",
-        "points": "2",
-        "played": "5",
-        "won": "0",
-        "drawn": "2",
-        "lost": "3",
-        "goalsFor": "3",
-        "goalsAgainst": "8",
-        "goalDifference": "-5"
-      },
-      {
-        "rank": "20",
-        "team": "ＦＣ今治",
-        "points": "1",
-        "played": "5",
-        "won": "0",
-        "drawn": "1",
-        "lost": "4",
-        "goalsFor": "4",
-        "goalsAgainst": "13",
-        "goalDifference": "-9"
       }
     ],
     "J3": [
@@ -19391,16 +19670,52 @@
         "rank": "3",
         "team": "ＦＣ岐阜",
         "points": "10",
-        "played": "5",
+        "played": "6",
         "won": "3",
         "drawn": "1",
-        "lost": "1",
-        "goalsFor": "14",
-        "goalsAgainst": "2",
-        "goalDifference": "12"
+        "lost": "2",
+        "goalsFor": "15",
+        "goalsAgainst": "4",
+        "goalDifference": "11"
       },
       {
         "rank": "4",
+        "team": "レノファ山口ＦＣ",
+        "points": "10",
+        "played": "6",
+        "won": "3",
+        "drawn": "1",
+        "lost": "2",
+        "goalsFor": "7",
+        "goalsAgainst": "4",
+        "goalDifference": "3"
+      },
+      {
+        "rank": "5",
+        "team": "ガイナーレ鳥取",
+        "points": "10",
+        "played": "6",
+        "won": "3",
+        "drawn": "1",
+        "lost": "2",
+        "goalsFor": "8",
+        "goalsAgainst": "11",
+        "goalDifference": "-3"
+      },
+      {
+        "rank": "6",
+        "team": "ロアッソ熊本",
+        "points": "9",
+        "played": "6",
+        "won": "2",
+        "drawn": "3",
+        "lost": "1",
+        "goalsFor": "6",
+        "goalsAgainst": "4",
+        "goalDifference": "2"
+      },
+      {
+        "rank": "7",
         "team": "レイラック滋賀ＦＣ",
         "points": "9",
         "played": "5",
@@ -19412,7 +19727,7 @@
         "goalDifference": "1"
       },
       {
-        "rank": "5",
+        "rank": "8",
         "team": "ＳＣ相模原",
         "points": "8",
         "played": "5",
@@ -19424,7 +19739,7 @@
         "goalDifference": "3"
       },
       {
-        "rank": "6",
+        "rank": "9",
         "team": "栃木ＳＣ",
         "points": "8",
         "played": "5",
@@ -19436,7 +19751,19 @@
         "goalDifference": "0"
       },
       {
-        "rank": "7",
+        "rank": "10",
+        "team": "奈良クラブ",
+        "points": "8",
+        "played": "6",
+        "won": "2",
+        "drawn": "2",
+        "lost": "2",
+        "goalsFor": "11",
+        "goalsAgainst": "13",
+        "goalDifference": "-2"
+      },
+      {
+        "rank": "11",
         "team": "ＦＣ琉球",
         "points": "7",
         "played": "5",
@@ -19448,7 +19775,7 @@
         "goalDifference": "2"
       },
       {
-        "rank": "8",
+        "rank": "12",
         "team": "ＦＣ大阪",
         "points": "7",
         "played": "5",
@@ -19460,19 +19787,7 @@
         "goalDifference": "2"
       },
       {
-        "rank": "9",
-        "team": "レノファ山口ＦＣ",
-        "points": "7",
-        "played": "5",
-        "won": "2",
-        "drawn": "1",
-        "lost": "2",
-        "goalsFor": "5",
-        "goalsAgainst": "4",
-        "goalDifference": "1"
-      },
-      {
-        "rank": "10",
+        "rank": "13",
         "team": "ＡＣ長野パルセイロ",
         "points": "7",
         "played": "5",
@@ -19484,31 +19799,7 @@
         "goalDifference": "-1"
       },
       {
-        "rank": "11",
-        "team": "ガイナーレ鳥取",
-        "points": "7",
-        "played": "5",
-        "won": "2",
-        "drawn": "1",
-        "lost": "2",
-        "goalsFor": "4",
-        "goalsAgainst": "9",
-        "goalDifference": "-5"
-      },
-      {
-        "rank": "12",
-        "team": "ロアッソ熊本",
-        "points": "6",
-        "played": "5",
-        "won": "1",
-        "drawn": "3",
-        "lost": "1",
-        "goalsFor": "4",
-        "goalsAgainst": "3",
-        "goalDifference": "1"
-      },
-      {
-        "rank": "13",
+        "rank": "14",
         "team": "ツエーゲン金沢",
         "points": "6",
         "played": "5",
@@ -19520,31 +19811,7 @@
         "goalDifference": "-1"
       },
       {
-        "rank": "14",
-        "team": "奈良クラブ",
-        "points": "5",
-        "played": "5",
-        "won": "1",
-        "drawn": "2",
-        "lost": "2",
-        "goalsFor": "9",
-        "goalsAgainst": "12",
-        "goalDifference": "-3"
-      },
-      {
         "rank": "15",
-        "team": "福島ユナイテッドＦＣ",
-        "points": "4",
-        "played": "5",
-        "won": "1",
-        "drawn": "1",
-        "lost": "3",
-        "goalsFor": "10",
-        "goalsAgainst": "11",
-        "goalDifference": "-1"
-      },
-      {
-        "rank": "16",
         "team": "松本山雅ＦＣ",
         "points": "4",
         "played": "5",
@@ -19554,6 +19821,18 @@
         "goalsFor": "5",
         "goalsAgainst": "6",
         "goalDifference": "-1"
+      },
+      {
+        "rank": "16",
+        "team": "福島ユナイテッドＦＣ",
+        "points": "4",
+        "played": "6",
+        "won": "1",
+        "drawn": "1",
+        "lost": "4",
+        "goalsFor": "11",
+        "goalsAgainst": "13",
+        "goalDifference": "-2"
       },
       {
         "rank": "17",
@@ -19583,27 +19862,27 @@
         "rank": "19",
         "team": "ギラヴァンツ北九州",
         "points": "3",
-        "played": "5",
+        "played": "6",
         "won": "0",
         "drawn": "3",
-        "lost": "2",
-        "goalsFor": "5",
-        "goalsAgainst": "10",
-        "goalDifference": "-5"
+        "lost": "3",
+        "goalsFor": "7",
+        "goalsAgainst": "14",
+        "goalDifference": "-7"
       },
       {
         "rank": "20",
         "team": "ザスパ群馬",
         "points": "3",
-        "played": "5",
+        "played": "6",
         "won": "1",
         "drawn": "0",
-        "lost": "4",
+        "lost": "5",
         "goalsFor": "6",
-        "goalsAgainst": "12",
-        "goalDifference": "-6"
+        "goalsAgainst": "14",
+        "goalDifference": "-8"
       }
     ]
   },
-  "standingsUpdatedAt": "2026-09-12T05:38+09:00"
+  "standingsUpdatedAt": "2026-09-12T22:49+09:00"
 }
