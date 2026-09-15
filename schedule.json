@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-15T06:36+09:00",
+  "updatedAt": "2026-09-16T00:22+09:00",
   "source": "https://www.jleague.jp/match/search/",
   "matches": [
     {
@@ -5252,7 +5252,7 @@
     {
       "id": "J2-2026091210",
       "date": "2026-09-12",
-      "time": "18:05",
+      "time": "18:00",
       "league": "J2",
       "home": "いわきＦＣ",
       "away": "横浜ＦＣ",
@@ -5279,7 +5279,7 @@
     {
       "id": "J3-2026091217",
       "date": "2026-09-12",
-      "time": "18:05",
+      "time": "18:00",
       "league": "J3",
       "home": "福島ユナイテッドＦＣ",
       "away": "ロアッソ熊本",
@@ -5312,7 +5312,7 @@
     {
       "id": "J3-2026091218",
       "date": "2026-09-12",
-      "time": "18:05",
+      "time": "18:00",
       "league": "J3",
       "home": "奈良クラブ",
       "away": "ＦＣ岐阜",
@@ -5345,7 +5345,7 @@
     {
       "id": "J3-2026091219",
       "date": "2026-09-12",
-      "time": "18:05",
+      "time": "18:00",
       "league": "J3",
       "home": "ギラヴァンツ北九州",
       "away": "ガイナーレ鳥取",
@@ -5437,7 +5437,7 @@
     {
       "id": "J2-2026091212",
       "date": "2026-09-12",
-      "time": "18:35",
+      "time": "18:30",
       "league": "J2",
       "home": "カターレ富山",
       "away": "栃木シティ",
@@ -5588,7 +5588,7 @@
     {
       "id": "J2-2026091213",
       "date": "2026-09-12",
-      "time": "19:03",
+      "time": "19:00",
       "league": "J2",
       "home": "ＲＢ大宮アルディージャ",
       "away": "大分トリニータ",
@@ -5602,58 +5602,9 @@
       "awayScorers": []
     },
     {
-      "id": "J3-2026091220",
-      "date": "2026-09-12",
-      "time": "19:03",
-      "league": "J3",
-      "home": "レノファ山口ＦＣ",
-      "away": "ザスパ群馬",
-      "stadium": "維新みらいふスタジアム",
-      "url": "https://www.jleague.jp/match/j3/2026/091220/",
-      "status": "finished",
-      "statusText": "試合終了",
-      "homeScore": 2,
-      "awayScore": 0,
-      "homeScorers": [
-        {
-          "name": "渡邉 颯太",
-          "time": "15'",
-          "ownGoal": false
-        },
-        {
-          "name": "山本 龍平",
-          "time": "24'",
-          "ownGoal": false
-        }
-      ],
-      "awayScorers": []
-    },
-    {
-      "id": "J2-2026091215",
-      "date": "2026-09-12",
-      "time": "19:04",
-      "league": "J2",
-      "home": "ＦＣ今治",
-      "away": "サガン鳥栖",
-      "stadium": "アシックス里山スタジアム",
-      "url": "https://www.jleague.jp/match/j2/2026/091215/",
-      "status": "finished",
-      "statusText": "試合終了",
-      "homeScore": 1,
-      "awayScore": 0,
-      "homeScorers": [
-        {
-          "name": "森 晃太",
-          "time": "89'",
-          "ownGoal": false
-        }
-      ],
-      "awayScorers": []
-    },
-    {
       "id": "J2-2026091214",
       "date": "2026-09-12",
-      "time": "19:05",
+      "time": "19:00",
       "league": "J2",
       "home": "ヴァンフォーレ甲府",
       "away": "ジュビロ磐田",
@@ -5673,9 +5624,31 @@
       ]
     },
     {
+      "id": "J2-2026091215",
+      "date": "2026-09-12",
+      "time": "19:00",
+      "league": "J2",
+      "home": "ＦＣ今治",
+      "away": "サガン鳥栖",
+      "stadium": "アシックス里山スタジアム",
+      "url": "https://www.jleague.jp/match/j2/2026/091215/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 1,
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "森 晃太",
+          "time": "89'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
+    },
+    {
       "id": "J2-2026091216",
       "date": "2026-09-12",
-      "time": "19:05",
+      "time": "19:00",
       "league": "J2",
       "home": "テゲバジャーロ宮崎",
       "away": "藤枝ＭＹＦＣ",
@@ -5716,6 +5689,33 @@
       ]
     },
     {
+      "id": "J3-2026091220",
+      "date": "2026-09-12",
+      "time": "19:00",
+      "league": "J3",
+      "home": "レノファ山口ＦＣ",
+      "away": "ザスパ群馬",
+      "stadium": "維新みらいふスタジアム",
+      "url": "https://www.jleague.jp/match/j3/2026/091220/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 2,
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "渡邉 颯太",
+          "time": "15'",
+          "ownGoal": false
+        },
+        {
+          "name": "山本 龍平",
+          "time": "24'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
+    },
+    {
       "id": "J1-2026091302",
       "date": "2026-09-13",
       "time": "18:00",
@@ -5744,9 +5744,59 @@
       ]
     },
     {
+      "id": "J2-2026091304",
+      "date": "2026-09-13",
+      "time": "18:00",
+      "league": "J2",
+      "home": "ベガルタ仙台",
+      "away": "北海道コンサドーレ札幌",
+      "stadium": "ユアテックスタジアム仙台",
+      "url": "https://www.jleague.jp/match/j2/2026/091304/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 1,
+      "awayScore": 1,
+      "homeScorers": [
+        {
+          "name": "武田 英寿",
+          "time": "26'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": [
+        {
+          "name": "大森 真吾",
+          "time": "22'",
+          "ownGoal": false
+        }
+      ]
+    },
+    {
+      "id": "J2-2026091305",
+      "date": "2026-09-13",
+      "time": "18:00",
+      "league": "J2",
+      "home": "アルビレックス新潟",
+      "away": "モンテディオ山形",
+      "stadium": "デンカビッグスワンスタジアム",
+      "url": "https://www.jleague.jp/match/j2/2026/091305/",
+      "status": "finished",
+      "statusText": "試合終了",
+      "homeScore": 1,
+      "awayScore": 0,
+      "homeScorers": [
+        {
+          "name": "前田 椋介",
+          "time": "46'",
+          "ownGoal": false
+        }
+      ],
+      "awayScorers": []
+    },
+    {
       "id": "J3-2026091306",
       "date": "2026-09-13",
-      "time": "18:04",
+      "time": "18:00",
       "league": "J3",
       "home": "松本山雅ＦＣ",
       "away": "ＳＣ相模原",
@@ -5782,31 +5832,9 @@
       ]
     },
     {
-      "id": "J2-2026091305",
-      "date": "2026-09-13",
-      "time": "18:05",
-      "league": "J2",
-      "home": "アルビレックス新潟",
-      "away": "モンテディオ山形",
-      "stadium": "デンカビッグスワンスタジアム",
-      "url": "https://www.jleague.jp/match/j2/2026/091305/",
-      "status": "finished",
-      "statusText": "試合終了",
-      "homeScore": 1,
-      "awayScore": 0,
-      "homeScorers": [
-        {
-          "name": "前田 椋介",
-          "time": "46'",
-          "ownGoal": false
-        }
-      ],
-      "awayScorers": []
-    },
-    {
       "id": "J3-2026091307",
       "date": "2026-09-13",
-      "time": "18:05",
+      "time": "18:00",
       "league": "J3",
       "home": "ＦＣ琉球",
       "away": "カマタマーレ讃岐",
@@ -5824,34 +5852,6 @@
         }
       ],
       "awayScorers": []
-    },
-    {
-      "id": "J2-2026091304",
-      "date": "2026-09-13",
-      "time": "18:07",
-      "league": "J2",
-      "home": "ベガルタ仙台",
-      "away": "北海道コンサドーレ札幌",
-      "stadium": "ユアテックスタジアム仙台",
-      "url": "https://www.jleague.jp/match/j2/2026/091304/",
-      "status": "finished",
-      "statusText": "試合終了",
-      "homeScore": 1,
-      "awayScore": 1,
-      "homeScorers": [
-        {
-          "name": "武田 英寿",
-          "time": "26'",
-          "ownGoal": false
-        }
-      ],
-      "awayScorers": [
-        {
-          "name": "大森 真吾",
-          "time": "22'",
-          "ownGoal": false
-        }
-      ]
     },
     {
       "id": "J1-2026091303",
@@ -5889,7 +5889,7 @@
     {
       "id": "J3-2026091308",
       "date": "2026-09-13",
-      "time": "18:36",
+      "time": "18:30",
       "league": "J3",
       "home": "レイラック滋賀ＦＣ",
       "away": "鹿児島ユナイテッドＦＣ",
@@ -5922,7 +5922,7 @@
     {
       "id": "J3-2026091309",
       "date": "2026-09-13",
-      "time": "19:03",
+      "time": "19:00",
       "league": "J3",
       "home": "ＡＣ長野パルセイロ",
       "away": "栃木ＳＣ",
@@ -5950,7 +5950,7 @@
     {
       "id": "J3-2026091310",
       "date": "2026-09-13",
-      "time": "19:05",
+      "time": "19:00",
       "league": "J3",
       "home": "高知ユナイテッドＳＣ",
       "away": "ツエーゲン金沢",
@@ -20037,5 +20037,5 @@
       }
     ]
   },
-  "standingsUpdatedAt": "2026-09-15T06:36+09:00"
+  "standingsUpdatedAt": "2026-09-16T00:22+09:00"
 }
