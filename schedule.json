@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-16T05:58+09:00",
+  "updatedAt": "2026-09-17T00:15+09:00",
   "source": "https://www.jleague.jp/match/search/",
   "matches": [
     {
@@ -5978,7 +5978,7 @@
     {
       "id": "J3-2026091401",
       "date": "2026-09-14",
-      "time": "19:06",
+      "time": "19:00",
       "league": "J3",
       "home": "ＦＣ大阪",
       "away": "愛媛ＦＣ",
@@ -20037,5 +20037,5 @@
       }
     ]
   },
-  "standingsUpdatedAt": "2026-09-16T05:58+09:00"
+  "standingsUpdatedAt": "2026-09-17T00:15+09:00"
 }
