@@ -26,7 +26,19 @@ def season_month_keys(now):
         yield f"{value // 12:04d}{value % 12 + 1:02d}"
 
 
-def fetch_month(league, month):
+def update_month_keys(now, has_previous):
+    if not has_previous:
+        yield from season_month_keys(now)
+        return
+    # 通常更新は今月と翌月だけを取り直す。ほかの月は保存済み日程を維持し、
+    # 15分おきの更新でも処理が重くなりすぎないようにする。
+    current_value = now.year * 12 + now.month - 1
+    for offset in range(2):
+        value = current_value + offset
+        yield f"{value // 12:04d}{value % 12 + 1:02d}"
+
+
+def fetch_month(league, month, previous):
     year, number = int(month[:4]), int(month[4:])
     last_day = calendar.monthrange(year, number)[1]
     start_date = f"{year:04d}-{number:02d}-01"
@@ -89,6 +101,20 @@ def fetch_month(league, month):
             "awayScore": score_values[1] if finished else None,
             }
 
+    # 公式サイトでは、終了後しばらく経った試合の詳細データが月間ページから
+    # 一部省略されることがある。その場合は保存済みの確定結果を引き継ぐ。
+    missing = sorted(expected_ids - matches.keys())
+    restored = []
+    for match_id in missing:
+        old = previous.get(f"{league}-{match_id}")
+        if old:
+            matches[match_id] = old
+            restored.append(match_id)
+    if restored:
+        print(
+            f"warning: {league} {month} の{len(restored)}試合を保存済みデータから補完しました",
+            file=sys.stderr,
+        )
     missing = sorted(expected_ids - matches.keys())
     if missing:
         raise RuntimeError(f"{league} {month} の試合を完全に取得できませんでした: {', '.join(missing)}")
@@ -219,20 +245,28 @@ def main():
         write_standings(now, standings)
         print(f"updated standings: {', '.join(f'{league}={len(rows)}' for league, rows in standings.items())}")
         return
-    matches = {}
+    # 順位表を先に取得しておく。日程取得で問題が起きても順位表は更新する。
+    standings = {league: fetch_standings(league) for league in LEAGUES}
+    matches = dict(previous)
     league_counts = {}
-    for league in LEAGUES:
-        found = 0
-        for month in season_month_keys(now):
-            for match in fetch_month(league, month):
-                matches[match["id"]] = match
-                found += 1
-            time.sleep(0.25)
-        if found == 0:
-            raise RuntimeError(f"{league}の日程を取得できませんでした。既存データを更新しません。")
-        league_counts[league] = found
-    if not matches:
-        raise RuntimeError("日程を1件も取得できませんでした。既存データを更新しません。")
+    try:
+        for league in LEAGUES:
+            found = 0
+            for month in update_month_keys(now, bool(previous)):
+                for match in fetch_month(league, month, previous):
+                    matches[match["id"]] = match
+                    found += 1
+                time.sleep(0.25)
+            if found == 0:
+                raise RuntimeError(f"{league}の日程を取得できませんでした。既存データを更新しません。")
+            league_counts[league] = found
+        if not matches:
+            raise RuntimeError("日程を1件も取得できませんでした。既存データを更新しません。")
+    except Exception as error:
+        write_standings(now, standings)
+        print(f"warning: 日程は更新できませんでしたが、順位表は更新しました: {error}", file=sys.stderr)
+        print(f"updated standings: {', '.join(f'{league}={len(rows)}' for league, rows in standings.items())}")
+        return
     scorer_targets = []
     for match in matches.values():
         old = previous.get(match["id"], {})
@@ -250,7 +284,6 @@ def main():
                     match.update(future.result())
                 except Exception as error:
                     print(f"warning: {error}", file=sys.stderr)
-    standings = {league: fetch_standings(league) for league in LEAGUES}
     output = {
         "updatedAt": now.isoformat(timespec="minutes"),
         "source": f"{BASE}/match/search/",
