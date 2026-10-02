@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T07:26+09:00",
+  "updatedAt": "2026-10-03T02:29+09:00",
   "source": "https://www.jleague.jp/standings/",
   "leagues": {
     "J1": [
@@ -537,6 +537,18 @@
       },
       {
         "rank": "5",
+        "team": "ロアッソ熊本",
+        "points": "14",
+        "played": "9",
+        "won": "3",
+        "drawn": "5",
+        "lost": "1",
+        "goalsFor": "7",
+        "goalsAgainst": "4",
+        "goalDifference": "3"
+      },
+      {
+        "rank": "6",
         "team": "奈良クラブ",
         "points": "14",
         "played": "8",
@@ -548,7 +560,7 @@
         "goalDifference": "2"
       },
       {
-        "rank": "6",
+        "rank": "7",
         "team": "ＦＣ岐阜",
         "points": "13",
         "played": "8",
@@ -560,19 +572,19 @@
         "goalDifference": "11"
       },
       {
-        "rank": "7",
-        "team": "ロアッソ熊本",
+        "rank": "8",
+        "team": "レイラック滋賀ＦＣ",
         "points": "13",
-        "played": "8",
-        "won": "3",
-        "drawn": "4",
-        "lost": "1",
-        "goalsFor": "7",
-        "goalsAgainst": "4",
-        "goalDifference": "3"
+        "played": "9",
+        "won": "4",
+        "drawn": "1",
+        "lost": "4",
+        "goalsFor": "14",
+        "goalsAgainst": "14",
+        "goalDifference": "0"
       },
       {
-        "rank": "8",
+        "rank": "9",
         "team": "ＳＣ相模原",
         "points": "12",
         "played": "8",
@@ -582,18 +594,6 @@
         "goalsFor": "14",
         "goalsAgainst": "10",
         "goalDifference": "4"
-      },
-      {
-        "rank": "9",
-        "team": "レイラック滋賀ＦＣ",
-        "points": "12",
-        "played": "8",
-        "won": "4",
-        "drawn": "0",
-        "lost": "4",
-        "goalsFor": "14",
-        "goalsAgainst": "14",
-        "goalDifference": "0"
       },
       {
         "rank": "10",
