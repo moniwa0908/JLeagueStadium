@@ -1,30 +1,30 @@
 {
-  "updatedAt": "2026-10-09T08:03+09:00",
+  "updatedAt": "2026-10-10T02:58+09:00",
   "source": "https://www.jleague.jp/standings/",
   "leagues": {
     "J1": [
       {
         "rank": "1",
-        "team": "ヴィッセル神戸",
-        "points": "19",
-        "played": "8",
-        "won": "6",
-        "drawn": "1",
-        "lost": "1",
-        "goalsFor": "12",
-        "goalsAgainst": "5",
+        "team": "柏レイソル",
+        "points": "21",
+        "played": "9",
+        "won": "7",
+        "drawn": "0",
+        "lost": "2",
+        "goalsFor": "21",
+        "goalsAgainst": "14",
         "goalDifference": "7"
       },
       {
         "rank": "2",
-        "team": "柏レイソル",
-        "points": "18",
-        "played": "8",
+        "team": "ヴィッセル神戸",
+        "points": "19",
+        "played": "9",
         "won": "6",
-        "drawn": "0",
+        "drawn": "1",
         "lost": "2",
-        "goalsFor": "17",
-        "goalsAgainst": "12",
+        "goalsFor": "14",
+        "goalsAgainst": "9",
         "goalDifference": "5"
       },
       {
@@ -65,6 +65,18 @@
       },
       {
         "rank": "6",
+        "team": "鹿島アントラーズ",
+        "points": "16",
+        "played": "9",
+        "won": "5",
+        "drawn": "1",
+        "lost": "3",
+        "goalsFor": "19",
+        "goalsAgainst": "16",
+        "goalDifference": "3"
+      },
+      {
+        "rank": "7",
         "team": "横浜Ｆ・マリノス",
         "points": "14",
         "played": "8",
@@ -76,7 +88,7 @@
         "goalDifference": "4"
       },
       {
-        "rank": "7",
+        "rank": "8",
         "team": "川崎フロンターレ",
         "points": "13",
         "played": "8",
@@ -86,18 +98,6 @@
         "goalsFor": "16",
         "goalsAgainst": "12",
         "goalDifference": "4"
-      },
-      {
-        "rank": "8",
-        "team": "鹿島アントラーズ",
-        "points": "13",
-        "played": "8",
-        "won": "4",
-        "drawn": "1",
-        "lost": "3",
-        "goalsFor": "17",
-        "goalsAgainst": "16",
-        "goalDifference": "1"
       },
       {
         "rank": "9",
@@ -185,18 +185,6 @@
       },
       {
         "rank": "16",
-        "team": "ガンバ大阪",
-        "points": "6",
-        "played": "8",
-        "won": "1",
-        "drawn": "3",
-        "lost": "4",
-        "goalsFor": "8",
-        "goalsAgainst": "14",
-        "goalDifference": "-6"
-      },
-      {
-        "rank": "17",
         "team": "名古屋グランパス",
         "points": "6",
         "played": "8",
@@ -206,6 +194,18 @@
         "goalsFor": "7",
         "goalsAgainst": "14",
         "goalDifference": "-7"
+      },
+      {
+        "rank": "17",
+        "team": "ガンバ大阪",
+        "points": "6",
+        "played": "9",
+        "won": "1",
+        "drawn": "3",
+        "lost": "5",
+        "goalsFor": "8",
+        "goalsAgainst": "16",
+        "goalDifference": "-8"
       },
       {
         "rank": "18",
@@ -513,6 +513,30 @@
       },
       {
         "rank": "3",
+        "team": "ＳＣ相模原",
+        "points": "18",
+        "played": "10",
+        "won": "5",
+        "drawn": "3",
+        "lost": "2",
+        "goalsFor": "18",
+        "goalsAgainst": "12",
+        "goalDifference": "6"
+      },
+      {
+        "rank": "4",
+        "team": "ＦＣ大阪",
+        "points": "17",
+        "played": "10",
+        "won": "4",
+        "drawn": "5",
+        "lost": "1",
+        "goalsFor": "18",
+        "goalsAgainst": "9",
+        "goalDifference": "9"
+      },
+      {
+        "rank": "5",
         "team": "レノファ山口ＦＣ",
         "points": "17",
         "played": "9",
@@ -524,7 +548,7 @@
         "goalDifference": "6"
       },
       {
-        "rank": "4",
+        "rank": "6",
         "team": "奈良クラブ",
         "points": "17",
         "played": "9",
@@ -536,31 +560,19 @@
         "goalDifference": "3"
       },
       {
-        "rank": "5",
-        "team": "ＦＣ大阪",
-        "points": "16",
-        "played": "9",
-        "won": "4",
-        "drawn": "4",
-        "lost": "1",
-        "goalsFor": "17",
-        "goalsAgainst": "8",
-        "goalDifference": "9"
-      },
-      {
-        "rank": "6",
-        "team": "ＳＣ相模原",
-        "points": "15",
-        "played": "9",
-        "won": "4",
-        "drawn": "3",
-        "lost": "2",
-        "goalsFor": "15",
-        "goalsAgainst": "10",
-        "goalDifference": "5"
-      },
-      {
         "rank": "7",
+        "team": "ツエーゲン金沢",
+        "points": "14",
+        "played": "10",
+        "won": "4",
+        "drawn": "2",
+        "lost": "4",
+        "goalsFor": "17",
+        "goalsAgainst": "14",
+        "goalDifference": "3"
+      },
+      {
+        "rank": "8",
         "team": "ロアッソ熊本",
         "points": "14",
         "played": "9",
@@ -572,7 +584,7 @@
         "goalDifference": "3"
       },
       {
-        "rank": "8",
+        "rank": "9",
         "team": "ＦＣ岐阜",
         "points": "13",
         "played": "9",
@@ -582,18 +594,6 @@
         "goalsFor": "19",
         "goalsAgainst": "10",
         "goalDifference": "9"
-      },
-      {
-        "rank": "9",
-        "team": "ツエーゲン金沢",
-        "points": "13",
-        "played": "9",
-        "won": "4",
-        "drawn": "1",
-        "lost": "4",
-        "goalsFor": "16",
-        "goalsAgainst": "13",
-        "goalDifference": "3"
       },
       {
         "rank": "10",
@@ -707,13 +707,13 @@
         "rank": "19",
         "team": "カマタマーレ讃岐",
         "points": "5",
-        "played": "9",
+        "played": "10",
         "won": "1",
         "drawn": "2",
-        "lost": "6",
-        "goalsFor": "10",
-        "goalsAgainst": "17",
-        "goalDifference": "-7"
+        "lost": "7",
+        "goalsFor": "12",
+        "goalsAgainst": "20",
+        "goalDifference": "-8"
       },
       {
         "rank": "20",
