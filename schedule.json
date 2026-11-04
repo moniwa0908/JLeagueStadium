@@ -20824,6 +20824,18 @@
       },
       {
         "rank": "6",
+        "team": "ＦＣ大阪",
+        "points": "26",
+        "played": "15",
+        "won": "7",
+        "drawn": "5",
+        "lost": "3",
+        "goalsFor": "25",
+        "goalsAgainst": "15",
+        "goalDifference": "10"
+      },
+      {
+        "rank": "7",
         "team": "愛媛ＦＣ",
         "points": "26",
         "played": "15",
@@ -20835,28 +20847,16 @@
         "goalDifference": "5"
       },
       {
-        "rank": "7",
+        "rank": "8",
         "team": "ロアッソ熊本",
         "points": "24",
-        "played": "14",
+        "played": "15",
         "won": "6",
         "drawn": "6",
-        "lost": "2",
-        "goalsFor": "16",
-        "goalsAgainst": "8",
-        "goalDifference": "8"
-      },
-      {
-        "rank": "8",
-        "team": "ＦＣ大阪",
-        "points": "23",
-        "played": "14",
-        "won": "6",
-        "drawn": "5",
         "lost": "3",
-        "goalsFor": "23",
-        "goalsAgainst": "14",
-        "goalDifference": "9"
+        "goalsFor": "17",
+        "goalsAgainst": "10",
+        "goalDifference": "7"
       },
       {
         "rank": "9",
@@ -21004,5 +21004,5 @@
       }
     ]
   },
-  "standingsUpdatedAt": "2026-11-04T07:59+09:00"
+  "standingsUpdatedAt": "2026-11-05T04:23+09:00"
 }
