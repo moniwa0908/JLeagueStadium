@@ -20294,13 +20294,13 @@
         "rank": "2",
         "team": "柏レイソル",
         "points": "31",
-        "played": "14",
+        "played": "15",
         "won": "10",
         "drawn": "1",
-        "lost": "3",
+        "lost": "4",
         "goalsFor": "31",
-        "goalsAgainst": "20",
-        "goalDifference": "11"
+        "goalsAgainst": "21",
+        "goalDifference": "10"
       },
       {
         "rank": "3",
@@ -20330,24 +20330,24 @@
         "rank": "5",
         "team": "ヴィッセル神戸",
         "points": "27",
-        "played": "14",
+        "played": "15",
         "won": "8",
         "drawn": "3",
-        "lost": "3",
-        "goalsFor": "23",
-        "goalsAgainst": "14",
-        "goalDifference": "9"
+        "lost": "4",
+        "goalsFor": "24",
+        "goalsAgainst": "16",
+        "goalDifference": "8"
       },
       {
         "rank": "6",
         "team": "鹿島アントラーズ",
-        "points": "23",
-        "played": "14",
+        "points": "24",
+        "played": "15",
         "won": "7",
-        "drawn": "2",
+        "drawn": "3",
         "lost": "5",
-        "goalsFor": "29",
-        "goalsAgainst": "24",
+        "goalsFor": "30",
+        "goalsAgainst": "25",
         "goalDifference": "5"
       },
       {
@@ -20424,6 +20424,30 @@
       },
       {
         "rank": "13",
+        "team": "ジェフユナイテッド千葉",
+        "points": "16",
+        "played": "15",
+        "won": "4",
+        "drawn": "4",
+        "lost": "7",
+        "goalsFor": "17",
+        "goalsAgainst": "24",
+        "goalDifference": "-7"
+      },
+      {
+        "rank": "14",
+        "team": "清水エスパルス",
+        "points": "15",
+        "played": "15",
+        "won": "4",
+        "drawn": "3",
+        "lost": "8",
+        "goalsFor": "11",
+        "goalsAgainst": "24",
+        "goalDifference": "-13"
+      },
+      {
+        "rank": "15",
         "team": "名古屋グランパス",
         "points": "14",
         "played": "14",
@@ -20435,7 +20459,7 @@
         "goalDifference": "-8"
       },
       {
-        "rank": "14",
+        "rank": "16",
         "team": "東京ヴェルディ",
         "points": "14",
         "played": "14",
@@ -20447,19 +20471,7 @@
         "goalDifference": "-10"
       },
       {
-        "rank": "15",
-        "team": "清水エスパルス",
-        "points": "14",
-        "played": "14",
-        "won": "4",
-        "drawn": "2",
-        "lost": "8",
-        "goalsFor": "10",
-        "goalsAgainst": "23",
-        "goalDifference": "-13"
-      },
-      {
-        "rank": "16",
+        "rank": "17",
         "team": "Ｖ・ファーレン長崎",
         "points": "13",
         "played": "14",
@@ -20469,18 +20481,6 @@
         "goalsFor": "17",
         "goalsAgainst": "22",
         "goalDifference": "-5"
-      },
-      {
-        "rank": "17",
-        "team": "ジェフユナイテッド千葉",
-        "points": "13",
-        "played": "14",
-        "won": "3",
-        "drawn": "4",
-        "lost": "7",
-        "goalsFor": "16",
-        "goalsAgainst": "24",
-        "goalDifference": "-8"
       },
       {
         "rank": "18",
@@ -20497,14 +20497,14 @@
       {
         "rank": "19",
         "team": "水戸ホーリーホック",
-        "points": "9",
-        "played": "14",
-        "won": "2",
+        "points": "12",
+        "played": "15",
+        "won": "3",
         "drawn": "3",
         "lost": "9",
-        "goalsFor": "12",
-        "goalsAgainst": "26",
-        "goalDifference": "-14"
+        "goalsFor": "14",
+        "goalsAgainst": "27",
+        "goalDifference": "-13"
       },
       {
         "rank": "20",
@@ -21004,5 +21004,5 @@
       }
     ]
   },
-  "standingsUpdatedAt": "2026-11-20T09:22+09:00"
+  "standingsUpdatedAt": "2026-11-21T04:37+09:00"
 }
