@@ -20292,27 +20292,27 @@
       },
       {
         "rank": "2",
-        "team": "サンフレッチェ広島",
-        "points": "32",
+        "team": "柏レイソル",
+        "points": "34",
         "played": "16",
-        "won": "9",
-        "drawn": "5",
-        "lost": "2",
-        "goalsFor": "36",
-        "goalsAgainst": "14",
-        "goalDifference": "22"
+        "won": "11",
+        "drawn": "1",
+        "lost": "4",
+        "goalsFor": "34",
+        "goalsAgainst": "22",
+        "goalDifference": "12"
       },
       {
         "rank": "3",
-        "team": "柏レイソル",
-        "points": "31",
-        "played": "15",
-        "won": "10",
-        "drawn": "1",
-        "lost": "4",
-        "goalsFor": "31",
-        "goalsAgainst": "21",
-        "goalDifference": "10"
+        "team": "サンフレッチェ広島",
+        "points": "32",
+        "played": "17",
+        "won": "9",
+        "drawn": "5",
+        "lost": "3",
+        "goalsFor": "37",
+        "goalsAgainst": "17",
+        "goalDifference": "20"
       },
       {
         "rank": "4",
@@ -20328,6 +20328,18 @@
       },
       {
         "rank": "5",
+        "team": "ヴィッセル神戸",
+        "points": "30",
+        "played": "16",
+        "won": "9",
+        "drawn": "3",
+        "lost": "4",
+        "goalsFor": "27",
+        "goalsAgainst": "17",
+        "goalDifference": "10"
+      },
+      {
+        "rank": "6",
         "team": "川崎フロンターレ",
         "points": "28",
         "played": "16",
@@ -20337,18 +20349,6 @@
         "goalsFor": "31",
         "goalsAgainst": "25",
         "goalDifference": "6"
-      },
-      {
-        "rank": "6",
-        "team": "ヴィッセル神戸",
-        "points": "27",
-        "played": "15",
-        "won": "8",
-        "drawn": "3",
-        "lost": "4",
-        "goalsFor": "24",
-        "goalsAgainst": "16",
-        "goalDifference": "8"
       },
       {
         "rank": "7",
@@ -20365,50 +20365,50 @@
       {
         "rank": "8",
         "team": "鹿島アントラーズ",
-        "points": "24",
-        "played": "15",
+        "points": "25",
+        "played": "16",
         "won": "7",
-        "drawn": "3",
+        "drawn": "4",
         "lost": "5",
-        "goalsFor": "30",
-        "goalsAgainst": "25",
+        "goalsFor": "31",
+        "goalsAgainst": "26",
         "goalDifference": "5"
       },
       {
         "rank": "9",
         "team": "ファジアーノ岡山",
-        "points": "23",
-        "played": "16",
+        "points": "24",
+        "played": "17",
         "won": "7",
-        "drawn": "2",
+        "drawn": "3",
         "lost": "7",
-        "goalsFor": "19",
-        "goalsAgainst": "22",
+        "goalsFor": "20",
+        "goalsAgainst": "23",
         "goalDifference": "-3"
       },
       {
         "rank": "10",
         "team": "浦和レッズ",
         "points": "23",
-        "played": "16",
+        "played": "17",
         "won": "7",
         "drawn": "2",
-        "lost": "7",
+        "lost": "8",
         "goalsFor": "26",
-        "goalsAgainst": "33",
-        "goalDifference": "-7"
+        "goalsAgainst": "34",
+        "goalDifference": "-8"
       },
       {
         "rank": "11",
         "team": "京都サンガF.C.",
-        "points": "19",
-        "played": "15",
-        "won": "5",
+        "points": "22",
+        "played": "16",
+        "won": "6",
         "drawn": "4",
         "lost": "6",
-        "goalsFor": "21",
-        "goalsAgainst": "24",
-        "goalDifference": "-3"
+        "goalsFor": "25",
+        "goalsAgainst": "25",
+        "goalDifference": "0"
       },
       {
         "rank": "12",
@@ -20424,30 +20424,42 @@
       },
       {
         "rank": "13",
-        "team": "セレッソ大阪",
+        "team": "清水エスパルス",
         "points": "18",
-        "played": "16",
-        "won": "4",
-        "drawn": "6",
-        "lost": "6",
-        "goalsFor": "18",
-        "goalsAgainst": "30",
-        "goalDifference": "-12"
+        "played": "17",
+        "won": "5",
+        "drawn": "3",
+        "lost": "9",
+        "goalsFor": "12",
+        "goalsAgainst": "26",
+        "goalDifference": "-14"
       },
       {
         "rank": "14",
-        "team": "ジェフユナイテッド千葉",
-        "points": "16",
-        "played": "16",
+        "team": "セレッソ大阪",
+        "points": "18",
+        "played": "17",
         "won": "4",
-        "drawn": "4",
-        "lost": "8",
-        "goalsFor": "18",
-        "goalsAgainst": "26",
-        "goalDifference": "-8"
+        "drawn": "6",
+        "lost": "7",
+        "goalsFor": "19",
+        "goalsAgainst": "34",
+        "goalDifference": "-15"
       },
       {
         "rank": "15",
+        "team": "ジェフユナイテッド千葉",
+        "points": "16",
+        "played": "17",
+        "won": "4",
+        "drawn": "4",
+        "lost": "9",
+        "goalsFor": "19",
+        "goalsAgainst": "29",
+        "goalDifference": "-10"
+      },
+      {
+        "rank": "16",
         "team": "東京ヴェルディ",
         "points": "15",
         "played": "16",
@@ -20459,7 +20471,7 @@
         "goalDifference": "-11"
       },
       {
-        "rank": "16",
+        "rank": "17",
         "team": "水戸ホーリーホック",
         "points": "15",
         "played": "16",
@@ -20469,18 +20481,6 @@
         "goalsFor": "15",
         "goalsAgainst": "27",
         "goalDifference": "-12"
-      },
-      {
-        "rank": "17",
-        "team": "清水エスパルス",
-        "points": "15",
-        "played": "16",
-        "won": "4",
-        "drawn": "3",
-        "lost": "9",
-        "goalsFor": "11",
-        "goalsAgainst": "26",
-        "goalDifference": "-15"
       },
       {
         "rank": "18",
@@ -20534,6 +20534,18 @@
       },
       {
         "rank": "2",
+        "team": "ＲＢ大宮アルディージャ",
+        "points": "36",
+        "played": "20",
+        "won": "10",
+        "drawn": "6",
+        "lost": "4",
+        "goalsFor": "36",
+        "goalsAgainst": "25",
+        "goalDifference": "11"
+      },
+      {
+        "rank": "3",
         "team": "カターレ富山",
         "points": "35",
         "played": "19",
@@ -20545,7 +20557,7 @@
         "goalDifference": "14"
       },
       {
-        "rank": "3",
+        "rank": "4",
         "team": "ベガルタ仙台",
         "points": "34",
         "played": "19",
@@ -20557,7 +20569,7 @@
         "goalDifference": "16"
       },
       {
-        "rank": "4",
+        "rank": "5",
         "team": "横浜ＦＣ",
         "points": "34",
         "played": "19",
@@ -20567,18 +20579,6 @@
         "goalsFor": "34",
         "goalsAgainst": "22",
         "goalDifference": "12"
-      },
-      {
-        "rank": "5",
-        "team": "ＲＢ大宮アルディージャ",
-        "points": "33",
-        "played": "19",
-        "won": "9",
-        "drawn": "6",
-        "lost": "4",
-        "goalsFor": "33",
-        "goalsAgainst": "23",
-        "goalDifference": "10"
       },
       {
         "rank": "6",
@@ -20728,13 +20728,13 @@
         "rank": "18",
         "team": "ＦＣ今治",
         "points": "18",
-        "played": "19",
+        "played": "20",
         "won": "5",
         "drawn": "3",
-        "lost": "11",
-        "goalsFor": "19",
-        "goalsAgainst": "35",
-        "goalDifference": "-16"
+        "lost": "12",
+        "goalsFor": "21",
+        "goalsAgainst": "38",
+        "goalDifference": "-17"
       },
       {
         "rank": "19",
@@ -20814,13 +20814,13 @@
         "rank": "5",
         "team": "奈良クラブ",
         "points": "35",
-        "played": "19",
+        "played": "20",
         "won": "11",
         "drawn": "2",
-        "lost": "6",
+        "lost": "7",
         "goalsFor": "35",
-        "goalsAgainst": "27",
-        "goalDifference": "8"
+        "goalsAgainst": "28",
+        "goalDifference": "7"
       },
       {
         "rank": "6",
@@ -20993,16 +20993,16 @@
       {
         "rank": "20",
         "team": "高知ユナイテッドＳＣ",
-        "points": "13",
-        "played": "19",
-        "won": "3",
+        "points": "16",
+        "played": "20",
+        "won": "4",
         "drawn": "4",
         "lost": "12",
-        "goalsFor": "14",
+        "goalsFor": "15",
         "goalsAgainst": "40",
-        "goalDifference": "-26"
+        "goalDifference": "-25"
       }
     ]
   },
-  "standingsUpdatedAt": "2026-11-28T10:13+09:00"
+  "standingsUpdatedAt": "2026-11-29T04:33+09:00"
 }
